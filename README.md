@@ -1,9 +1,8 @@
 # API-2
 API 2 semestre
-![image](https://github.com/DataSolutionsGroup2/API-2/assets/144190669/c9c14bf3-425e-4b7f-b82a-5bedc076cdde)# API-2
-API 2 semestre
+![image](https://github.com/DataSolutionsGroup2/API-2/assets/144190669/c9c14bf3-425e-4b7f-b82a-5bedc076cdde)
 <p align="center">
-  <img src="img/DSG.png" width="300" height="300">
+  <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
 <h1>DSG - DATA SOLUTIONS GROUP</h1>
  
@@ -19,7 +18,7 @@ API 2 semestre
   
 <h2>💡Sobre o Projeto:</h2>
 
-Este progeto tem como principal objetivo de construir um sistema web para o gestor fazer a administração dos projetos de mapeamento realizado por sua equipe podendo criar tipos de perfil que tem niveis e permissões de usabilidade diferentes.
+Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala.
 
 <span id="backlog"></span>
 <h1>⚙️Backlog</h1>
