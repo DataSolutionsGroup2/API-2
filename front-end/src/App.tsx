@@ -1,11 +1,7 @@
-import CriacaoEditorRevisorPage from "./pages/CriacaoEditorRevisor/CriacaoEditorRevisorPage";
-import GestorPage from "./pages/GestorPage/GestorPage";
+import LayoutPage from "./components/manager/LayoutPage";
 
 function App() {
-
-  return (
-    <GestorPage />
-  )
+  return <LayoutPage />;
 }
 
-export default App
+export default App;
