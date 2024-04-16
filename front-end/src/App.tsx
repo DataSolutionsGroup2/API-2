@@ -1,10 +1,10 @@
-import CriacaoEditorRevisorPage from "./pages/CriacaoEditorRevisor/CriacaoEditorRevisorPage";
-import GestorPage from "./pages/GestorPage/GestorPage";
+
+import Login from "./components/Login";
 
 function App() {
 
   return (
-    <GestorPage />
+    <Login />
   )
 }
 

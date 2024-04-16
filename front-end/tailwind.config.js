@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'visionai': "url('./images/visiona.jpg')",
+        'visionai2': "url('./images/visiona2.jpg')",
+      },
+      colors: {
+        'visiona': '#fe5000',
+      },
+    },
   },
   plugins: [],
 }
