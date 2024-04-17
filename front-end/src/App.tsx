@@ -1,7 +1,7 @@
-import LayoutPage from "./components/manager/LayoutPage";
+import Aoi from "./pages/Aoi";
 
 function App() {
-  return <LayoutPage />;
+  return <Aoi />;
 }
 
 export default App;
