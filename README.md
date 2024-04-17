@@ -13,7 +13,7 @@ API 2 semestre
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
   <a href="#UML">UML</a> |
-  <a href="#cuse">Caso de Uso </a> |
+  <a href="#UML">Caso de Uso </a> |
     <a href="#pbacklog">Product Backlog</a> | 
     <a href="#equipe">Equipe</a> |
   
@@ -47,11 +47,10 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 
 <span id="UML"></span>
-<h1>⚙️UML</h1>
+<h1 id="UML">⚙️UML</h1>
+<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor</p>
+<img src="Images/casos_de_uso.png" alt="UML" width="1100" height="600">
 
-
-<span id="cuse"></span>
-<h1>⚙️Caso de Uso </h1>
 
 
 <span id="backlog"></span>
