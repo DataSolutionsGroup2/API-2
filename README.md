@@ -13,15 +13,12 @@ API 2 semestre
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
     <a href="#pbacklog">Product Backlog</a> | 
-    <a href="https://www.figma.com/file/lSciviyO60I1VUjzt5eolv/Untitled?type=design&node-id=0-1&mode=design&t=aED36n5W4qIogM8S-0" target="_blank" >Protótipo</a> |
     <a href="#equipe">Equipe</a> |
   
 <h2>💡Sobre o Projeto:</h2>
 
-Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala.
+Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função sera monitorar e evidenciar em graficos os relatorios de cada agente, da area percorrida e atividades realizadas dentro da Geometria solicitada e demandada por Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema 
 
-<span id="backlog"></span>
-<h1>⚙️Backlog</h1>
 
 ## 📝Requisitos Funcionais
 * O gestor deverá ser capaz de carregar o polígono que delimita a área do projeto
@@ -46,6 +43,14 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 * Armazenamento: SGBD PostgreSQL;
 * Autenticação de usuário.
 
+<span id="backlog"></span>
+<h1>⚙️Backlog</h1>
+
+<span id="burndown"></span>
+<h1>⚙️Burndown</h1>
+
+<span id="pbacklog"></span>
+<h1>⚙️Product Backlog</h1>
 
 
 <h3>Video do Projeto</h3>
@@ -67,7 +72,6 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 [![Meu git](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
 [![Meu git](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)]()
 ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
 
@@ -75,9 +79,9 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 | Função         | Integrantes           |
 | ---------------|-----------------------|
-| Product Owner  | Renan Ming Han <a href="https://github.com/MingRenan" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>        |
-| Scrum Master    | Rodrigo Augusto Silva Lima <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>            |
-| Dev Team     | Fillipe Pereira Bueno de Almeida <a href="https://github.com/FPbueno" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>            |
-| Dev Team     | Evellin Amorim da Silva <a href="https://github.com/evellsil" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>        |
-| Dev Team | Tiago Santini Da Silva <a href="https://github.com/TiagoSan23" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>        |
-| Dev Team | Isaac Souza Santos <a href="https://github.com/IsaacSs32" target="_blank"><img src="img/GIT.png" width=20px height=20px></a>        |
+| Product Owner  | Renan Ming Han <a href="https://github.com/MingRenan" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
+| Scrum Master    | Rodrigo Augusto Silva Lima <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>            |
+| Dev Team     | Fillipe Pereira Bueno de Almeida <a href="https://github.com/FPbueno" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>            |
+| Dev Team     | Evellin Amorim da Silva <a href="https://github.com/evellsil" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
+| Dev Team | Tiago Santini Da Silva <a href="https://github.com/TiagoSan23" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
+| Dev Team | Isaac Souza Santos <a href="https://github.com/IsaacSs32" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
