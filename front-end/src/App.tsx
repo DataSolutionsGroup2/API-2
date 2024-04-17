@@ -1,7 +1,10 @@
-import LayoutPage from "./components/manager/LayoutPage";
+import Login from "./components/Login";
 
 function App() {
-  return <LayoutPage />;
+
+  return (
+    <Login />
+  )
 }
 
 export default App;
