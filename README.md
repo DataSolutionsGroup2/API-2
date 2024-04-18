@@ -1,4 +1,4 @@
-<h1>API 2 semestre</h1>
+<h1>ABP 2 semestre</h1>
 <p align="center">
   <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
@@ -11,7 +11,6 @@
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
   <a href="#UML">UML</a> |
-  <a href="#UML">Caso de Uso </a> |
     <a href="#pbacklog">Product Backlog</a> | 
     <a href="#equipe">Equipe</a> |
   
@@ -46,13 +45,15 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
-<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor</p>
+<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
 <img src="Images/casos_de_uso.png" alt="UML" width="1100" height="600">
 
 
 
 <span id="backlog"></span>
-<h1>⚙️Backlog</h1>
+<h2>⚙️Backlog</h2>
+<p>Tabela do backlog do projeto.</p>
+<img src="Images/Backlog.png" alt="backlog" width="1200">
 
 <span id="burndown"></span>
 <h2>⚙️Burndown</h2>
@@ -62,7 +63,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 <span id="pbacklog"></span>
 <h2>⚙️Product Backlog</h2>
-<p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades</p>
+<p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades.</p>
 <img src="Images/burndown.png" alt="product backlog">
 
 
