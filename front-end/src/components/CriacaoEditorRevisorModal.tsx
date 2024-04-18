@@ -148,7 +148,7 @@ const CriacaoEdidorRevisorModal = ({ onClose, onSave }: ModalProps) => {
               </div>
               <div className="flex-1">
                 <label htmlFor="role" className="block mb-1 text-black">
-                  Role:
+                  Usuario:
                 </label>
                 <select
                   id="role"
@@ -157,7 +157,7 @@ const CriacaoEdidorRevisorModal = ({ onClose, onSave }: ModalProps) => {
                   onChange={handleChange}
                   className="px-3 py-2 rounded border border-orange-500 w-3/4"
                 >
-                  <option value="">Select...</option>
+                  {" "}
                   <option value="editor">Editor</option>
                   <option value="manager">Gestor</option>
                   <option value="reader">Revisor</option>
