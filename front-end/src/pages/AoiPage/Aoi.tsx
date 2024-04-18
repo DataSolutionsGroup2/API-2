@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import service from "../services/Aoi";
-import { AoiProps } from "../types";
+import service from "../../services/Aoi";
+import { AoiProps } from "../../types";
 
 export default function Aoi() {
   const [itens, setItens] = useState([] as AoiProps[]);

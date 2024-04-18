@@ -1,9 +1,12 @@
-import Login from "./components/Login";
+import { BrowserRouter } from "react-router-dom";
+import Rotas from "./routes";
 
 function App() {
 
   return (
-    <Login />
+    <BrowserRouter>
+      <Rotas />
+    </BrowserRouter>
   )
 }
 

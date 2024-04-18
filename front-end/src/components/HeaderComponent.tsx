@@ -11,7 +11,7 @@ interface HeaderProps {
 const HeaderComponent = ({buttons} : HeaderProps) =>{
 
     return(
-        <div className="flex bg-slate-200 p-4">
+        <div className="h-20 flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-700 text-white text-center text-4xl font-bold shadow-md">
             {buttons.map((button, index) =>(
                 <button
                     className="p-4 bg-blue-500 text-white hover:bg-blue-800 m-2 rounded-xl"

@@ -3,13 +3,18 @@ import React from "react";
 
 interface ButtonSelectorProps {
   id: string;
+  onSelect: (regionName: string) => void
 }
 
-const ButtonSelector: React.FC<ButtonSelectorProps> = ({ id }) => {
+
+
+const ButtonSelector: React.FC<ButtonSelectorProps> = ({ id, onSelect }) => {
   const [isChecked, setIsChecked] = React.useState(false);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
+    console.log('isChecked', isChecked)
+    onSelect(isChecked==false ? id : '');
   };
 
   return (
