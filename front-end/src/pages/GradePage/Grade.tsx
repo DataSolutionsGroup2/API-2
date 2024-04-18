@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import service from "../services/Apontamento";
-import { ApontamentoProps } from "../types";
+import service from "../../services/Apontamento";
+import { ApontamentoProps } from "../../types";
 
 export default function Apontamento() {
   const [itens, setItens] = useState([] as ApontamentoProps[]);

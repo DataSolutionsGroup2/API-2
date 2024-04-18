@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+
 import HeaderComponent from "../../components/HeaderComponent"
 import CriacaoEdidorRevisorModal from "../../components/CriacaoEditorRevisorModal";
 
@@ -15,8 +17,14 @@ const GestorPage = () => {
  
     const [userData, setUserData] = useState<userInterface[]>([]);
 
+    const navigate = useNavigate();
+
     const handleModal = ()=>{
         setOpenModal(!openModal);
+    }
+
+    const handleButton = ()=>{
+        navigate("/relatorios");
     }
 
     const handleSaveUser = (data: userInterface) =>{
@@ -31,7 +39,7 @@ const GestorPage = () => {
         },
         {
             name: 'Pesquisar',
-            onClick: ()=> console.log('Apertei botao 2')
+            onClick: handleButton
         },
     ]
 

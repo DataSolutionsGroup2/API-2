@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import service from "../services/Alteracao";
-import { AlteracaoProps } from "../types";
+import service from "../../services/Alteracao";
+import { AlteracaoProps } from "../../types";
 
 export default function Alteracao() {
   const [itens, setItens] = useState([] as AlteracaoProps[]);

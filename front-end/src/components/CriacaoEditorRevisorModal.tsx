@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface FormData {
     name: string;
@@ -52,7 +52,6 @@ const CriacaoEdidorRevisorModal = ({onClose, onSave}: ModalProps) =>{
         //const validCpf = validateCPF(formData.cpf);
         //const validAge = validateAge(formData.birthdate);
         //if (validCpf && validAge) {
-            console.log(formData);
             const result = {
                 name: formData.name,
                 email: formData.email,
@@ -64,7 +63,7 @@ const CriacaoEdidorRevisorModal = ({onClose, onSave}: ModalProps) =>{
         //};
     }
 
-    const validateCPF = (cpf: string): boolean => {
+    /*const validateCPF = (cpf: string): boolean => {
         if (!cpf || cpf.length !== 11 || !/^\d+$/.test(cpf)) {
           setFormData(prevState => ({
             ...prevState,
@@ -73,9 +72,9 @@ const CriacaoEdidorRevisorModal = ({onClose, onSave}: ModalProps) =>{
           return false;
         }
         return true;
-    };
+    };*/
 
-    const validateAge = (birthdate: string): boolean => {
+    /*const validateAge = (birthdate: string): boolean => {
         const today = new Date();
         const birthDate = new Date(birthdate);
         let age = today.getFullYear() - birthDate.getFullYear();
@@ -91,7 +90,7 @@ const CriacaoEdidorRevisorModal = ({onClose, onSave}: ModalProps) =>{
           return false;
         }
         return true;
-    };
+    };*/
 
     return(
         
