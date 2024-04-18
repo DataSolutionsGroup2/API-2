@@ -2,31 +2,31 @@ import { useState } from "react";
 import "tailwindcss/tailwind.css";
 import RegionReport from "./RegionReport";
 
-import {MockedRegion} from "../../utils/mockedData/regionMocked";
+import { MockedRegion } from "../../utils/mockedData/regionMocked";
 
-interface optionsInterface{
-  user:string
+interface optionsInterface {
+  user: string;
 }
 interface Props {
-  options?: optionsInterface[]
-  onRegionChange: (regionName: string) => void
+  options?: optionsInterface[];
+  onRegionChange: (regionName: string) => void;
 }
 
-export default function Desktop({onRegionChange, options}: Props) {
+export default function Desktop({ onRegionChange, options }: Props) {
   const [open, setOpen] = useState(false);
- 
-  const handleRegionSelect = (regionName: string) =>{
-    onRegionChange(regionName)
-  }
+
+  const handleRegionSelect = (regionName: string) => {
+    onRegionChange(regionName);
+  };
 
   const regionNamesData = {
-    name: MockedRegion.regiao.map(item => item.name)
-  }
+    name: MockedRegion.regiao.map((item) => item.name),
+  };
 
-  console.log('name: ', regionNamesData)
+  console.log("name: ", regionNamesData);
 
   return (
-    <div className="flex justify-center mt-20">
+    <div className="flex  mt-10">
       <div className="custom-container">
         <ul>
           <li>
@@ -56,7 +56,10 @@ export default function Desktop({onRegionChange, options}: Props) {
           <div className=" bg-gradient-to-r from-orange-500 to-orange-700 rounded-b mt-[-5px]">
             <ul className="block">
               <li>
-                <RegionReport data={regionNamesData ? regionNamesData : options } onRegionSelect={handleRegionSelect}/>
+                <RegionReport
+                  data={regionNamesData ? regionNamesData : options}
+                  onRegionSelect={handleRegionSelect}
+                />
               </li>
             </ul>
           </div>
