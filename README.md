@@ -68,7 +68,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 
 <h3>Video do Projeto</h3>
-<a href="https://youtu.be/TVE2tWdRy30">Video completo Sprint 1 </a>
+<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
 
 ### exemplo
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
