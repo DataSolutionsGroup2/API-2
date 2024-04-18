@@ -1,6 +1,4 @@
-# API-2
-API 2 semestre
-![image](https://github.com/DataSolutionsGroup2/API-2/assets/144190669/c9c14bf3-425e-4b7f-b82a-5bedc076cdde)
+<h1>API 2 semestre</h1>
 <p align="center">
   <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
@@ -57,10 +55,15 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <h1>⚙️Backlog</h1>
 
 <span id="burndown"></span>
-<h1>⚙️Burndown</h1>
+<h2>⚙️Burndown</h2>
+<p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
+<img src="Images/GraficoBurndown.png" alt="burndown" width="1200" >
+
 
 <span id="pbacklog"></span>
-<h1>⚙️Product Backlog</h1>
+<h2>⚙️Product Backlog</h2>
+<p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades</p>
+<img src="Images/burndown.png" alt="product backlog">
 
 
 <h3>Video do Projeto</h3>
