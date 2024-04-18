@@ -34,9 +34,9 @@ export default function Desktop({ onRegionChange, options }: Props) {
               onClick={() => {
                 setOpen(!open);
               }}
-              className="w-[300px] inline-flex  bg-gradient-to-r from-orange-500 to-orange-700 text-white px-12 py-4 text-lg font-bold rounded cursor-pointer"
+              className="w-[320px] inline-flex  bg-gradient-to-r from-orange-500 to-orange-700 text-white px-11 py-4 text-lg font-bold rounded cursor-pointer"
             >
-              Região
+              Selecione a Região
               <svg
                 className="w-12 h-6 ml-2"
                 xmlns="http://www.w3.org/2000/svg"
