@@ -1,66 +1,77 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import HeaderComponent from "../../components/HeaderComponent"
+import HeaderComponent from "../../components/HeaderComponent";
 import CriacaoEdidorRevisorModal from "../../components/CriacaoEditorRevisorModal";
+import { Graphic } from "../../components/manager/Statistics/Graphic";
 
-
-interface userInterface  {
-    name: string,
-    password:string,
-    email: string,
-    role: string
+interface userInterface {
+  name: string;
+  password: string;
+  email: string;
+  role: string;
 }
 
 const GestorPage = () => {
-    const [openModal, setOpenModal] = useState(false);
- 
-    const [userData, setUserData] = useState<userInterface[]>([]);
+  const [openModal, setOpenModal] = useState(false);
 
-    const navigate = useNavigate();
+  const [userData, setUserData] = useState<userInterface[]>([]);
 
-    const handleModal = ()=>{
-        setOpenModal(!openModal);
-    }
+  const navigate = useNavigate();
 
-    const handleButton = ()=>{
-        navigate("/relatorios");
-    }
+  const handleModal = () => {
+    setOpenModal(!openModal);
+  };
 
-    const handleSaveUser = (data: userInterface) =>{
-        setUserData(prevData => [...prevData, data])
-        console.log(userData)
-    }
+  const handleButton = () => {
+    navigate("/relatorios");
+  };
 
-    const buttons = [
-        {
-            name: 'Criar Revisor/Editor',
-            onClick: handleModal
-        },
-        {
-            name: 'Pesquisar',
-            onClick: handleButton
-        },
-    ]
+  const handleSaveUser = (data: userInterface) => {
+    setUserData((prevData) => [...prevData, data]);
+    console.log(userData);
+  };
 
-    return(
-        <div>
-            <HeaderComponent buttons={buttons}/>
-            {openModal && <CriacaoEdidorRevisorModal onClose={handleModal} onSave={handleSaveUser}/>}
-            
-            {
-                userData && 
-                <div>
-                    {userData.map((user, index) => (
-                        <div key={index}>
-                            <span>{user.name}</span>
-                            <span>{user.email}</span>
-                            <span>{user.role}</span>
-                        </div>
-                    ))}
-                </div>            }
+  const buttons = [
+    {
+      name: "Criar Revisor/Editor",
+      onClick: handleModal,
+    },
+    {
+      name: "Pesquisar",
+      onClick: handleButton,
+    },
+  ];
+
+  return (
+    <div>
+      <HeaderComponent buttons={buttons} />
+      {openModal && (
+        <div style={{ marginBottom: "20px" }}>
+          <CriacaoEdidorRevisorModal
+            onClose={handleModal}
+            onSave={handleSaveUser}
+          />
         </div>
-    )
-}
+      )}
+
+      {userData && (
+        <div style={{ marginTop: "40px" }}>
+          {userData.map((user, index) => (
+            <div key={index}>
+              <span>{user.name}</span>
+              <br />
+              <span>{user.email}</span>
+              <br />
+              <span>{user.role}</span>
+              <br />
+            </div>
+          ))}
+          <Graphic />
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default GestorPage;
