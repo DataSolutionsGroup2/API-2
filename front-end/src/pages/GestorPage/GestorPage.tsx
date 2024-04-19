@@ -47,7 +47,7 @@ const GestorPage = () => {
     <div>
       <HeaderComponent buttons={buttons} />
       {openModal && (
-        <div style={{ marginBottom: "20px" }}>
+        <div className="mb-1 ">
           <CriacaoEdidorRevisorModal
             onClose={handleModal}
             onSave={handleSaveUser}
