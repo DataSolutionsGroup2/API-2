@@ -60,7 +60,7 @@ const CriacaoEdidorRevisorModal = ({ onClose, onSave }: ModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center">
+    <div className="fixed inset-20 bg-gray-500 bg-opacity-70 flex ml-[900px] items-center">
       <div className="modal-inner bg-white rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full border-orange-500">
         <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 modal-inner">
           <h2 className="text-center text-orange-700">Crie seu novo perfil</h2>
