@@ -3,7 +3,7 @@
 </p>
 <h1>DSG - DATA SOLUTIONS GROUP</h1>
  
- > Status: Developing ⚠️
+ > Status: Check ✅
 
 <h1 align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1>
 <p align="center"> 
