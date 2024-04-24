@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
+  <img src="/Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
 <h1>DSG - DATA SOLUTIONS GROUP</h1>
  
@@ -46,30 +46,30 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
 <p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
-<img src="Images/casos_de_uso.png" alt="UML" width="1100" height="600">
+<img src="/Images/casos_de_uso.png" alt="UML" width="1100" height="600">
 
 
 
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
-<img src="Images/Backlog.png" alt="backlog" width="1200">
+<img src="/Images/Backlog.png" alt="backlog" width="1200">
 
 <span id="burndown"></span>
 <h2>⚙️Burndown</h2>
 <p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
-<img src="Images/GraficoBurndown.png" alt="burndown" width="1200" >
+<img src="/Images/GraficoBurndown.png" alt="burndown" width="1200" >
 
 
 <span id="pbacklog"></span>
 <h2>⚙️Product Backlog</h2>
 <p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades.</p>
-<img src="Images/burndown.png" alt="product backlog">
+<img src="/Images/burndown.png" alt="product backlog">
 
 <span id="review"></span>
 <h2>Sprint review</h2>
 <p>Aqui temos a Sprint Review que acordado com a equipe sobre coisas para parar, continuar e começar a fazer.</p>
-<img src="Images/SprintReview.png" alt="Sprint Review" width="1200" >
+<img src="/Images/SprintReview.png" alt="Sprint Review" width="1200" >
 
 
 <h3>Video do Projeto</h3>
@@ -103,9 +103,9 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 | Função         | Integrantes           |
 | ---------------|-----------------------|
-| Product Owner  | Renan Ming Han <a href="https://github.com/MingRenan" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
-| Scrum Master    | Rodrigo Augusto Silva Lima <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>            |
-| Dev Team     | Fillipe Pereira Bueno de Almeida <a href="https://github.com/FPbueno" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>            |
-| Dev Team     | Evellin Amorim da Silva <a href="https://github.com/evellsil" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
-| Dev Team | Tiago Santini Da Silva <a href="https://github.com/TiagoSan23" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
-| Dev Team | Isaac Souza Santos <a href="https://github.com/IsaacSs32" target="_blank"><img src="Images/github_icon.png" width=20px height=20px></a>        |
+| Product Owner  | Renan Ming Han <a href="https://github.com/MingRenan" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
+| Scrum Master    | Rodrigo Augusto Silva Lima <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>            |
+| Dev Team     | Fillipe Pereira Bueno de Almeida <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>            |
+| Dev Team     | Evellin Amorim da Silva <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
+| Dev Team | Tiago Santini Da Silva <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
+| Dev Team | Isaac Souza Santos <a href="https://github.com/IsaacSs32" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
