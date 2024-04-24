@@ -1,4 +1,3 @@
-    <h1>ABP 2 semestre</h1>
 <p align="center">
   <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
