@@ -2,7 +2,7 @@
 <p align="center">
   <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
-<h1>DSG - DATA SOLUTIONS GROUP</h1>
+<h1 align="center">DSG - DATA SOLUTIONS GROUP</h1>
  
  > Status: Developing ⚠️
 
