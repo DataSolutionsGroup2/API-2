@@ -13,7 +13,7 @@ export const Graphic: React.FC = () => {
 
     const option = {
       title: {
-        text: "Áreas das Regiões",
+        text: "Áreas Finalizadas por Regiões",
         left: "center",
       },
       tooltip: {

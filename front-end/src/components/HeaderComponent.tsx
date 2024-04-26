@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const HeaderComponent = ({ buttons }: HeaderProps) => {
   return (
-    <div className="h-20 flex items-center justify-around bg-gradient-to-r from-orange-500 to-orange-700 text-white text-center text-4xl font-bold shadow-md">
+    <div className="h-20 flex items-center justify-around bg-gradient-to-r from-blue-500 to-orange-700 text-white text-center text-4xl font-bold shadow-md">
       <ul>
         <li>Gestor</li>
       </ul>
