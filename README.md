@@ -109,4 +109,4 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 | Dev Team     | Fillipe Pereira Bueno de Almeida | <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>            |
 | Dev Team     | Evellin Amorim da Silva | <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
 | Dev Team | Tiago Santini Da Silva | <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
-| Dev Team | Isaac Souza Santos | <a href="https://github.com/IsaacSs32" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
+| Dev Team | Isaac Souza Santos | <a href="https://github.com/Isaac-Exon" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
