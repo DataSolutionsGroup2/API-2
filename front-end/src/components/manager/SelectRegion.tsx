@@ -53,7 +53,7 @@ export default function Desktop({ onRegionChange, options }: Props) {
           </li>
         </ul>
         {open && (
-          <div className=" bg-gradient-to-r from-orange-500 to-orange-700 rounded-b mt-[-5px]">
+          <div className=" bg-gradient-to-r from-blue-500 to-orange-700 rounded-b mt-[-5px]">
             <ul className="block">
               <li>
                 <RegionReport
