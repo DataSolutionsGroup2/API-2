@@ -1,14 +1,9 @@
-import { Router } from "express";
-import aoi from "./aoi";
-import alteracao from "./alteracao";
-import apontamento from "./apontamento";
-import grade from "./grade";
+import express from 'express';
+import GradeAtuacaoController from '../controllers/GradeAtuacaoController';
 
-const router = Router();
+const router = express.Router();
+const gradeAtuacaoController = new GradeAtuacaoController();
 
-router.use("/aoi", aoi);
-router.use("/alteracao", alteracao);
-router.use("/apontamento", apontamento);
-router.use("/grade", grade);
+router.get('/grade-atuacao', gradeAtuacaoController.getGradeAtuacao);
 
 export default router;
