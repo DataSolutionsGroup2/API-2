@@ -4,14 +4,14 @@ import pool from "./db";
 class DeleteUsuarios {
   async deleteUsuario(req: Request, res: Response) {
     try {
-      const nome = req.query.nome as string;
+      const id = req.query.id as string;
 
       const queryText = `
         DELETE FROM usuarios
-        WHERE nome = $1;
+        WHERE id = $1;
       `;
 
-      await pool.query(queryText, [nome]);
+      await pool.query(queryText, [id]);
       res
         .status(200)
         .json({ message: "Dados do usuário deletados com sucesso!" });
