@@ -83,6 +83,8 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 02          | 22/04 - 15/05   | ✅                | <a href="Sprint 2/README.md">Sprint 2</a>
 03          | 20/05 - 12/06   | ✅                | <a href="Sprint 3/README.md">Sprint 3</a>
 
+## diagrama de uso.jpg
+
 
 
 ## 🚀Ferramentas Utilizadas
