@@ -1,50 +1,56 @@
 import {Request, Response} from 'express';
-import pool from './db';
+import { GradeAtuacaoModel, AtuacaoInterface } from '../models/GradeAtuacaoModel';
+import { Pool } from 'pg';
 
-class GradeAtuacaoController {
-    async getGradeAtuacao(req: Request, res: Response) {
+
+export class GradeAtuacaoController {
+    private gradeAtuacaoModel: GradeAtuacaoModel;
+
+    constructor(banco: Pool){
+        this.gradeAtuacaoModel = new GradeAtuacaoModel(banco);
+    }
+
+    async getGradeAtuacaoAnalista(req: Request, res: Response): Promise<void>{
+        
         try {
-            const { regiao, analista } = req.query;
-            const analistasArray = Array.isArray(analista) 
-            ? analista.map((analista: any) => analista.trim()) 
-            : [(analista as string)];
-
-            if(analistasArray?.length > 1){
-                const queryText = `
-                    SELECT atribuicao, status, area_km2 
-                    FROM ${regiao} 
-                    WHERE atribuicao IN (${analistasArray.map((_, i) => `$${i + 1}`).join(', ')})
-                `;
-                const client = await pool.connect();
-                const result = await client.query(
-                    queryText, analistasArray
-                );
-                client.release();
-                res.json(result.rows);
-                    
-            } else if (analistasArray[0] === 'Todos') {
-                const client = await pool.connect();
-                const result = await client.query(
-                    `SELECT atribuicao, status, area_km2 FROM ${regiao}`
-                )
-                client.release();
-                res.json(result.rows);
-
-            } else {
-                const client = await pool.connect();
-                const result = await client.query(
-                    `SELECT atribuicao, status, area_km2 FROM ${regiao}`,
-                    [String(analistasArray[0])]
-                );
-                client.release();
-                res.json(result.rows);
-            }
-          
-        } catch (err) {
-            console.error('Não foi possivel retornar informações', err);
-            res.status(500).send('Internal Server Error');
+            const atribuicao: string = req.query.analista as string;
+            const regiao: string = req.query.regiao as string;
+            
+            const gradeAtuacao: AtuacaoInterface[] = await this.gradeAtuacaoModel.getGradeAtuacaoAnalista(atribuicao, regiao);
+            res.json(gradeAtuacao);
+        } catch (error) {
+            console.error('Erro ao consultar tabela:', error);
+            res.status(500).json({ error: 'Erro ao consultar tabela' });
         }
     }
+
+    async getGradeAtuacaoAnalistas(req: Request, res: Response):Promise<void>{
+        const {regiao} = req.query;
+        const analistas = req.query.analista as string[]
+
+        try {
+            const gradeAtuacaoAnalistas: AtuacaoInterface[] = await this.gradeAtuacaoModel.getGradeAtuacaoAnalistas(analistas, regiao )
+            res.json(gradeAtuacaoAnalistas);
+        } catch (error) {
+            console.error('Erro ao consultar tabela:', error);
+            res.status(500).json({ error: 'Erro ao consultar tabela' });
+        }
+    }
+
+    async getGradeAtuacaoTodos(req: Request, res: Response):Promise<void>{
+        
+        const regiao: string = req.query.regiao as string;
+        
+        try {
+            const gradeAtuacaoTodos: AtuacaoInterface[] = await this.gradeAtuacaoModel.getGradeAtuaçãoTodos(regiao)
+            res.json(gradeAtuacaoTodos);
+        } catch (error) {
+            console.error('Erro ao consultar tabela:', error);
+            res.status(500).json({ error: 'Erro ao consultar tabela' });
+        }
+    }
+
+    
 }
 
 export default GradeAtuacaoController;
