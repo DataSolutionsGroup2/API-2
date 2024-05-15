@@ -3,7 +3,7 @@ import { GradeAtuacaoModel, AtuacaoInterface } from '../models/GradeAtuacaoModel
 import { Pool } from 'pg';
 
 
-export class GradeAtuacaoController {
+class GradeAtuacaoController {
     private gradeAtuacaoModel: GradeAtuacaoModel;
 
     constructor(banco: Pool){
