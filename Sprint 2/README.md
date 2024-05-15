@@ -46,7 +46,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
 <p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
-<img src="/Images/casos_de_uso.png" alt="UML" width="1100" height="600">
+<img src="../Images/casodeuso.jpg" alt="UML" width="1100" height="600">
 
 
 
