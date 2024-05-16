@@ -6,8 +6,6 @@ import u1 from "../controllers/PutUsuarios"
 import pool from "../controllers/db";
 import AuthController from "../controllers/AuthController";
 
-import {AuthMiddleware} from "../middleware/AuthMiddleware";
-
 const router = express.Router();
 const gradeAtuacaoController = new GradeAtuacaoController(pool);
 const deleteUserController = new DeleteUsuarios();
@@ -18,7 +16,7 @@ router.get('/grade-atuacao/analistas', gradeAtuacaoController.getGradeAtuacaoAna
 router.get('/grade-atuacao/analistas/todos', gradeAtuacaoController.getGradeAtuacaoTodos.bind(gradeAtuacaoController));
 
 router.put('/usuarios',u1);
-router.delete("/usuarios", AuthMiddleware, deleteUserController.deleteUsuario);
+router.delete("/usuarios", deleteUserController.deleteUsuario);
 
 
 router.post("/login", authController.getLoginUsuario.bind(authController))
