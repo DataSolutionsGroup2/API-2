@@ -73,7 +73,7 @@ de mapeamento: </p>
 
 
 <h3>Video do Projeto</h3>
-<a href="" target="_blank">Video completo Sprint 2 </a>
+<a href="https://youtu.be/cIjC-j5Lv38" target="_blank">Video completo Sprint 2 </a>
 
 ### exemplo
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
