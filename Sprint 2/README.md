@@ -5,7 +5,7 @@
  
  > Status: Developing ⚠️
 
-<h1 align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1>
+<h1 align="center"> Sprint 2 - 22/04/2024 a 15/05/2024 </h1>
 <p align="center"> 
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
@@ -45,35 +45,35 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
-<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
-<img src="/Images/casos_de_uso.png" alt="UML" width="1100" height="600">
-
+<p> Diagrama de caso de uso do sistema, para o gestor fazer a administração dos projetos 
+de mapeamento: </p>
+  <img src="../Images/caso_de_uso.png" alt="UML" height="500px" width="500px">
 
 
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
-<img src="/Images/Backlog.png" alt="backlog" width="1200">
+<img src="../Images/BackLogSprint2.jfif" alt="backlog" width="1200">
 
 <span id="burndown"></span>
 <h2>⚙️Burndown</h2>
 <p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
-<img src="/Images/GraficoBurndown.png" alt="burndown" width="1200" >
+<img src="../Images/Burndown2.jfif" alt="burndown" width="1200" >
 
 
 <span id="pbacklog"></span>
 <h2>⚙️Product Backlog</h2>
 <p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades.</p>
-<img src="/Images/burndown.png" alt="product backlog">
+<img src="../Images/ProductBackLog2.jfif" alt="product backlog">
 
 <span id="review"></span>
 <h2>Sprint review</h2>
 <p>Aqui temos a Sprint Review que acordado com a equipe sobre coisas para parar, continuar e começar a fazer.</p>
-<img src="/Images/SprintReview.png" alt="Sprint Review" width="1200" >
+<img src="../Images/SprinReview2.jfif" alt="Sprint Review" width="1200" >
 
 
 <h3>Video do Projeto</h3>
-<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
+<a href="" target="_blank">Video completo Sprint 2 </a>
 
 ### exemplo
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
@@ -101,11 +101,11 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 ## 👩‍💻Equipe
 
-| Função         | Integrantes           |
-| ---------------|-----------------------|
-| Product Owner  | Renan Ming Han <a href="https://github.com/MingRenan" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
-| Scrum Master    | Rodrigo Augusto Silva Lima <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>            |
-| Dev Team     | Fillipe Pereira Bueno de Almeida <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>            |
-| Dev Team     | Evellin Amorim da Silva <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
-| Dev Team | Tiago Santini Da Silva <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
-| Dev Team | Isaac Souza Santos <a href="https://github.com/IsaacSs32" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a>        |
+| Função         | Integrantes           | GitHub                |
+| ---------------|-----------------------|-----------------------|
+| Product Owner  | Renan Ming Han        |<a href="https://github.com/MingRenan" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a> |
+| Scrum Master   | Rodrigo Augusto Silva Lima |  <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a> |
+| Dev Team     | Fillipe Pereira Bueno de Almeida | <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>            |
+| Dev Team     | Evellin Amorim da Silva | <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
+| Dev Team | Tiago Santini Da Silva | <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
+| Dev Team | Isaac Souza Santos | <a href="https://github.com/IsaacSs32" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
