@@ -53,18 +53,18 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
-<img src="/Images/Backlog.png" alt="backlog" width="1200">
+<img src="../Images/BackLogSprint2.jfif" alt="backlog" width="1200">
 
 <span id="burndown"></span>
 <h2>⚙️Burndown</h2>
 <p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
-<img src="/Images/GraficoBurndown.png" alt="burndown" width="1200" >
+<img src="../Images/Burndown2.jfif" alt="burndown" width="1200" >
 
 
 <span id="pbacklog"></span>
 <h2>⚙️Product Backlog</h2>
 <p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades.</p>
-<img src="/Images/burndown.png" alt="product backlog">
+<img src="../Images/ProductBackLog2.jfif" alt="product backlog">
 
 <span id="review"></span>
 <h2>Sprint review</h2>
@@ -73,7 +73,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 
 <h3>Video do Projeto</h3>
-<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
+<a href="" target="_blank">Video completo Sprint 2 </a>
 
 ### exemplo
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
