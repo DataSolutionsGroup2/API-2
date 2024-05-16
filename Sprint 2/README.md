@@ -45,7 +45,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
-<p> Diagrama de caso de uso para o gestor fazer a administração dos projetos 
+<p> Diagrama de caso de uso do sistema, para o gestor fazer a administração dos projetos 
 de mapeamento: </p>
   <img src="../Images/caso_de_uso.png" alt="UML" height="500px" width="500px">
 
