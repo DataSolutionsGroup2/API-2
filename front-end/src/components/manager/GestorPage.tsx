@@ -15,7 +15,7 @@ const GestorPage = () => {
     },
     {
       name: "Pesquisar",
-      onClick: () => navigate("/relatorios"),
+      onClick: () => navigate("/pesquisa"),
     },
     {
       name: "Home",

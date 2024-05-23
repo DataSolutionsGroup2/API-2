@@ -4,6 +4,7 @@ import GestorPage from "./components/manager/GestorPage";
 import LayoutPage from "./pages/RelatorioPage/LayoutPage";
 import CriacaoEdidorRevisorModal from "./pages/Criar Usuario/CriacaoEditorRevisorModal";
 import PageGestor from "./pages/GestorPage";
+import Pesquisa from "./pages/Pesquisas/pesquisa";
 
 function Rotas() {
   return (
@@ -14,6 +15,7 @@ function Rotas() {
       <Route path="/relatorioPage" element={<LayoutPage />} />
       <Route path="/createUser" element={<CriacaoEdidorRevisorModal />} />
       <Route path="/pagegestor" element={<PageGestor />} />
+      <Route path="/pesquisa" element={<Pesquisa />} />
     </Routes>
   );
 }
