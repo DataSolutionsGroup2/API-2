@@ -48,12 +48,12 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <h1 id="UML">⚙️UML</h1>
 <p> Diagrama de caso de uso do sistema, para o gestor fazer a administração dos projetos 
 de mapeamento: </p>
-  <img src="../Images/trelloSprint3.png" alt="UML" height="500px" width="500px">
+  <img src="../Images/caso_de_uso.png " alt="UML" height="500px" width="500px">
 
   <span id="trello"></span>
 <h2>📈 Trello</h2>
 <p>Divisão de tarefas criadas pelo Scrum Master de entregas para a sprint</p>
- <img src="../Images/caso_de_uso.png" alt="UML" height="500px" width="500px">
+ <img src="../Images/trelloSprint3.png" alt="trello" width="1200"">
 
 
 <span id="backlog"></span>
