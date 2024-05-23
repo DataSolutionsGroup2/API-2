@@ -5,7 +5,7 @@
  
  > Status: Developing ⚠️
 
-<h1 align="center"> Sprint 2 - 22/04/2024 a 15/05/2024 </h1>
+<h1 align="center"> Sprint 3 - data/data/ a data/data/data </h1>
 <p align="center"> 
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
