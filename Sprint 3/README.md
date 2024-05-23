@@ -53,7 +53,7 @@ de mapeamento: </p>
   <span id="trello"></span>
 <h2>📈 Trello</h2>
 <p>Divisão de tarefas criadas pelo Scrum Master de entregas para a sprint</p>
-<img src="../Images/trelloSprint3" alt="trello" width="1200">
+<img src="../Images/trelloSprint3" alt="trello" width="1200" width="500px>
 
 
 <span id="backlog"></span>
