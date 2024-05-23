@@ -25,12 +25,12 @@ const LayoutPage = () => {
   const navigate = useNavigate();
 
   const handleButton = () => {
-    navigate("/gestorPage");
+    navigate("/pagegestor");
   };
 
   const buttons = [
     {
-      name: "Voltar para tela de Gestão",
+      name: "Home",
       onClick: handleButton,
     },
   ];
