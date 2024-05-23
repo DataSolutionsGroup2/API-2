@@ -15,7 +15,7 @@ class InsertUsuario {
       res.status(201).json({ message: "Usuário criado com sucesso!" });
     } catch (error) {
       console.error("Erro ao criar usuário:", error);
-      res.status(500).json({ error: "Erro ao criar usuário." });
+      res.status(500).json({ error: "Erro ao criar usuários." });
     }
   }
 }
