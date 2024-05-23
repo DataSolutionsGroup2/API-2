@@ -1,5 +1,5 @@
 import { Graphic } from "../../components/manager/Statistics/Graphic";
-import GestorPage from "./GestorPage";
+import GestorPage from "../../components/manager/GestorPage";
 
 export default function PageGestor() {
   return (

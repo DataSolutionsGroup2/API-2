@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import HeaderComponent from "../../components/HeaderComponent";
+import HeaderComponent from "../HeaderComponent";
 
 const GestorPage = () => {
   const navigate = useNavigate();
