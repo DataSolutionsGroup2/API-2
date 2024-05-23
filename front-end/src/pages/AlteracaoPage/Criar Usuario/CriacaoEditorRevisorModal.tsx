@@ -65,7 +65,7 @@ export default function CriacaoEdidorRevisorModal() {
           </div>
           <button
             type="button"
-            className="mt-4 w-full bg-[#ca5f42] text-white font-bold py-2 rounded-lg hover:bg-[#a94b35] transition-colors"
+            className="mt-3 w-full bg-[#ca5f42] text-white font-bold py-2 rounded-lg hover:bg-[#a94b35] transition-colors"
           >
             Criar
           </button>
