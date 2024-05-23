@@ -4,12 +4,12 @@ export default function Pesquisa() {
   return (
     <div>
       <GestorPage />
-      <div className="w-full p-4 h-auto flex flex-wrap md:flex-nowrap mb-2  justify-between py-4">
+      <div className="w-full p-4 h-auto flex flex-wrap md:flex-nowrap mb-2 justify-between py-4">
         <div className="mb-2 p-4 w-full md:w-1/3">
           <div className="text-left border-2 border-[#ca5f42] py-4 p-2 rounded-lg">
-            <h1 className="text-center">Editor</h1>
+            <h1 className="text-center font-bold">Editor</h1>
             <div className="mb-4">
-              <label htmlFor="pesquisaH1" className="block">
+              <label htmlFor="pesquisaH1" className="block font-bold">
                 Nome:
               </label>
               <input
@@ -19,7 +19,7 @@ export default function Pesquisa() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="selecaoCidadeEditor" className="block">
+              <label htmlFor="selecaoCidadeEditor" className="block font-bold">
                 Cidade:
               </label>
               <select
@@ -32,7 +32,7 @@ export default function Pesquisa() {
               </select>
             </div>
             <div className="mb-4">
-              <label htmlFor="areaEditor" className="block">
+              <label htmlFor="areaEditor" className="block font-bold">
                 Área Finalizada:
               </label>
               <input
@@ -46,9 +46,9 @@ export default function Pesquisa() {
 
         <div className="mb-2 p-4 w-full md:w-1/3">
           <div className="text-left border-2 border-[#ca5f42] py-4 p-2 rounded-lg">
-            <h1 className="text-center">Revisor</h1>
+            <h1 className="text-center font-bold">Revisor</h1>
             <div className="mb-4">
-              <label htmlFor="pesquisaH2" className="block">
+              <label htmlFor="pesquisaH2" className="block font-bold">
                 Nome:
               </label>
               <input
@@ -58,7 +58,7 @@ export default function Pesquisa() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="selecaoCidadeRevisor" className="block">
+              <label htmlFor="selecaoCidadeRevisor" className="block font-bold">
                 Cidade:
               </label>
               <select
@@ -71,7 +71,7 @@ export default function Pesquisa() {
               </select>
             </div>
             <div className="mb-4">
-              <label htmlFor="areaRevisor" className="block">
+              <label htmlFor="areaRevisor" className="block font-bold">
                 Área Finalizada:
               </label>
               <input
@@ -85,9 +85,9 @@ export default function Pesquisa() {
 
         <div className="mb-2 p-4 w-full md:w-1/3">
           <div className="text-left border-2 border-[#ca5f42] py-4 p-2 rounded-lg">
-            <h1 className="text-center">Cidade</h1>
+            <h1 className="text-center font-bold">Cidade</h1>
             <div className="mb-4">
-              <label htmlFor="selecaoCidadeCidade" className="block">
+              <label htmlFor="selecaoCidadeCidade" className="block font-bold">
                 Nome:
               </label>
               <select
@@ -100,7 +100,7 @@ export default function Pesquisa() {
               </select>
             </div>
             <div className="mb-4">
-              <label htmlFor="areaCidade" className="block">
+              <label htmlFor="areaCidade" className="block font-bold">
                 Área Total:
               </label>
               <input
@@ -110,7 +110,7 @@ export default function Pesquisa() {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="areaFinalizadaCidade" className="block">
+              <label htmlFor="areaFinalizadaCidade" className="block font-bold">
                 Área Total Finalizada:
               </label>
               <input

@@ -3,7 +3,7 @@ import Login from "./pages/LoginPage/LoginPage";
 import GestorPage from "./components/manager/GestorPage";
 import LayoutPage from "./pages/RelatorioPage/LayoutPage";
 import CriacaoEdidorRevisorModal from "./pages/Criar Usuario/CriacaoEditorRevisorModal";
-import PageGestor from "./pages/GestorPage";
+import PageGestor from "./pages/PaginaGestor";
 import Pesquisa from "./pages/Pesquisas/pesquisa";
 
 function Rotas() {
