@@ -14,34 +14,7 @@
     <a href="#equipe">Equipe</a> |
     <a href="#review">Sprint Review</a> |
     <a href="#trello">Trello</a> |
-  
-<h2>💡Sobre o Projeto:</h2>
 
-Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função sera monitorar e evidenciar em graficos os relatorios de cada agente, da area percorrida e atividades realizadas dentro da Geometria solicitada e demandada por Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema 
-
-
-## 📝Requisitos Funcionais
-* O gestor deverá ser capaz de carregar o polígono que delimita a área do projeto
-* O gestor deverá ser capaz de carregar a grade de polígonos especificando as dimensões de cada recorte (retângulo)
-* O gestor deverá ser capaz de cadastrar editor e revisor
-* O gestor deverá ser capaz de definir a área de trabalho do usuário. A área de trabalho é um retângulo na grade
-* O gestor deverá ser capaz de gerar as estatísticas: número de polígonos, área total, quantidade de correções e quantidade de correções executadas
-* O gestor deverá ser capaz de filtrar por revisor e por período para gerar as estatísticas;
-* O gestor deverá ser capaz de gerar estatísticas de quantidade de polígonos mapeados, quantidade de correções e de área de polígonos mapeados por editor
-* O gestor deverá ser capaz de visualizar e exportar relatórios com as estatísticas no formato PDF.
-
-## 📚Requisitos Não Funcionais
-* Documentação no GitHub: repositório do código fonte de cada sprint, descrição do projeto, link para cada entrega de sprint, backlog do produto, backlog de cada sprint, requisitos do cliente (user stories), prints das telas ou link para o portal, burndown de cada sprint mostrando funcionalidades (quantidade de requisitos) implementadas versus tempo,tecnologias utilizadas e membros da equipe (link para o GitHub de cada membro)
-* Utilizar o Trello para gerenciar o backlog do produto. Preferencialmente fazer a integração entre o Trello e GitHub
-* No Trello, cada cartão representa uma tarefa ou uma história de usuário
-* Os membros da equipe podem adicionar links para problemas do GitHub relevantes a cada cartão no Trello
-* Quando um membro da equipe começa a trabalhar em uma tarefa, ele pode mover o cartão correspondente para a coluna "Em progresso"
-* Quando o trabalho em uma tarefa estiver concluído e um pull request for aberto no GitHub, o membro da equipe pode adicionar o link do pull request ao cartão no Trello
-* Os membros da equipe podem monitorar o progresso das tarefas no Trello e visualizar os links para os problemas e pull requests correspondentes no GitHub.
-* Back-end: TypeScript e Node.js;
-* Front-end: React TypeScript, HTML e CSS;
-* Armazenamento: SGBD PostgreSQL;
-* Autenticação de usuário.
 
 
 <span id="UML"></span>
