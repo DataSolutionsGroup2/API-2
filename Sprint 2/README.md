@@ -48,7 +48,7 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 <h1 id="UML">⚙️UML</h1>
 <p> Diagrama de caso de uso do sistema, para o gestor fazer a administração dos projetos 
 de mapeamento: </p>
-  <img src="../Images/caso_de_uso.png" alt="UML" height="500px" width="500px">
+  <img src="../Images/caso_de_uso.jpeg" alt="UML" height="500px" width="500px">
 
   <span id="trello"></span>
 <h2>📈 Trello</h2>
