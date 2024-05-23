@@ -5,7 +5,7 @@
  
  > Status: Developing ⚠️
 
-<h1 align="center"> Sprint 3 - data/data/ a data/data/data </h1>
+<h1 align="center"> Sprint 3 - 20/05 a 12/06 </h1>
 <p align="center"> 
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
