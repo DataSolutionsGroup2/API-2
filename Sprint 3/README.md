@@ -75,7 +75,7 @@ de mapeamento: </p>
 <span id="review"></span>
 <h2>Sprint review</h2>
 <p>Aqui temos a Sprint Review que acordado com a equipe sobre coisas para parar, continuar e começar a fazer.</p>
-<img src="../Images/SprinReview2.jfif" alt="Sprint Review" width="1200" >
+<img src="Images/SprinReview3.png" alt="Sprint Review" width="1200" >
 
 
 <h3>Video do Projeto</h3>
