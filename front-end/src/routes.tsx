@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./pages/LoginPage/LoginPage";
 import GestorPage from "./pages/GestorPage/GestorPage";
 import LayoutPage from "./pages/RelatorioPage/LayoutPage";
-import CriacaoEdidorRevisorModal from "./pages/AlteracaoPage/Criar Usuario/CriacaoEditorRevisorModal";
+import CriacaoEdidorRevisorModal from "./pages/Criar Usuario/CriacaoEditorRevisorModal";
 import PageGestor from "./pages/GestorPage";
 
 function Rotas() {

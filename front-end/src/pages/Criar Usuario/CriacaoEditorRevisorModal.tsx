@@ -1,4 +1,4 @@
-import GestorPage from "../../GestorPage/GestorPage";
+import GestorPage from "../GestorPage/GestorPage";
 
 export default function CriacaoEdidorRevisorModal() {
   return (
@@ -6,7 +6,7 @@ export default function CriacaoEdidorRevisorModal() {
       <GestorPage />
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="w-full max-w-md border-2 border-[#ca5f42] rounded-lg h-auto p-4 bg-white">
-          <header className="mb-2 bg-gradient-to-r rounded-lg from-orange-700 to-orange-900 py-4 text-white text-center">
+          <header className="mb-2 bg-gradient-to-r from-blue-500 to-orange-700 rounded-lg  py-4 text-white text-center">
             <h1 className="text-xl font-bold ">Criação de Editor/Revisor</h1>
           </header>
           <div className="flex flex-col mb-2">
@@ -65,7 +65,7 @@ export default function CriacaoEdidorRevisorModal() {
           </div>
           <button
             type="button"
-            className="mt-3 w-full bg-[#ca5f42] text-white font-bold py-2 rounded-lg hover:bg-[#a94b35] transition-colors"
+            className="mt-3 w-full bg-[#ca5f42] text-white font-bold py-2 rounded-lg hover:bg-[#355ea9] transition-colors"
           >
             Criar
           </button>
