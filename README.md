@@ -163,6 +163,10 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
     <a href="#entrega1">Video</a> 
     </p>
 
+## Resumo:
+Após algumas reuniões com o cliente tentando entender a real necessidade dele fizemos algumas telas no Front-End na tentativa de entregar um MVP descente,
+portanto fizemos 4 telas sendo elas 1 de login e outras 3 de um usuário já logado.
+
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
@@ -174,6 +178,12 @@ Aqui temos o nosso prototipo implementado no projeto da tela de login.
 <img src="/Images/LoginV1.jfif" alt="Prototipo" width="1200">
 Após a ideia ser aceita pelo grupo decidimos então dar continuidade ao desenvolvimento da tela de login incrementando um pouco da personalidade do nosso cliente utilizando a paleta de cores deles, chegando na versão final até o momento.
 <img src="/Images/LoginV2.png" alt="LoginV1" width="1200">
+Já tendo previamente uma ideia do design que queriamos em nossa aplicação seguimos desenvolvendo as demais partes do que seria a tela do Gestor no projeto, o que seria a tela principal que ele entraria logo após logar, pensamos em aparecer um grafico mostrando como estaria o andamento do projeto geral.
+<img src="/Images/telaPrincipalGestor1.png" alt="GestorPrincipal1" width="1200">
+O gestor tabém pode criar usuários, sendo eles o Revisor e o Editor então também decidimos implementar essa interface em nosso projeto com campos a serem preenchidos referente a esse novo usuario.
+<img src="/Images/criarUsuarioGestor1.png" alt="criarUsuarioGestor1 width="1200">
+E nossa ultima implementação nessa entrega totalizando as 4 telas sendo 1 de login e outras 3 de um usuario ja logado em nosso caso o gestor fizemos uma ultima tela com uma interface que possibilitava ele filtrar por cidade e ver todos os analistas e demais imformações sobre uma determinada cidade previamente selecionada.
+<img src="/Images/pesquisaGestor1.png" alt="criarUsuarioGestor1 width="1200">
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
 <p>Aqui temos o UML de casos de uso do nosso projeto com uma visão do funcionamento de perspectiva externa.</p>
