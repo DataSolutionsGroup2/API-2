@@ -49,29 +49,75 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 ## 🚀Ferramentas Utilizadas
 
-[![Meu git](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)]()
-[![Meu git](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)]()
-[![Meu git](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Express](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000?style=for-the-badge&logo=postgresql)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+* HTML  <img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" width="30" height="30" align="center" />
+* CSS  <img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" width="30" height="30" align="center" />
+* Javascript  <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="Javascript" width="25" height="25" align="center" />
+* Typescript  <img src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png" alt="Typescript" width="25" height="25" align="center" />
+* React  <img src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" width="25" height="25" align="center" />
+* Tailwind  <img src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png" alt="Tailwind" width="25" height="25" align="center" />
+* Express  <img src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png" alt="Express" width="25" height="25" align="center" />
+* PostgreSQL  <img src="https://user-images.githubusercontent.com/25181517/117208740-bfb78400-adf5-11eb-97bb-09072b6bedfc.png" alt="PostgreSQL" width="35" height="35" align="center" />
+* Node.js  <img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="Node.js" width="35" height="35" align="center" />
+* Vite  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62091613/261395532-b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35.png" alt="Vite" width="25" height="25" align="center" />
+* VS Code  <img src="https://user-images.githubusercontent.com/25181517/192108891-d86b6220-e232-423a-bf5f-90903e6887c3.png" alt="VS Code" width="25" height="25" align="center" />
+* Git  <img src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" alt="Git" width="25" height="25" align="center" />
 
 ## 👩‍💻Equipe
-
-| Função         | Integrantes           | GitHub                |
-| ---------------|-----------------------|-----------------------|
-| Product Owner  | Renan Ming Han        |<a href="https://github.com/MingRenan" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a> |
-| Scrum Master     | Fillipe Pereira Bueno de Almeida | <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>            |
-|  Dev Team  | Rodrigo Augusto Silva Lima |  <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a> |
-| Dev Team     | Evellin Amorim da Silva | <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
-| Dev Team | Tiago Santini Da Silva | <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
-| Dev Team | Isaac Souza Santos | <a href="https://github.com/Isaac-Exon" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
-
-<img src="https://contrib.rocks/image?repo=DataSolutionsGroup2/API-2&user=FPBueno"/>
-
+<table>
+  <thead>
+    <tr>
+      <th>Função</th>
+      <th>Integrante</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Scrum Master</td>
+      <td>
+        <a href="https://github.com/FPBueno">
+          <img src="https://github.com/FPBueno.png" width="50" height="50" style="border-radius: 50%;" alt="FPBueno">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Product Ownerr</td>
+      <td>
+        <a href="https://github.com/MingRenan">
+          <img src="https://github.com/MingRenan.png" width="50" height="50" style="border-radius: 50%;" alt="MingRenan">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Dev Team</td>
+      <td>
+        <a href="https://github.com/Isaac-Exon">
+          <img src="https://github.com/Isaac-Exon.png" width="50" height="50" style="border-radius: 50%;" alt="Isaac-Exon">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Dev Team</td>
+      <td>
+        <a href="https://github.com/rodrigoaslima">
+          <img src="https://github.com/rodrigoaslima.png" width="50" height="50" style="border-radius: 50%;" alt="Isaac-Exon">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Dev Team</td>
+      <td>
+        <a href="https://github.com/TiagoSan23">
+          <img src="https://github.com/TiagoSan23.png" width="50" height="50" style="border-radius: 50%;" alt="Isaac-Exon">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Dev Team</td>
+      <td>
+        <a href="https://github.com/evellsil">
+          <img src="https://github.com/evellsil.png" width="50" height="50" style="border-radius: 50%;" alt="Isaac-Exon">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
