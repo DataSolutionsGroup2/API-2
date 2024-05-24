@@ -72,7 +72,7 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 :---------: | :------:    | :-------:          | :-------:
 01          | 25/03 - 17/04   | ✅                | <a href="#sprint1">Sprint 1</a>
 02          | 22/04 - 15/05   | ✅                | <a href="#sprint2">Sprint 2</a>
-03          | 20/05 - 12/06   | ✅                | <a href="#sprint3">Sprint 3</a>
+03          | 20/05 - 12/06   | ⚠️                | <a href="#sprint3">Sprint 3</a>
 
 
 ## 🚀Ferramentas Utilizadas
