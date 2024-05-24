@@ -8,7 +8,6 @@
 
 <h1 align="center"> Projeto: 25/03/2024 a 13/06/2024 </h1>  
 
-
 <h2>💡 Sobre o Projeto:</h2>
 
 Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função será monitorar e evidenciar em gráficos os relatorios de cada agente, da área percorrida e atividades realizadas dentro da geometria solicitada e demandada pelo Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema, projeto desenvolvido justamente para resolver o problema de gestão em projetos de grande escala. 
@@ -71,9 +70,9 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 ### Entregas 
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
 :---------: | :------:    | :-------:          | :-------:
-01          | 25/03 - 17/04   | ✅                | <a href="Sprint 1/README.md">Sprint 1</a>
-02          | 22/04 - 15/05   | ✅                | <a href="Sprint 2/README.md">Sprint 2</a>
-03          | 20/05 - 12/06   | ✅                | <a href="Sprint 3/README.md">Sprint 3</a>
+01          | 25/03 - 17/04   | ✅                | <a href="#sprint1">Sprint 1</a>
+02          | 22/04 - 15/05   | ✅                | <a href="#sprint2">Sprint 2</a>
+03          | 20/05 - 12/06   | ✅                | <a href="#sprint3">Sprint 3</a>
 
 
 ## 🚀Ferramentas Utilizadas
@@ -152,7 +151,7 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 </table>
 
  
-<h1 align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1> > Status: Check ✅
+<h1 id="sprint1"align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1> > Status: Check ✅
 
 <p align="center"> 
     <a href="#backlog">Backlog</a> |
@@ -160,6 +159,7 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
   <a href="#UML">UML</a> |
     <a href="#pbacklog">Product Backlog</a> | 
     <a href="#review">Sprint Review</a> |
+    <a href="#entrega1">Video</a>
 
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
@@ -187,5 +187,5 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 <img src="/Images/SprintReview.png" alt="Sprint Review" width="1200" >
 
 
-<h3>Video do Projeto</h3>
+<h3 id="entrega1">Video do Projeto</h3>
 <a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
