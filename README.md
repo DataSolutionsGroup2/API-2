@@ -1,4 +1,4 @@
-<h1>ABP 2 semestre</h1>
+<h1>ABP</h1>
 <p align="center">
   <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
@@ -6,18 +6,7 @@
  
  > Status: Developing ⚠️
 
-<h1 align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1>
-<p align="center"> 
-    <a href="#backlog">Backlog</a> |
-    <a href="#burndown">Burndown</a> |
-  <a href="#UML">UML</a> |
-    <a href="#pbacklog">Product Backlog</a> | 
-    <a href="#equipe">Equipe</a> |
-    <a href="#review">Sprint Review</a> |
-  
-<h2>💡Sobre o Projeto:</h2>
-
-Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função sera monitorar e evidenciar em graficos os relatorios de cada agente, da area percorrida e atividades realizadas dentro da Geometria solicitada e demandada por Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema 
+<h1 align="center"> Projeto: 25/03/2024 a 13/06/2024 </h1>  
 
 
 ## 📝Requisitos Funcionais
@@ -43,48 +32,17 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 * Armazenamento: SGBD PostgreSQL;
 * Autenticação de usuário.
 
+<h2>💡Sobre o Projeto:</h2>
 
-<span id="UML"></span>
-<h1 id="UML">⚙️UML</h1>
-<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
-<img src="Images/caso_de_uso.jpeg" alt="UML" width="1100" height="600">
+Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função sera monitorar e evidenciar em graficos os relatorios de cada agente, da area percorrida e atividades realizadas dentro da Geometria solicitada e demandada por Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema 
 
 
-
-<span id="backlog"></span>
-<h2>⚙️Backlog</h2>
-<p>Tabela do backlog do projeto.</p>
-<img src="Images/Backlog.png" alt="backlog" width="1200">
-
-<span id="burndown"></span>
-<h2>⚙️Burndown</h2>
-<p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
-<img src="Images/GraficoBurndown.png" alt="burndown" width="1200" >
-
-
-<span id="pbacklog"></span>
-<h2>⚙️Product Backlog</h2>
-<p>Product backlog feito pelo nosso Product Owner com as atividades que foram implementadas na aplicação nessa sprint com os seus niveis de prioridades.</p>
-<img src="Images/burndown.png" alt="product backlog">
-
-<span id="review"></span>
-<h2>Sprint review</h2>
-<p>Aqui temos a Sprint Review que acordado com a equipe sobre coisas para parar, continuar e começar a fazer.</p>
-<img src="Images/SprintReview.png" alt="Sprint Review" width="1200" >
-
-
-<h3>Video do Projeto</h3>
-<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
-
-### exemplo
+### Entregas
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
 :---------: | :------:    | :-------:          | :-------:
 01          | 25/03 - 17/04   | ✅                | <a href="Sprint 1/README.md">Sprint 1</a>
 02          | 22/04 - 15/05   | ✅                | <a href="Sprint 2/README.md">Sprint 2</a>
 03          | 20/05 - 12/06   | ✅                | <a href="Sprint 3/README.md">Sprint 3</a>
-
-## diagrama de uso.jpg
-
 
 
 ## 🚀Ferramentas Utilizadas
@@ -107,8 +65,8 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 | Função         | Integrantes           | GitHub                |
 | ---------------|-----------------------|-----------------------|
 | Product Owner  | Renan Ming Han        |<a href="https://github.com/MingRenan" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px></a> |
-| Scrum Master   | Rodrigo Augusto Silva Lima |  <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a> |
-| Dev Team     | Fillipe Pereira Bueno de Almeida | <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>            |
+| Scrum Master     | Fillipe Pereira Bueno de Almeida | <a href="https://github.com/FPbueno" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>            |
+|  Dev Team  | Rodrigo Augusto Silva Lima |  <a href="https://github.com/rodrigoaslima/" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a> |
 | Dev Team     | Evellin Amorim da Silva | <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
 | Dev Team | Tiago Santini Da Silva | <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
 | Dev Team | Isaac Souza Santos | <a href="https://github.com/Isaac-Exon" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
