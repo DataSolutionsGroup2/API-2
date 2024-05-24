@@ -9,7 +9,7 @@
 <h1 align="center"> Projeto: 25/03/2024 a 13/06/2024 </h1>  
 
 
-## 📝Requisitos Funcionais
+## 📝 Requisitos Funcionais
 * O gestor deverá ser capaz de carregar o polígono que delimita a área do projeto
 * O gestor deverá ser capaz de carregar a grade de polígonos especificando as dimensões de cada recorte (retângulo)
 * O gestor deverá ser capaz de cadastrar editor e revisor
@@ -19,7 +19,7 @@
 * O gestor deverá ser capaz de gerar estatísticas de quantidade de polígonos mapeados, quantidade de correções e de área de polígonos mapeados por editor
 * O gestor deverá ser capaz de visualizar e exportar relatórios com as estatísticas no formato PDF.
 
-## 📚Requisitos Não Funcionais
+## 📚 Requisitos Não Funcionais
 * Documentação no GitHub: repositório do código fonte de cada sprint, descrição do projeto, link para cada entrega de sprint, backlog do produto, backlog de cada sprint, requisitos do cliente (user stories), prints das telas ou link para o portal, burndown de cada sprint mostrando funcionalidades (quantidade de requisitos) implementadas versus tempo,tecnologias utilizadas e membros da equipe (link para o GitHub de cada membro)
 * Utilizar o Trello para gerenciar o backlog do produto. Preferencialmente fazer a integração entre o Trello e GitHub
 * No Trello, cada cartão representa uma tarefa ou uma história de usuário
@@ -32,14 +32,31 @@
 * Armazenamento: SGBD PostgreSQL;
 * Autenticação de usuário.
 
-<h2>💡Sobre o Projeto:</h2>
+<h2>💡 Sobre o Projeto:</h2>
 
 Desenvolver um programa de gestão de projetos eficiente e fácil de usar que permita aos usuários gerenciar, atualizar e colaborar em projetos de qualquer escala. Onde a principal função será monitorar e evidenciar em gráficos os relatorios de cada agente, da área percorrida e atividades realizadas dentro da geometria solicitada e demandada pelo Gestor de Projetos. Ou seja o principal objetivio é criar um sistema onde é possivel realizar relatorios diarios sobre atividades exercidas e realizadas separando elas pontualmente a cada usuario criado e utilizado no sistema, projeto desenvolvido justamente para resolver o problema de gestão em projetos de grande escala. 
 
-<h2>⚙️ Instalação</h2>
+## ⚙️ Instalação
 
+Primeiro clone o repositório do github e abra-o no `VSCode`
+```
+git clone https://github.com/DataSolutionsGroup2/API-2/ .
 
-### Entregas
+code .
+```
+Após abrir a pasta abra o terminal e instale todas as dependências para rodar o projeto da pasta `front-end` e da pasta `back-end`, siga os passos de comandos à baixo:
+```
+cd .\front-end\
+npm i
+cd ..
+
+cd .\back-end\
+npm i
+cd ..
+```
+Depois..
+
+### Entregas 
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
 :---------: | :------:    | :-------:          | :-------:
 01          | 25/03 - 17/04   | ✅                | <a href="Sprint 1/README.md">Sprint 1</a>
