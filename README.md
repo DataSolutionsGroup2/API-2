@@ -165,10 +165,16 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
 <img src="/Images/Backlog.png" alt="backlog" width="1200">
-  
+
+<h2>Protótipo 🔧</h2>
+Aqui temos o nosso prototipo implementado no projeto da tela de login.
+
+<img src="/Images/LoginV1.jfif" alt="Prototipo" width="1200">
+Após a ideia ser aceita pelo grupo decidimos então dar continuidade ao desenvolvimento da tela de login incrementando um pouco da personalidade do nosso cliente utilizando a paleta de cores deles, chegando na versão final até o momento.
+<img src="/Images/LoginV2.png" alt="LoginV1" width="1200">
 <span id="UML"></span>
 <h1 id="UML">⚙️UML</h1>
-<p>Aqui temos o UML de casos de uso do nosso projeto de como funciona a gestão do projeto através do Gestor.</p>
+<p>Aqui temos o UML de casos de uso do nosso projeto com uma visão do funcionamento de perspectiva externa.</p>
 <img src="/Images/caso_de_uso.jpeg" alt="UML" width="1100" height="600">
 
 <span id="burndown"></span>
