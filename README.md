@@ -228,12 +228,22 @@ Primeiramente aqui temos como as tasks foram divididas pelo nosso Scrum Master c
 <span id="pbacklog2"></span>
 <h2>✏️ Product Backlog</h2>
 <p>Como cometemos alguns erros na entrega passada no quesito definir a prioridade como basico ao invés de baixo nessa sprint resolvemos esse erro.</p>
-<img src="/Images/ProductBackLog2.jfif" alt="product backlog">
+<img src="/Images/ProductBackLog2.jfif" alt="product backlog" width="1200">
 
 <h2 id="projeto2">Projeto:</h2>
-Aqui teremos o que foi feito nessa sprint e todas a funcionalidades implementadas no projeto até o momento.
+Começando com uma das primeiras implementações feitas nessa sprint temos a criação de usuarios no banco de dados, que consiste em um post que passa os parametros de criação do usuario em um JSON.
+<img src="/Images/CriarUsuarioBE.png" alt="CriarUsuarioBE" width="1200">
 
-<span id="burndown"></span>
+Fizemos também um get na tabela tbgrade_atuacao filtrando por regiao e passando o analista que queremos ver, essa consulta serve para vermos todas as atribuições que um analista tem em uma determinada cidade.
+<img src="/Images/getAnalistaBE.png" alt="CriarUsuarioBE" width="1200">
+
+Temos também um put que consiste em atualizar um usuario já existente no sistema.
+<img src="/Images/putUsuarioBE.png" alt="CriarUsuarioBE" width="1200">
+
+E nossa ultima implementação feita no sistema foi um Delete que exclui um usuario existente na tabela.
+<img src="/Images/deleteUserBE.png" alt="CriarUsuarioBE" width="1200">
+
+<span id="burndown2"></span>
 <h2>⚙️Burndown</h2>
 <p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
 <img src="/Images/Burndown2.jfif" alt="burndown" width="1200" >
@@ -245,3 +255,18 @@ Aqui teremos o que foi feito nessa sprint e todas a funcionalidades implementada
 
 <h3 id="entrega2">Video do Projeto</h3>
 <a href="https://youtu.be/cIjC-j5Lv38" target="_blank">Video completo Sprint 2 </a>
+
+<h1 align="center"> Sprint 3 - 20/05 a 12/06 </h1>  > Status: Developing ⚠️
+<p align="center"> 
+    <a href="#burndown3">Burndown</a> |
+    <a href="#pbacklog3">Product Backlog</a> | 
+    <a href="#review3">Sprint Review</a> |
+    <a href="#trello3">Trello</a> |
+    <a href="#projeto3">Projeto</a> |
+    <a href="#entrega3">Vídeo</a>
+
+  ## Resumo:
+  Na sprint passada erramos em alguns aspectos no projeto no quesito compreensão do que era para ser entregue, mas nessa sprint terminamos todo o resto que nos faltam, conectamos o BackEnd com o FrontEnd fizemos o resto das requisições que faltavam e fizemos alguns ajustes no FrontEnd do projeto para que tudo ficasse o melhor possível e consertamos tudo que não estava de acordo com a visão do cliente.
+
+  <h2 id="trello3">Trello</h2>
+  Acabamos por decidir trocar nosso Scrum Master portanto é possivel notar uma pequena diferença na forma que as tarefas foram criadas nessa sprint.
