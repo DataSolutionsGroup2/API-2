@@ -168,7 +168,7 @@ Após algumas reuniões com o cliente tentando entender a real necessidade dele 
 portanto fizemos 4 telas sendo elas 1 de login e outras 3 de um usuário já logado.
 
 <span id="backlog"></span>
-<h2>⚙️Backlog</h2>
+<h2>⚙️Backlog [TROCAR IMAGEM]</h2>
 <p>Tabela do backlog do projeto.</p>
 <img src="/Images/Backlog.png" alt="backlog" width="1200">
 
