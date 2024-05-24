@@ -153,20 +153,22 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
  
 <h1 id="sprint1"align="center"> Sprint 1: 25/03/2024 a 17/04/2024 </h1> > Status: Check ✅
 
-<p align="center"> 
+<p align="center">
+  <a href="#prototipo">Protótipo</a> |
     <a href="#backlog">Backlog</a> |
     <a href="#burndown">Burndown</a> |
   <a href="#UML">UML</a> |
     <a href="#pbacklog">Product Backlog</a> | 
     <a href="#review">Sprint Review</a> |
-    <a href="#entrega1">Video</a>
+    <a href="#entrega1">Video</a> 
+    </p>
 
 <span id="backlog"></span>
 <h2>⚙️Backlog</h2>
 <p>Tabela do backlog do projeto.</p>
 <img src="/Images/Backlog.png" alt="backlog" width="1200">
 
-<h2>Protótipo 🔧</h2>
+<h2 id="prototipo">Protótipo 🔧</h2>
 Aqui temos o nosso prototipo implementado no projeto da tela de login.
 
 <img src="/Images/LoginV1.jfif" alt="Prototipo" width="1200">
@@ -194,4 +196,20 @@ Após a ideia ser aceita pelo grupo decidimos então dar continuidade ao desenvo
 
 
 <h3 id="entrega1">Video do Projeto</h3>
-<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a>
+<a href="https://youtu.be/TVE2tWdRy30" target="_blank">Video completo Sprint 1 </a> 
+
+<h1 id="sprint2" align="center"> Sprint 2 - 22/04/2024 a 15/05/2024 </h1> > Status: Check ✅
+
+<p align="center"> 
+    <a href="#burndown2">Burndown</a> |
+    <a href="#pbacklog2">Product Backlog</a> | 
+    <a href="#review2">Sprint Review</a> |
+    <a href="#trello1">Trello</a> |
+    <a href="#entrega2">Vídeo</a>
+
+## Resumo:
+Como na Sprint passada focamos demais na entrega de um Front-End descente acabamos que por sua vez negligenciando a parte de Back End do projeto, então em grupo decidimos focar unicamente em entregas de Back End nessa Sprint com requisições ao Banco de dados de Get, Post, Put e Delete.
+
+<h2 id="trello1">Trello</h2>
+Primeiramente aqui temos como as tasks foram divididas pelo nosso Scrum Master com a utilização da ferramenta trello pra gerenciar as tarefas e implementações a serem feitas no projeto.
+<img src="/Images/trelloSprint2.png" alt="trello" width="1200">
