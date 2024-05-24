@@ -38,13 +38,13 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 
 ## ⚙️ Instalação
 
-Primeiro clone o repositório do github e abra-o no `VSCode`
+Primeiro crie uma pasta em sua área de trabalho e abrindo ela com o `cmd` clone o repositório do github e abra-o no `VSCode` com os codigos na sequencia
 ```
 git clone https://github.com/DataSolutionsGroup2/API-2/ .
 
 code .
 ```
-Após abrir a pasta abra o terminal e instale todas as dependências para rodar o projeto da pasta `front-end` e da pasta `back-end`, siga os passos de comandos à baixo:
+Após abrir a pasta no `VSCode` abra o terminal e instale todas as dependências para rodar o projeto da pasta `front-end` e da pasta `back-end`, siga os passos de comandos à baixo:
 ```
 cd .\front-end\
 npm i
@@ -54,7 +54,18 @@ cd .\back-end\
 npm i
 cd ..
 ```
-Depois..
+Após realizar a instalação de dependências do projeto, é necessario subir o servidor do `front-end` e do `back-end` para que a aplicação funcione corretamente.
+```
+cd .\front-end\
+npm run dev
+
+abra outro terminal e repita o mesmo na pasta back-end.
+
+cd .\back-end\
+npm run dev
+```
+Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, utilizamos a plataforma `Heroku` para hospedar o servidor gratuitamente.
+
 
 ### Entregas 
 **Sprint**  | **Inicio / Fim** | **Status**         | **Link**
