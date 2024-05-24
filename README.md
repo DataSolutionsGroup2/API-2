@@ -214,12 +214,34 @@ E nossa ultima implementação nessa entrega totalizando as 4 telas sendo 1 de l
     <a href="#burndown2">Burndown</a> |
     <a href="#pbacklog2">Product Backlog</a> | 
     <a href="#review2">Sprint Review</a> |
-    <a href="#trello1">Trello</a> |
+    <a href="#trello2">Trello</a> |
+    <a href="#projeto2">Projeto</a> |
     <a href="#entrega2">Vídeo</a>
 
 ## Resumo:
 Como na Sprint passada focamos demais na entrega de um Front-End descente acabamos que por sua vez negligenciando a parte de Back End do projeto, então em grupo decidimos focar unicamente em entregas de Back End nessa Sprint com requisições ao Banco de dados de Get, Post, Put e Delete.
 
-<h2 id="trello1">Trello</h2>
+<h2 id="trello2">Trello</h2>
 Primeiramente aqui temos como as tasks foram divididas pelo nosso Scrum Master com a utilização da ferramenta trello pra gerenciar as tarefas e implementações a serem feitas no projeto.
 <img src="/Images/trelloSprint2.png" alt="trello" width="1200">
+
+<span id="pbacklog2"></span>
+<h2>✏️ Product Backlog</h2>
+<p>Como cometemos alguns erros na entrega passada no quesito definir a prioridade como basico ao invés de baixo nessa sprint resolvemos esse erro.</p>
+<img src="/Images/ProductBackLog2.jfif" alt="product backlog">
+
+<h2 id="projeto2">Projeto:</h2>
+Aqui teremos o que foi feito nessa sprint e todas a funcionalidades implementadas no projeto até o momento.
+
+<span id="burndown"></span>
+<h2>⚙️Burndown</h2>
+<p>Aqui temos o gráfico do burndown com a linha ideal e a linha do desempenho da nossa equipe nas conclusões das atividades introduzidas no product backlog</p>
+<img src="/Images/Burndown2.jfif" alt="burndown" width="1200" >
+
+<span id="review2"></span>
+<h2>Sprint review</h2>
+<p>Aqui temos a Sprint Review dessa sprint, houveram poucas mudanças pois não conseguimos consertar alguns de nosso erros.</p>
+<img src="/Images/SprinReview2.jfif" alt="Sprint Review" width="1200" >
+
+<h3 id="entrega2">Video do Projeto</h3>
+<a href="https://youtu.be/cIjC-j5Lv38" target="_blank">Video completo Sprint 2 </a>
