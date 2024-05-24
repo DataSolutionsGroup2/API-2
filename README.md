@@ -72,3 +72,6 @@ Desenvolver um programa de gestão de projetos eficiente e fácil de usar que pe
 | Dev Team     | Evellin Amorim da Silva | <a href="https://github.com/evellsil" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
 | Dev Team | Tiago Santini Da Silva | <a href="https://github.com/TiagoSan23" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
 | Dev Team | Isaac Souza Santos | <a href="https://github.com/Isaac-Exon" target="_blank"><img src="/Images/github_icon.png" width=20px height=20px align="center"></a>        |
+
+<img src="https://contrib.rocks/image?repo=DataSolutionsGroup2/API-2&user=FPBueno"/>
+
