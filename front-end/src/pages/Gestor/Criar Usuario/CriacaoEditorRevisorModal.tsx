@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import GestorPage from "../../components/manager/GestorPage";
+import GestorPage from "../../../components/manager/GestorPage";
 
 export default function CriacaoEdidorRevisorModal() {
   const [nome, setNome] = useState("");

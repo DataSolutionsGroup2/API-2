@@ -10,11 +10,13 @@ import GetAnalistaController from "../controllers/GetAnalistaController";
 import AuthController from "../controllers/AuthController";
 import pool from "../controllers/db";
 import InsertUsuario from "../controllers/InsertUser";
+import GetGradeAtuacao from "../controllers/GetTbGradeAtuacaoCidades";
 
 const router = express.Router();
 const gradeAtuacaoController = new GradeAtuacaoController(pool);
 const deleteUserController = new DeleteUsuarios();
 const insertUserController = new InsertUsuario();
+const selectGradeAtuacao = new GetGradeAtuacao();
 
 const createUserController = new CreateUserController();
 const getAnalistaController = new GetAnalistaController();
@@ -47,5 +49,6 @@ router.put("/usuarios", u1);
 router.post("/usuarios", insertUserController.insertUsuario);
 router.delete("/usuarios", deleteUserController.deleteUsuario),
   router.post("/login", authController.getLoginUsuario.bind(authController));
+router.get("/Gradeatuacao", selectGradeAtuacao.getGradeAtuacao);
 
 export default router;
