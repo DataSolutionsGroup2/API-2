@@ -1,36 +1,19 @@
-import { DataGrid, GridFilterModel } from "@mui/x-data-grid";
-import GestorPage from "../manager/GestorPage";
+import { AgGridReact } from "ag-grid-react";
+import "ag-grid-community/styles/ag-grid.css";
+import "ag-grid-community/styles/ag-theme-alpine.css";
 import { useEffect, useState } from "react";
-
-const columns = [
-  { field: "id", headerName: "ID", width: 90 },
-  {
-    field: "cidade",
-    headerName: "Cidade",
-    width: 150,
-  },
-  {
-    field: "atribuicao",
-    headerName: "Atribuição",
-    width: 150,
-  },
-  { field: "status", headerName: "Status", width: 130 },
-  { field: "validacao", headerName: "Validação", width: 150 },
-  { field: "area_km2", headerName: "Área (km²)", width: 150 },
-];
+import GestorPage from "../manager/GestorPage";
+import { ColDef } from "ag-grid-community";
 
 const PesquisaDataGrid = () => {
-  const [rows, setRows] = useState([]);
-  const [filterModel, setFilterModel] = useState<GridFilterModel>({
-    items: [],
-  });
+  const [rowData, setRowData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:3100/Gradeatuacao");
         const data = await response.json();
-        setRows(data);
+        setRowData(data);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);
       }
@@ -39,12 +22,66 @@ const PesquisaDataGrid = () => {
     fetchData();
   }, []);
 
-  const handleFilterModelChange = (newModel: GridFilterModel) => {
-    setFilterModel(newModel);
-  };
+  const columnDefs: ColDef[] = [
+    {
+      field: "id",
+      headerName: "ID",
+      width: 90,
+      filter: "agNumberColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+    {
+      field: "cidade",
+      headerName: "Cidade",
+      width: 150,
+      filter: "agTextColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+    {
+      field: "atribuicao",
+      headerName: "Atribuição",
+      width: 150,
+      filter: "agTextColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+    {
+      field: "status",
+      headerName: "Status",
+      width: 130,
+      filter: "agTextColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+    {
+      field: "validacao",
+      headerName: "Validação",
+      width: 150,
+      filter: "agTextColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+    {
+      field: "area_km2",
+      headerName: "Área (km²)",
+      width: 150,
+      filter: "agNumberColumnFilter",
+      floatingFilter: true, // Adiciona filtro flutuante
+    },
+  ];
 
-  const handleAddFilter = () => {
-    console.log("Add Filter clicked");
+  const localizedTexts = {
+    filterOoo: "Filtrar...",
+    equals: "Igual a",
+    notEqual: "Diferente de",
+    startsWith: "Começa com",
+    endsWith: "Termina com",
+    contains: "Contém",
+    notContains: "Não contém",
+    filter: "Filtro",
+    applyFilter: "Aplicar Filtro",
+    clearFilter: "Limpar Filtro",
+    resetFilter: "Redefinir Filtro",
+    blank: "Em branco",
+    // Usando "Não está vazio" para traduzir "não em branco"
+    notblank: "Não está vazio",
   };
 
   return (
@@ -68,20 +105,16 @@ const PesquisaDataGrid = () => {
             maxWidth: 1200,
           }}
         ></div>
-        <div style={{ width: "100%", maxWidth: 1200 }}>
-          <DataGrid
-            rows={rows}
-            columns={columns}
-            filterModel={filterModel}
-            onFilterModelChange={handleFilterModelChange}
-            componentsProps={{
-              toolbar: {
-                filterButton: {
-                  onClick: handleAddFilter,
-                },
-              },
-            }}
-          />
+        <div
+          className="ag-theme-alpine"
+          style={{ height: 400, width: "100%", maxWidth: 1200 }}
+        >
+          <AgGridReact
+            rowData={rowData}
+            columnDefs={columnDefs}
+            defaultColDef={{ flex: 1 }}
+            localeText={localizedTexts}
+          ></AgGridReact>
         </div>
       </div>
     </div>

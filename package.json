@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ag-grid-community/core": "^31.3.2",
+    "@ag-grid-community/react": "^31.3.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.18",
     "@mui/x-data-grid": "^6.20.0",
+    "@mui/x-data-grid-pro": "^7.5.1",
+    "ag-grid-community": "^31.3.2",
+    "ag-grid-react": "^31.3.2",
     "axios": "^1.6.8",
     "echarts": "^5.5.0",
     "react": "^18.2.0",
