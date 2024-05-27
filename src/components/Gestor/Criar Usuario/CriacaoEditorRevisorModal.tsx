@@ -47,7 +47,7 @@ export default function CriacaoEdidorRevisorModal() {
       <div className="flex flex-col justify-center items-center h-screen">
         <div className="w-full max-w-md border-2 border-[#ca5f42] rounded-lg h-auto p-4 bg-white">
           <header className="mb-2 bg-gradient-to-r from-blue-500 to-orange-700 rounded-lg  py-4 text-white text-center">
-            <h1 className="text-xl font-bold ">teste</h1>
+            <h1 className="text-xl font-bold ">Criar usuário</h1>
           </header>
           <div className="flex flex-col mb-2">
             <label htmlFor="usuario" className="font-bold mb-1">
