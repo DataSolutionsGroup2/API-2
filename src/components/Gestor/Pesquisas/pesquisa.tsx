@@ -28,42 +28,39 @@ const PesquisaDataGrid = () => {
       headerName: "ID",
       width: 90,
       filter: "agNumberColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
     },
     {
       field: "cidade",
       headerName: "Cidade",
       width: 150,
       filter: "agTextColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
+      floatingFilter: true,
     },
     {
       field: "atribuicao",
       headerName: "Atribuição",
       width: 150,
       filter: "agTextColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
+      floatingFilter: true,
     },
     {
       field: "status",
       headerName: "Status",
       width: 130,
       filter: "agTextColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
+      floatingFilter: true,
     },
     {
       field: "validacao",
       headerName: "Validação",
       width: 150,
       filter: "agTextColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
     },
     {
       field: "area_km2",
       headerName: "Área (km²)",
       width: 150,
       filter: "agNumberColumnFilter",
-      floatingFilter: true, // Adiciona filtro flutuante
     },
   ];
 
@@ -80,7 +77,6 @@ const PesquisaDataGrid = () => {
     clearFilter: "Limpar Filtro",
     resetFilter: "Redefinir Filtro",
     blank: "Em branco",
-    // Usando "Não está vazio" para traduzir "não em branco"
     notblank: "Não está vazio",
   };
 
