@@ -77,6 +77,7 @@ const PesquisaDataGrid = () => {
     clearFilter: "Limpar Filtro",
     resetFilter: "Redefinir Filtro",
     blank: "Em branco",
+
     notblank: "Não está vazio",
   };
 
@@ -103,10 +104,11 @@ const PesquisaDataGrid = () => {
         ></div>
         <div
           className="ag-theme-alpine"
-          style={{ height: 400, width: "100%", maxWidth: 1200 }}
+          style={{ height: 600, width: "100%", maxWidth: 1200 }}
         >
           <AgGridReact
             rowData={rowData}
+            pagination={true}
             columnDefs={columnDefs}
             defaultColDef={{ flex: 1 }}
             localeText={localizedTexts}
