@@ -1,11 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./pages/LoginPage/LoginPage";
-import GestorPage from "./components/manager/GestorPage";
-
+import GestorPage from "./components/Gestor/manager/GestorPage";
+import CriacaoEdidorRevisorModal from "./components/Gestor/Criar Usuario/CriacaoEditorRevisorModal";
+import PesquisaDataGrid from "./components/Gestor/Pesquisas/pesquisa";
 import PageGestor from "./pages/PaginaGestor";
-
-import CriacaoEdidorRevisorModal from "./pages/Gestor/Criar Usuario/CriacaoEditorRevisorModal";
-import PesquisaDataGrid from "./pages/Gestor/Pesquisas/pesquisa";
 
 function Rotas() {
   return (
