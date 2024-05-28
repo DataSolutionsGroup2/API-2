@@ -62,8 +62,6 @@ create table if not exists grids (
    idproject integer REFERENCES projects(id),
    user_editor integer REFERENCES users(id),
    user_revisor integer REFERENCES users(id),
-   atribuicao varchar(25),
-   validacao varchar(25),
    status varchar(25),
    status_val varchar(25),
    obs varchar(250),
@@ -104,9 +102,9 @@ with (
   encoding 'UTF-8'
 );
 
--- Ler o arquivo CSV e carregar na tabela changes
-copy changes
-from 'D:\servidor\src\assets\csv\changes.csv'
+-- Ler o arquivo CSV e carregar na tabela pointers
+copy pointers
+from 'D:\servidor\src\assets\csv\pointers.csv'
 with (
   format csv,
   header true,
@@ -115,9 +113,9 @@ with (
   encoding 'UTF-8'
 );
 
--- Ler o arquivo CSV e carregar na tabela pointers
-copy pointers
-from 'D:\servidor\src\assets\csv\pointers.csv'
+-- Ler o arquivo CSV e carregar na tabela grids
+copy grids
+from 'D:\servidor\src\assets\csv\grids.csv'
 with (
   format csv,
   header true,
