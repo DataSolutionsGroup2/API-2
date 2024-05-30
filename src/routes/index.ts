@@ -2,7 +2,7 @@ import express from "express";
 
 import GradeAtuacaoController from "../controllers/GradeAtuacaoController";
 import DeleteUsuarios from "../controllers/DeleteUserController";
-import u1 from "../controllers/PutUsuarios"; // Supondo que seja o controlador de atualização de usuário
+import u1 from "../controllers/PutUsuarios";
 
 import CreateUserController from "../controllers/CreateUserController";
 import GetAnalistaController from "../controllers/GetAnalistaController";
@@ -11,17 +11,17 @@ import AuthController from "../controllers/AuthController";
 import pool from "../controllers/db";
 import InsertUsuario from "../controllers/InsertUser";
 import GetGradeAtuacao from "../controllers/GetTbGradeAtuacaoCidades";
+import InsertOrUpdateAtribuicao from "../controllers/InserAtribuicaoTbGrade";
 
 const router = express.Router();
 const gradeAtuacaoController = new GradeAtuacaoController(pool);
 const deleteUserController = new DeleteUsuarios();
 const insertUserController = new InsertUsuario();
 const selectGradeAtuacao = new GetGradeAtuacao();
-
 const createUserController = new CreateUserController();
 const getAnalistaController = new GetAnalistaController();
-
 const authController = new AuthController(pool);
+const insertUpdateAnalistaController = new InsertOrUpdateAtribuicao();
 
 router.get(
   "/grade-atuacao/analista",
@@ -50,5 +50,9 @@ router.post("/usuarios", insertUserController.insertUsuario);
 router.delete("/usuarios", deleteUserController.deleteUsuario),
   router.post("/login", authController.getLoginUsuario.bind(authController));
 router.get("/Gradeatuacao", selectGradeAtuacao.getGradeAtuacao);
+router.post(
+  "/Gradeatuacao",
+  insertUpdateAnalistaController.insertOrUpdateAtribuicao
+);
 
 export default router;
