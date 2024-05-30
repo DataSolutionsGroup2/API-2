@@ -14,7 +14,11 @@ const GestorPage = () => {
       onClick: handleButton,
     },
     {
-      name: "Área de trabalho",
+      name: "Área do Editor",
+      onClick: () => navigate("/pesquisa"),
+    },
+    {
+      name: "Área do Revisor",
       onClick: () => navigate("/pesquisa"),
     },
     {
