@@ -51,6 +51,13 @@ const PesquisaDataGrid = () => {
       floatingFilter: true,
     },
     {
+      field: "status_val",
+      headerName: "Status_val",
+      width: 130,
+      filter: "agTextColumnFilter",
+      floatingFilter: true,
+    },
+    {
       field: "validacao",
       headerName: "Validação",
       width: 150,
