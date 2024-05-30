@@ -14,7 +14,7 @@ const GestorPage = () => {
       onClick: handleButton,
     },
     {
-      name: "Pesquisar",
+      name: "Área de trabalho",
       onClick: () => navigate("/pesquisa"),
     },
     {

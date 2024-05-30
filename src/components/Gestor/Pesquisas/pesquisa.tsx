@@ -4,6 +4,7 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 import { useEffect, useState } from "react";
 import GestorPage from "../manager/GestorPage";
 import { ColDef } from "ag-grid-community";
+import { WorkspaceDefinition } from "./workspaceDefinition";
 
 const PesquisaDataGrid = () => {
   const [rowData, setRowData] = useState([]);
@@ -112,8 +113,12 @@ const PesquisaDataGrid = () => {
         ></div>
         <div
           className="ag-theme-alpine"
-          style={{ height: 600, width: "100%", maxWidth: 1200 }}
+          style={{ height: 450, width: "100%", maxWidth: 1000 }}
         >
+          <div className="text-[20px] font-bold p-2">
+            <h1>Area de trabalho dos analistas</h1>
+          </div>
+
           <AgGridReact
             rowData={rowData}
             pagination={true}
@@ -121,6 +126,10 @@ const PesquisaDataGrid = () => {
             defaultColDef={{ flex: 1 }}
             localeText={localizedTexts}
           ></AgGridReact>
+        </div>
+        <div className="text-[15px] mt-[40px] p-2 font-bold">
+          <h1>Escolha a área para o analista</h1>
+          <WorkspaceDefinition />
         </div>
       </div>
     </div>
