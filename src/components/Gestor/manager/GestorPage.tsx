@@ -10,6 +10,10 @@ const GestorPage = () => {
 
   const buttons = [
     {
+      name: "Home",
+      onClick: () => navigate("/pagegestor"),
+    },
+    {
       name: "Criar Revisor/Editor",
       onClick: handleButton,
     },
@@ -20,10 +24,6 @@ const GestorPage = () => {
     {
       name: "Área do Revisor",
       onClick: () => navigate("/pesquisa"),
-    },
-    {
-      name: "Home",
-      onClick: () => navigate("/pagegestor"),
     },
   ];
 
