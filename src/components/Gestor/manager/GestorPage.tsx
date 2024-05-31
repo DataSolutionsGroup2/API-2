@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import HeaderComponent from "../HeaderComponent";
+import HeaderComponent from "../FaixaMenuGestor.tsx/BoxButton";
 
 const GestorPage = () => {
   const navigate = useNavigate();

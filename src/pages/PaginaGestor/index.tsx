@@ -1,5 +1,5 @@
 import FaixaGestor from "../../components/Gestor/FaixaMenuGestor.tsx/FaixaGestor";
-import { Graphic } from "../../components/Gestor/Statistics/Graphic";
+import { GraphicNumberPol } from "../../components/Gestor/Statistics/GraphicQuantityofGraphs";
 import GestorPage from "../../components/Gestor/manager/GestorPage";
 
 export default function PageGestor() {
@@ -9,7 +9,7 @@ export default function PageGestor() {
       <div className="flex ">
         <GestorPage />
         <div className="ml-5 mt-6">
-          <Graphic />
+          <GraphicNumberPol />
         </div>
       </div>
     </div>
