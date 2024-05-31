@@ -12,8 +12,6 @@ class GetGradeAtuacao {
       UNION ALL
       SELECT 'Taubate' AS cidade, *
       FROM tbgrade_atuacao_taubate;
-      
-       
       `;
 
       const result = await pool.query(queryText);

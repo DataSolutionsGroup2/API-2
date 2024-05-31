@@ -12,6 +12,7 @@ import pool from "../controllers/db";
 import InsertUsuario from "../controllers/InsertUser";
 import GetGradeAtuacao from "../controllers/GetTbGradeAtuacaoCidades";
 import InsertOrUpdateAtribuicao from "../controllers/InserAtribuicaoTbGrade";
+import GetStatistcs from "../controllers/GetStastistcs";
 
 const router = express.Router();
 const gradeAtuacaoController = new GradeAtuacaoController(pool);
@@ -22,6 +23,8 @@ const createUserController = new CreateUserController();
 const getAnalistaController = new GetAnalistaController();
 const authController = new AuthController(pool);
 const insertUpdateAnalistaController = new InsertOrUpdateAtribuicao();
+const getStatistcs = new GetStatistcs();
+const getAreaStatistcs = new GetStatistcs();
 
 router.get(
   "/grade-atuacao/analista",
@@ -54,5 +57,6 @@ router.post(
   "/Gradeatuacao",
   insertUpdateAnalistaController.insertOrUpdateAtribuicao
 );
-
+router.get("/statistcs", getStatistcs.getStatistics);
+router.get("/tbaoistatistcs", getAreaStatistcs.getAreaStatistics);
 export default router;
