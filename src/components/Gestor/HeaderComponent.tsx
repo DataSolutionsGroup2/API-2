@@ -10,6 +10,7 @@ interface HeaderProps {
 const HeaderComponent = ({ buttons }: HeaderProps) => {
   return (
     <div className=" flex-col h-auto w-[250px] bg-blue-600 rounded-br-lg">
+      <img src="/src/imagens/logotipo_empresa_p.jpg" alt="" />
       <div className="p-4">
         <ul>
           {buttons.map((button, index) => (
