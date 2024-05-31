@@ -69,5 +69,5 @@ export const GraphicNumberPol: React.FC = () => {
     };
   }, [regionData]);
 
-  return <div id="chart" style={{ width: "600px", height: "400px" }} />;
+  return <div id="chart" style={{ width: "720px", height: "400px" }} />;
 };

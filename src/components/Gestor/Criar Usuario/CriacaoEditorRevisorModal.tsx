@@ -42,8 +42,8 @@ export default function CriacaoEdidorRevisorModal() {
         <GestorPage />
 
         <div className="flex w-full  ml-[350px] mt-4">
-          <div className="w-full max-w-md border-2 border-[#ca5f42] rounded-lg h-auto p-4 bg-white">
-            <header className="mb-2 bg-gradient-to-r from-blue-500 to-orange-700 rounded-lg  py-4 text-white text-center">
+          <div className="w-full max-w-md border-2 border-blue-800 rounded-lg h-auto p-4 bg-white">
+            <header className="mb-2 bg-gradient-to-r from-blue-500 to-blue-800 rounded-lg  py-4 text-white text-center">
               <h1 className="text-xl font-bold ">Criar usuário</h1>
             </header>
             <div className="flex flex-col mb-2">
@@ -55,7 +55,7 @@ export default function CriacaoEdidorRevisorModal() {
                 id="usuario"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
-                className="border-2 border-[#ca5f42] rounded-lg px-2 py-2"
+                className="border-2 border-blue-600 rounded-lg px-2 py-2"
               />
             </div>
             <div className="flex flex-col mb-2">
@@ -64,7 +64,7 @@ export default function CriacaoEdidorRevisorModal() {
               </label>
               <select
                 id="funcao"
-                className="border-2 border-[#ca5f42] rounded-lg px-2 py-2"
+                className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
                 value={funcao}
                 onChange={(e) => setFuncao(e.target.value)}
               >
@@ -85,7 +85,7 @@ export default function CriacaoEdidorRevisorModal() {
                 id="senha"
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}
-                className="border-2 border-[#ca5f42] rounded-lg px-2 py-2"
+                className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
               />
             </div>
             <div className="flex flex-col mb-2">
@@ -97,13 +97,13 @@ export default function CriacaoEdidorRevisorModal() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="border-2 border-[#ca5f42] rounded-lg px-2 py-2"
+                className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
               />
             </div>
             <button
               type="button"
               onClick={criarUsuario}
-              className="mt-3 w-full bg-[#ca5f42] text-white font-bold py-2 rounded-lg hover:bg-[#355ea9] transition-colors"
+              className="mt-3 w-full bg- border-blue-600 text-white font-bold py-2 rounded-lg hover:bg-[#355ea9] transition-colors"
             >
               Criar
             </button>
