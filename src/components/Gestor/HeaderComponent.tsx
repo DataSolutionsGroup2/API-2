@@ -16,7 +16,7 @@ const HeaderComponent = ({ buttons }: HeaderProps) => {
           {buttons.map((button, index) => (
             <li key={index}>
               <button
-                className="p-2 text-white font-bold hover:bg-blue-800 m-2 rounded-xl"
+                className="w-full p-2 text-left text-white font-bold hover:bg-white hover:text-blue-800 rounded-xl"
                 onClick={() => {
                   button.onClick();
                 }}
