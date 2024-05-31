@@ -29,7 +29,7 @@ const City = () => {
       },
       series: [
         {
-          name: "Access From",
+          name: "Área",
           type: "pie",
           radius: ["40%", "70%"],
           avoidLabelOverlap: false,
@@ -76,7 +76,7 @@ const City = () => {
 
   return (
     <div>
-      <h1 className="font-bold">Área Total</h1>
+      <h1 className="font-bold text-center">Área Total</h1>
       <div ref={chartRef} style={{ width: "500px", height: "400px" }} />
     </div>
   );
