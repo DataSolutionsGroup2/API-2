@@ -25,6 +25,10 @@ const GestorPage = () => {
       name: "Área do Revisor",
       onClick: () => navigate("/pesquisa"),
     },
+    {
+      name: "Estatísticas dos editores",
+      onClick: () => navigate("/pagestatisticseditor"),
+    },
   ];
 
   return (

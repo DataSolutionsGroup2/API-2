@@ -28,7 +28,7 @@ export function WorkspaceDefinition({ onInsert }) {
 
       if (response.ok) {
         setMessage("Inserção realizada com sucesso!");
-        onInsert(); // Chama a função onInsert passada por prop
+        onInsert();
       } else {
         setMessage("O id não pertence a essa cidade, verifique por favor!");
       }

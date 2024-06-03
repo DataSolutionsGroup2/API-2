@@ -4,6 +4,7 @@ import Login from "./pages/LoginPage/LoginPage";
 import CriacaoEdidorRevisorModal from "./components/Gestor/Criar Usuario/CriacaoEditorRevisorModal";
 import PageGestor from "./pages/PaginaGestor";
 import PesquisaDataGrid from "./components/Gestor/Pesquisas/AreaEditor";
+import StatisticsEditor from "./components/Gestor/StatisticsEditor/PageStatisticsEditor";
 
 function Rotas() {
   return (
@@ -13,6 +14,7 @@ function Rotas() {
       <Route path="/createUser" element={<CriacaoEdidorRevisorModal />} />
       <Route path="/pagegestor" element={<PageGestor />} />
       <Route path="/pesquisa" element={<PesquisaDataGrid />} />
+      <Route path="/pagestatisticseditor" element={<StatisticsEditor />} />
     </Routes>
   );
 }
