@@ -68,7 +68,7 @@ class GetStatistics {
     }
   }
 
-  async getStatusStatistics(req: Request, res: Response) {
+  async getStatusEditorStatistics(req: Request, res: Response) {
     try {
       const statusQuery = `
         SELECT 
@@ -111,6 +111,57 @@ class GetStatistics {
     } catch (error) {
       console.error("Erro ao buscar estatísticas de status:", error);
       res.status(500).json({ error: "Erro ao buscar estatísticas de status." });
+    }
+  }
+
+  async getStatusRevisorStatistics(req: Request, res: Response) {
+    try {
+      const analystStatusQuery = `
+        SELECT 
+          'Taubate' AS cidade,
+          validacao AS analista,
+          SUM(CASE WHEN status_val = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status_val = 'finalizado' THEN 1 ELSE 0 END) AS finalizado
+        FROM 
+          tbgrade_atuacao_taubate
+        GROUP BY cidade, validacao
+
+        UNION ALL
+
+        SELECT 
+          'Cruzeiro' AS cidade,
+          validacao AS analista,
+          SUM(CASE WHEN status_val = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status_val = 'finalizado' THEN 1 ELSE 0 END) AS finalizado
+        FROM 
+          tbgrade_atuacao_cruzeiro
+        GROUP BY cidade, validacao
+
+        UNION ALL
+
+        SELECT 
+          'Atibaia' AS cidade,
+          validacao AS analista,
+          SUM(CASE WHEN status_val = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status_val = 'finalizado' THEN 1 ELSE 0 END) AS finalizado
+        FROM 
+          tbgrade_atuacao_atibaia
+        GROUP BY cidade, validacao;
+      `;
+
+      const analystStatusResult = await pool.query(analystStatusQuery);
+
+      console.log("Analyst Status result:", analystStatusResult.rows);
+
+      res.status(200).json(analystStatusResult.rows);
+    } catch (error) {
+      console.error(
+        "Erro ao buscar estatísticas de status por analista:",
+        error
+      );
+      res
+        .status(500)
+        .json({ error: "Erro ao buscar estatísticas de status por analista." });
     }
   }
 }
