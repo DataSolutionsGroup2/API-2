@@ -256,7 +256,7 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
 <h3 id="entrega2">Video do Projeto</h3>
 <a href="https://youtu.be/cIjC-j5Lv38" target="_blank">Video completo Sprint 2 </a>
 
-<h1 align="center"> Sprint 3 - 20/05 a 12/06 </h1>  > Status: Developing ⚠️
+<h1 id="sprint3"align="center"> Sprint 3 - 20/05 a 12/06 </h1>  > Status: Developing ⚠️
 <p align="center"> 
     <a href="#burndown3">Burndown</a> |
     <a href="#pbacklog3">Product Backlog</a> | 
