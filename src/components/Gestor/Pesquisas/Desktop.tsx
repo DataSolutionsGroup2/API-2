@@ -151,7 +151,7 @@ const PesquisaDataGrid = () => {
           </button>
           <div
             className="ag-theme-alpine ml-20"
-            style={{ height: 450, width: "100%", maxWidth: 1000 }}
+            style={{ height: 400, width: "100%", maxWidth: 1000 }}
           >
             <div className="text-[20px] font-bold p-2 ">
               <h1>Area de trabalho dos analistas</h1>
