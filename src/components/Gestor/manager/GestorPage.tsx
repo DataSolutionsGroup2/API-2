@@ -23,7 +23,7 @@ const GestorPage = () => {
     },
     {
       name: "Área do Revisor",
-      onClick: () => navigate("/pesquisa"),
+      onClick: () => navigate(""),
     },
     {
       name: "Estatísticas dos editores",
