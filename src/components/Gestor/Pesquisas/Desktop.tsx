@@ -6,7 +6,7 @@ import jsPDF from "jspdf";
 import "jspdf-autotable";
 import GestorPage from "../manager/GestorPage";
 import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
-import { WorkspaceDefinition } from "./workspaceDefinition";
+import { WorkspaceDefinition } from "./workspaceDefinitionEditor";
 import { ColDef } from "ag-grid-community";
 
 const PesquisaDataGrid = () => {
@@ -166,7 +166,7 @@ const PesquisaDataGrid = () => {
             ></AgGridReact>
           </div>
           <div className="text-[15px] mt-[40px] p-2 font-bold ml-20">
-            <h1>Escolha a área para o analista</h1>
+            <h1>Escolha a área para o Editor</h1>
             <WorkspaceDefinition onInsert={() => setDataUpdated(true)} />
           </div>
         </div>

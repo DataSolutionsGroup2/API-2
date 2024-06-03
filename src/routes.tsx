@@ -3,9 +3,9 @@ import Login from "./pages/LoginPage/LoginPage";
 import GestorPage from "./components/Gestor/manager/GestorPage";
 import CriacaoEdidorRevisorModal from "./components/Gestor/Criar Usuario/CriacaoEditorRevisorModal";
 import PageGestor from "./pages/PaginaGestor";
-import PesquisaDataGrid from "./components/Gestor/Pesquisas/AreaEditor";
 import PageStatisticscEditor from "./components/Gestor/PagesStatistcs/PageStatisticsEditor";
 import PagestatisticsRevisor from "./components/Gestor/PagesStatistcs/PageStatisticRevisor";
+import PesquisaDataGrid from "./components/Gestor/Pesquisas/Desktop";
 
 function Rotas() {
   return (
