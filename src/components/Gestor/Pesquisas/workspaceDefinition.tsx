@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function WorkspaceDefinition({ onInsert }) {
   const [idValue, setIdValue] = useState("");
@@ -28,14 +28,24 @@ export function WorkspaceDefinition({ onInsert }) {
 
       if (response.ok) {
         setMessage("Inserção realizada com sucesso!");
-        onInsert();
+        onInsert(); // Chama a função onInsert passada por prop
       } else {
-        setMessage("O id não pertence a essa cidade verifique por favor ! ");
+        setMessage("O id não pertence a essa cidade, verifique por favor!");
       }
     } catch (error: unknown) {
       setMessage("Erro ao inserir ou atualizar atribuição.");
     }
   };
+
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => {
+        setMessage("");
+      }, 10000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   return (
     <div className="flex min-w-[1000px] justify-around border-gray-400 border py-3 p-2 space-x-4 rounded-sm">
