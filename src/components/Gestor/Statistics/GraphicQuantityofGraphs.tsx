@@ -39,7 +39,7 @@ export const GraphicNumberPol: React.FC = () => {
       },
       xAxis: {
         type: "value",
-        name: "Área (km²)",
+        name: "Polígonos",
         axisLabel: {
           formatter: "{value}",
         },

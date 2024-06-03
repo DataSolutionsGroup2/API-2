@@ -14,7 +14,7 @@ const GestorPage = () => {
       onClick: () => navigate("/pagegestor"),
     },
     {
-      name: "Criar Revisor/Editor",
+      name: "Criar usuário",
       onClick: handleButton,
     },
     {
