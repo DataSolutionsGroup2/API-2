@@ -67,6 +67,52 @@ class GetStatistics {
       res.status(500).json({ error: "Erro ao buscar estatísticas de área." });
     }
   }
+
+  async getStatusStatistics(req: Request, res: Response) {
+    try {
+      const statusQuery = `
+        SELECT 
+          'Cruzeiro' AS cidade,
+          atribuicao,
+          SUM(CASE WHEN status = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status = 'finalizado' THEN 1 ELSE 0 END) AS finalizado,
+          SUM(CASE WHEN atribuicao IS NULL THEN 1 ELSE 0 END) AS sem_atribuicao
+        FROM tbgrade_atuacao_cruzeiro
+        GROUP BY atribuicao
+
+        UNION ALL
+
+        SELECT 
+          'Atibaia' AS cidade,
+          atribuicao,
+          SUM(CASE WHEN status = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status = 'finalizado' THEN 1 ELSE 0 END) AS finalizado,
+          SUM(CASE WHEN atribuicao IS NULL THEN 1 ELSE 0 END) AS sem_atribuicao
+        FROM tbgrade_atuacao_atibaia
+        GROUP BY atribuicao
+
+        UNION ALL
+
+        SELECT 
+          'Taubate' AS cidade,
+          atribuicao,
+          SUM(CASE WHEN status = 'andamento' THEN 1 ELSE 0 END) AS andamento,
+          SUM(CASE WHEN status = 'finalizado' THEN 1 ELSE 0 END) AS finalizado,
+          SUM(CASE WHEN atribuicao IS NULL THEN 1 ELSE 0 END) AS sem_atribuicao
+        FROM tbgrade_atuacao_taubate
+        GROUP BY atribuicao;
+      `;
+
+      const statusResult = await pool.query(statusQuery);
+
+      console.log("Status result:", statusResult.rows);
+
+      res.status(200).json(statusResult.rows);
+    } catch (error) {
+      console.error("Erro ao buscar estatísticas de status:", error);
+      res.status(500).json({ error: "Erro ao buscar estatísticas de status." });
+    }
+  }
 }
 
 export default GetStatistics;

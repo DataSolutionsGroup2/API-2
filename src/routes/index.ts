@@ -25,6 +25,7 @@ const authController = new AuthController(pool);
 const insertUpdateAnalistaController = new InsertOrUpdateAtribuicao();
 const getStatistcs = new GetStatistcs();
 const getAreaStatistcs = new GetStatistcs();
+const getStatusStatistcs = new GetStatistcs();
 
 router.get(
   "/grade-atuacao/analista",
@@ -59,4 +60,5 @@ router.post(
 );
 router.get("/statistcs", getStatistcs.getStatistics);
 router.get("/tbaoistatistcs", getAreaStatistcs.getAreaStatistics);
+router.get("/tbgradestatus", getStatusStatistcs.getStatusStatistics);
 export default router;
