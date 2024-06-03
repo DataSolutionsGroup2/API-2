@@ -5,7 +5,6 @@ const GraficRevisor = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the server
     const fetchData = async () => {
       try {
         const response = await fetch(

@@ -38,7 +38,6 @@ export const GradeProvider: React.FC = () => {
   );
 };
 
-// Hook personalizado para usar o contexto
 export const useGrade = () => {
   return useContext(GradeContext) as GradeContextProps;
 };
