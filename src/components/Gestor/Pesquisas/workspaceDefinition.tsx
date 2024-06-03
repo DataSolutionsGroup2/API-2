@@ -66,7 +66,7 @@ export function WorkspaceDefinition() {
 
       <button
         onClick={handleInsert}
-        className="py-3 px-6 rounded-sm text-white bg-gradient-to-r from-green-400 to-green-600 hover:from-orange-600 hover:to-orange-700"
+        className="py-3 px-6 rounded-sm text-white bg-gradient-to-r from-blue-400 to-blue-800 hover:from-blue-600 hover:to-blue-900"
       >
         Inserir
       </button>

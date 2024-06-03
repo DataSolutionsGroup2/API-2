@@ -1,14 +1,17 @@
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-import { useEffect, useState } from "react";
-import GestorPage from "../manager/GestorPage";
+import { useEffect, useState, useRef } from "react";
 import { ColDef } from "ag-grid-community";
-import { WorkspaceDefinition } from "./workspaceDefinition";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import GestorPage from "../manager/GestorPage";
 import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
+import { WorkspaceDefinition } from "./workspaceDefinition";
 
 const PesquisaDataGrid = () => {
   const [rowData, setRowData] = useState([]);
+  const gridRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -88,8 +91,25 @@ const PesquisaDataGrid = () => {
     clearFilter: "Limpar Filtro",
     resetFilter: "Redefinir Filtro",
     blank: "Em branco",
-
     notblank: "Não está vazio",
+  };
+
+  const exportToPDF = () => {
+    const doc = new jsPDF();
+    const filteredData = gridRef.current.api
+      .getModel()
+      .rowsToDisplay.map((rowNode) => rowNode.data);
+    const tableColumn = columnDefs.map((colDef) => colDef.headerName);
+    const tableRows = filteredData.map((data) =>
+      columnDefs.map((colDef) => data[colDef.field])
+    );
+
+    doc.autoTable({
+      head: [tableColumn],
+      body: tableRows,
+    });
+
+    doc.save("filtered_data.pdf");
   };
 
   return (
@@ -114,6 +134,12 @@ const PesquisaDataGrid = () => {
               maxWidth: 1200,
             }}
           ></div>
+          <button
+            className=" p-4 rounded-sm border-blue-900 font-bold justify-end ml-[900px]  text-white bg-gradient-to-r from-blue-400 to-blue-800 hover:from-blue-600 hover:to-blue-900"
+            onClick={exportToPDF}
+          >
+            Exportar para PDF
+          </button>
           <div
             className="ag-theme-alpine ml-20"
             style={{ height: 450, width: "100%", maxWidth: 1000 }}
@@ -121,8 +147,8 @@ const PesquisaDataGrid = () => {
             <div className="text-[20px] font-bold p-2 ">
               <h1>Area de trabalho dos analistas</h1>
             </div>
-
             <AgGridReact
+              ref={gridRef}
               rowData={rowData}
               pagination={true}
               columnDefs={columnDefs}

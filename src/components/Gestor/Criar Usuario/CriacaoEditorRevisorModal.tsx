@@ -27,11 +27,13 @@ export default function CriacaoEdidorRevisorModal() {
       setFuncao("");
 
       setSucesso(true);
+      setErro("");
 
       setTimeout(() => setSucesso(false), 3000);
     } catch (error) {
       console.error("Erro ao criar usuário:", error);
       setErro("Erro ao criar usuário.");
+      setSucesso(false);
     }
   };
 
@@ -40,8 +42,7 @@ export default function CriacaoEdidorRevisorModal() {
       <FaixaGestor />
       <div className="flex mb-4">
         <GestorPage />
-
-        <div className="flex w-full  ml-[350px] mt-4">
+        <div className="flex  w-full  ml-[350px] mt-4">
           <div className="w-full max-w-md border-2 border-blue-800 rounded-lg h-auto p-4 bg-white">
             <header className="mb-2 bg-gradient-to-r from-blue-500 to-blue-800 rounded-lg  py-4 text-white text-center">
               <h1 className="text-xl font-bold ">Criar usuário</h1>
@@ -103,18 +104,19 @@ export default function CriacaoEdidorRevisorModal() {
             <button
               type="button"
               onClick={criarUsuario}
-              className="mt-3 w-full bg- border-blue-600 text-white font-bold py-2 rounded-lg hover:bg-[#355ea9] transition-colors"
+              className="mt-3 w-full bg-blue-600 text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition-colors"
             >
               Criar
             </button>
+            {sucesso && (
+              <div className="bg-green-500 text-center text-white rounded mt-2 p-2">
+                Usuário criado com sucesso!
+              </div>
+            )}
+            {erro && (
+              <div className="text-red-600 text-center mt-2">{erro}</div>
+            )}
           </div>
-
-          {sucesso && (
-            <div className="bg-green-500 text-white rounded">
-              Usuário criado com sucesso!
-            </div>
-          )}
-          {erro && <div className="text-red-600">{erro}</div>}
         </div>
       </div>
     </div>
