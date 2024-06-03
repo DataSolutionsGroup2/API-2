@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function WorkspaceDefinition() {
+export function WorkspaceDefinition({ onInsert }) {
   const [idValue, setIdValue] = useState("");
   const [selectValue2, setSelectValue2] = useState("");
   const [analistaValue, setAnalistaValue] = useState("");
@@ -28,6 +28,7 @@ export function WorkspaceDefinition() {
 
       if (response.ok) {
         setMessage("Inserção realizada com sucesso!");
+        onInsert();
       } else {
         setMessage("O id não pertence a essa cidade verifique por favor ! ");
       }

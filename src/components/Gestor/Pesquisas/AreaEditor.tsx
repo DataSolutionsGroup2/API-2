@@ -1,31 +1,39 @@
+import { useState, useEffect, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-import { useEffect, useState, useRef } from "react";
-import { ColDef } from "ag-grid-community";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import GestorPage from "../manager/GestorPage";
 import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
 import { WorkspaceDefinition } from "./workspaceDefinition";
+import { ColDef } from "ag-grid-community";
 
 const PesquisaDataGrid = () => {
   const [rowData, setRowData] = useState([]);
+  const [dataUpdated, setDataUpdated] = useState(false);
   const gridRef = useRef(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3100/Gradeatuacao");
-        const data = await response.json();
-        setRowData(data);
-      } catch (error) {
-        console.error("Erro ao obter os dados:", error);
-      }
-    };
+  const fetchData = async () => {
+    try {
+      const response = await fetch("http://localhost:3100/Gradeatuacao");
+      const data = await response.json();
+      setRowData(data);
+    } catch (error) {
+      console.error("Erro ao obter os dados:", error);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (dataUpdated) {
+      fetchData();
+      setDataUpdated(false);
+    }
+  }, [dataUpdated]);
 
   const columnDefs: ColDef[] = [
     {
@@ -135,7 +143,7 @@ const PesquisaDataGrid = () => {
             }}
           ></div>
           <button
-            className=" p-4 rounded-sm border-blue-900 font-bold justify-end ml-[900px]  text-white bg-gradient-to-r from-blue-400 to-blue-800 hover:from-blue-600 hover:to-blue-900"
+            className="p-4 rounded-sm border-blue-900 font-bold justify-end ml-[900px] text-white bg-gradient-to-r from-blue-400 to-blue-800 hover:from-blue-600 hover:to-blue-900"
             onClick={exportToPDF}
           >
             Exportar para PDF
@@ -158,7 +166,7 @@ const PesquisaDataGrid = () => {
           </div>
           <div className="text-[15px] mt-[40px] p-2 font-bold ml-20">
             <h1>Escolha a área para o analista</h1>
-            <WorkspaceDefinition />
+            <WorkspaceDefinition onInsert={() => setDataUpdated(true)} />
           </div>
         </div>
       </div>
