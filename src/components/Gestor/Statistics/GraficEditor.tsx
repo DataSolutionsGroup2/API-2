@@ -23,7 +23,7 @@ const GraficEditor = () => {
 
   useEffect(() => {
     if (data.length > 0) {
-      const cities = ["Cruzeiro", "Atibaia", "Taubate"];
+      const cities = ["Atibaia", "Cruzeiro", "Taubate"];
       const cityData = {};
       cities.forEach((city) => {
         cityData[city] = data.filter((item) => item.cidade === city);
@@ -102,11 +102,11 @@ const GraficEditor = () => {
 
   return (
     <div className="flex flex-col mt-10 ml-[50px] h-auto p-4 mb-4">
+      <div id="main-Atibaia" style={{ width: "1000px", height: "400px" }}></div>
       <div
         id="main-Cruzeiro"
         style={{ width: "1000px", height: "400px" }}
       ></div>
-      <div id="main-Atibaia" style={{ width: "1000px", height: "400px" }}></div>
       <div id="main-Taubate" style={{ width: "1000px", height: "400px" }}></div>
     </div>
   );
