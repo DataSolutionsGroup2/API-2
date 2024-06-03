@@ -1,7 +1,7 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
 
-const GraficEditor = () => {
+const GraficRevisor = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const GraficEditor = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3100/tbgradestatuseditor"
+          "http://localhost:3100/tbgradestatusrevisor"
         );
         const result = await response.json();
         setData(result);
@@ -33,11 +33,10 @@ const GraficEditor = () => {
         const cityItems = cityData[city];
 
         const categories = cityItems.map(
-          (item) => `${item.atribuicao ?? "Sem Atribuição"}`
+          (item) => `${item.analista ?? "Sem Analista"}`
         );
         const andamentoData = cityItems.map((item) => item.andamento);
         const finalizadoData = cityItems.map((item) => item.finalizado);
-        const semAtribuicaoData = cityItems.map((item) => item.sem_atribuicao);
 
         const option = {
           title: {
@@ -50,7 +49,7 @@ const GraficEditor = () => {
             },
           },
           legend: {
-            data: ["Andamento", "Finalizado", "Sem Atribuição"],
+            data: ["Andamento", "Finalizado"],
           },
           xAxis: {
             type: "category",
@@ -80,14 +79,6 @@ const GraficEditor = () => {
                 color: "green",
               },
             },
-            {
-              name: "Sem Atribuição",
-              type: "bar",
-              data: semAtribuicaoData,
-              itemStyle: {
-                color: "red",
-              },
-            },
           ],
         };
 
@@ -112,4 +103,4 @@ const GraficEditor = () => {
   );
 };
 
-export default GraficEditor;
+export default GraficRevisor;

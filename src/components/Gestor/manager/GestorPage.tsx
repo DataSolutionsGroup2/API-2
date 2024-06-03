@@ -23,11 +23,15 @@ const GestorPage = () => {
     },
     {
       name: "Área do Revisor",
-      onClick: () => navigate(""),
+      onClick: () => navigate("/pesquisa"),
     },
     {
       name: "Estatísticas dos editores",
       onClick: () => navigate("/pagestatisticseditor"),
+    },
+    {
+      name: "Estatísticas dos revisores",
+      onClick: () => navigate("/pagestatisticsrevisor"),
     },
   ];
 

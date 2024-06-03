@@ -2,7 +2,7 @@ import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
 import GraficEditor from "../Statistics/GraficEditor";
 import GestorPage from "../manager/GestorPage";
 
-export default function StatisticsEditor() {
+export default function PageStatisticscEditor() {
   return (
     <div>
       <FaixaGestor />
