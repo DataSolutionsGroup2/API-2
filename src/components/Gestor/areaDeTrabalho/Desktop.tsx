@@ -4,12 +4,13 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-import GestorPage from "../manager/GestorPage";
-import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
-import { WorkspaceDefinition } from "./workspaceDefinitionEditor";
-import { ColDef } from "ag-grid-community";
 
-const PesquisaDataGrid = () => {
+import { ColDef } from "ag-grid-community";
+import FaixaGestor from "../menuGestor/FaixaGestor";
+import SelectorButton from "../menuGestor/ButtonSelector";
+import { WorkspaceDefinition } from "./workspaceDefinitionEditor";
+
+const AreaDeTrabalho = () => {
   const [rowData, setRowData] = useState([]);
   const [dataUpdated, setDataUpdated] = useState(false);
   const gridRef = useRef(null);
@@ -125,7 +126,7 @@ const PesquisaDataGrid = () => {
     <div>
       <FaixaGestor />
       <div className="flex mb-4">
-        <GestorPage />
+        <SelectorButton />
         <div
           style={{
             height: "100vh",
@@ -175,4 +176,4 @@ const PesquisaDataGrid = () => {
   );
 };
 
-export default PesquisaDataGrid;
+export default AreaDeTrabalho;

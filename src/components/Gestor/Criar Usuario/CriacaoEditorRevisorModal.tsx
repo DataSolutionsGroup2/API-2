@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import GestorPage from "../manager/GestorPage";
-import FaixaGestor from "../FaixaMenuGestor.tsx/FaixaGestor";
+import FaixaGestor from "../menuGestor/FaixaGestor";
+import SelectorButton from "../menuGestor/ButtonSelector";
 
 export default function CriacaoEdidorRevisorModal() {
   const [nome, setNome] = useState("");
@@ -41,7 +41,7 @@ export default function CriacaoEdidorRevisorModal() {
     <div>
       <FaixaGestor />
       <div className="flex mb-4">
-        <GestorPage />
+        <SelectorButton />
         <div className="flex  w-full  ml-[350px] mt-4">
           <div className="w-full max-w-md border-2 border-blue-800 rounded-lg h-auto p-4 bg-white">
             <header className="mb-2 bg-gradient-to-r from-blue-500 to-blue-800 rounded-lg  py-4 text-white text-center">

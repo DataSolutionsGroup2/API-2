@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import HeaderComponent from "../FaixaMenuGestor.tsx/BoxButton";
+import HeaderComponent from "./BoxButton";
 
-const GestorPage = () => {
+const SelectorButton = () => {
   const navigate = useNavigate();
 
   const handleButton = () => {
@@ -19,16 +19,16 @@ const GestorPage = () => {
     },
     {
       name: "Área de trabalho",
-      onClick: () => navigate("/pesquisa"),
+      onClick: () => navigate("/areadetrabalho"),
     },
 
     {
       name: "Estatísticas dos editores",
-      onClick: () => navigate("/pagestatisticseditor"),
+      onClick: () => navigate("/statisticseditor"),
     },
     {
       name: "Estatísticas dos revisores",
-      onClick: () => navigate("/pagestatisticsrevisor"),
+      onClick: () => navigate("/statisticsrevisor"),
     },
   ];
 
@@ -39,4 +39,4 @@ const GestorPage = () => {
   );
 };
 
-export default GestorPage;
+export default SelectorButton;
