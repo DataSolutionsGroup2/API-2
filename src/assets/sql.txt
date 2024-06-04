@@ -1,6 +1,6 @@
 -- Comandos SQL para criar as tabelas e carregar nas tabelas os registros
 -- que estão nos arquivos CSV da pasta csv.
--- É necessário substituir o caminho D:\servidor\src\assets\csv\ pelo caminho
+-- É necessário substituir o caminho D:\csv\ pelo caminho
 -- do projeto no seu computador.
 -- Lembre-se que antes de executar esses comandos, será necessário incluir a 
 -- extensão espacial POSTGIS no seu BD.
@@ -71,7 +71,7 @@ create table if not exists grids (
 
 -- Ler o arquivo CSV e carregar na tabela users
 copy users
-from 'D:\servidor\src\assets\csv\users.csv'
+from 'D:\csv\users.csv'
 with (
   format csv,
   header true,
@@ -82,7 +82,7 @@ with (
 
 -- Ler o arquivo CSV e carregar na tabela projects
 copy projects
-from 'D:\servidor\src\assets\csv\projects.csv'
+from 'D:\csv\projects.csv'
 with (
   format csv,
   header true,
@@ -93,7 +93,7 @@ with (
 
 -- Ler o arquivo CSV e carregar na tabela changes
 copy changes
-from 'D:\servidor\src\assets\csv\changes.csv'
+from 'D:\csv\changes.csv'
 with (
   format csv,
   header true,
@@ -104,7 +104,7 @@ with (
 
 -- Ler o arquivo CSV e carregar na tabela pointers
 copy pointers
-from 'D:\servidor\src\assets\csv\pointers.csv'
+from 'D:\csv\pointers.csv'
 with (
   format csv,
   header true,
@@ -115,7 +115,7 @@ with (
 
 -- Ler o arquivo CSV e carregar na tabela grids
 copy grids
-from 'D:\servidor\src\assets\csv\grids.csv'
+from 'D:\csv\grids.csv'
 with (
   format csv,
   header true,
@@ -123,3 +123,10 @@ with (
   null 'NULL',
   encoding 'UTF-8'
 );
+
+-- Redefine a sequência para o próximo valor disponível
+SELECT setval('users_id_seq', (SELECT MAX(id) FROM users) + 1);
+SELECT setval('projects_id_seq', (SELECT MAX(id) FROM projects) + 1);
+SELECT setval('pointers_id_seq', (SELECT MAX(id) FROM pointers) + 1);
+SELECT setval('grids_id_seq', (SELECT MAX(id) FROM grids) + 1);
+SELECT setval('changes_id_seq', (SELECT MAX(id) FROM changes) + 1);

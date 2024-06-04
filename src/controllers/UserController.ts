@@ -6,8 +6,10 @@ class UserController {
   public async login(req: Request, res: Response): Promise<void> {
     const { mail, password } = req.body;
 
-    if (!mail || !password) {
-      res.status(401).json({ erro: "Forneça o e-mail e senha" });
+    if (!mail) {
+      res.json({ erro: "Forneça o e-mail" });
+    } else if (!password) {
+      res.json({ erro: "Forneça a senha" });
     } else {
       const response: any = await query(
         `SELECT id, mail, profile 
@@ -27,20 +29,26 @@ class UserController {
 
   public async create(req: Request, res: Response): Promise<void> {
     const { mail, password, profile } = req.body;
-    if (!mail || !password || !profile) {
-      res.status(401).json({ erro: "Forneça o e-mail, perfil e senha" });
+
+    if (!mail) {
+      res.json({ erro: "Forneça o e-mail" });
+    } else if (!password) {
+      res.json({ erro: "Forneça a senha" });
+    } else if (!profile) {
+      res.json({ erro: "Forneça o perfil" });
     } else if (profile !== "adm" && profile !== "user") {
-      res.status(401).json({ erro: "O perfil precisa ser adm ou user" });
+      res.json({ erro: "O perfil precisa ser adm ou user" });
     } else {
       const response: any = await query(
-        "INSERT INTO users(mail,password) VALUES ($1,$2) RETURNING id, mail, profile",
-        [mail, password]
+        "INSERT INTO users(mail,password,profile) VALUES ($1,$2,$3) RETURNING id, mail, profile",
+        [mail, password,profile]
       );
 
       if (response && response.id) {
         res.json(response);
       } else if (response.message.startsWith("duplicate key")) {
-        res.json({ erro: `O e-mail ${mail} já existe no cadastro` });
+        res
+          .json({ erro: `O e-mail ${mail} já existe no cadastro` });
       } else {
         res.json({ erro: response.message });
       }
@@ -55,9 +63,9 @@ class UserController {
   }
 
   public async delete(req: Request, res: Response): Promise<void> {
-    const { iduser } = req.body;
+    const { iduser } = req.params;
     if (!iduser) {
-      res.status(401).json({ erro: "Forneça o usuário a ser excluído" });
+      res.json({ erro: "Forneça o usuário a ser excluído" });
     } else {
       const response: any = await query(
         "DELETE FROM users WHERE id = $1 RETURNING id, mail, profile",
@@ -76,20 +84,18 @@ class UserController {
     const { mail } = req.body;
     const { id } = res.locals;
     if (!mail) {
-      res.status(401).json({ erro: "Forneça o novo e-mail" });
+      res.json({ erro: "Forneça o novo e-mail" });
     } else {
-      const r: any = await query("UPDATE users SET mail=$2 WHERE id=$1", [
-        id,
-        mail,
-      ]);
+      const r: any = await query(
+        "UPDATE users SET mail=$2 WHERE id=$1 RETURNING id, mail, profile",
+        [id, mail]
+      );
 
-      if( r.rowcount == 1 ){
-        res.json({mail});
-      }
-      else if( r.message.startsWith("duplicate key") ) {
+      if (r.rowcount == 1) {
+        res.json({ mail });
+      } else if (r.message.startsWith("duplicate key")) {
         res.json({ erro: `O e-mail ${mail} já existe no cadastro` });
-      }
-      else{
+      } else {
         res.json({ erro: "Não foi possível alterar o e-mail" });
       }
     }
@@ -99,12 +105,12 @@ class UserController {
     const { password } = req.body;
     const { id } = res.locals;
     if (!password) {
-      res.status(401).json({ erro: "Forneça a nova senha" });
+      res.json({ erro: "Forneça a nova senha" });
     } else {
-      const r: any = await query("UPDATE users SET password=$2 WHERE id=$1", [
-        id,
-        password,
-      ]);
+      const r: any = await query(
+        "UPDATE users SET password=$2 WHERE id=$1 RETURNING id, mail, profile",
+        [id, password]
+      );
       res.json(r);
     }
   }
@@ -112,10 +118,10 @@ class UserController {
   public async updateProfile(req: Request, res: Response): Promise<void> {
     const { id, profile } = req.body;
     if (profile === "adm" || profile === "user") {
-      const r: any = await query("UPDATE users SET profile=$2 WHERE id=$1", [
-        id,
-        profile,
-      ]);
+      const r: any = await query(
+        "UPDATE users SET profile=$2 WHERE id=$1 RETURNING id, mail, profile", 
+        [id,profile]
+      );
       res.json(r);
     } else {
       res.json({ erro: "Perfil inexistente" });
