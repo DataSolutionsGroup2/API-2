@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./pages/LoginPage/LoginPage";
-import PageGestor from "./pages/PaginaGestor";
+import Login from "./pages/loginPage/LoginPage";
+import PageGestor from "./pages/pageGestor";
 import PageStatisticscEditor from "./pages/pagesStatistcs/PageStatisticsEditor";
 import PagestatisticsRevisor from "./pages/pagesStatistcs/PageStatisticRevisor";
 import CriacaoEdidorRevisorModal from "./components/gestor/criar Usuario/CriacaoEditorRevisorModal";
