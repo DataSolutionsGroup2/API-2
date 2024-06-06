@@ -14,11 +14,11 @@ export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
     const confirmInsert = window.confirm("Deseja realmente fazer a inserção?");
     if (!confirmInsert) return;
 
-    const url = "http://localhost:3100/Gradeatuacao";
+    const url = "http://localhost:3100/InsertValidacaoRevisor";
     const data = {
       id: idValue,
       cidade: selectValue2,
-      validação: analistaValue,
+      validacao: analistaValue,
     };
 
     try {
