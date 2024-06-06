@@ -55,7 +55,7 @@ export const GraphicNumberPol: React.FC = () => {
           data: regionAreas,
           type: "bar",
           itemStyle: {
-            color: (params: echarts.EChartsCoreOption.ColorObject) =>
+            color: (params: echarts.EChartsOption.ColorObject) =>
               colors[params.dataIndex], // Tipagem do parâmetro
           },
         },
