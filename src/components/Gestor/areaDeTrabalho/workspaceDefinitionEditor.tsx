@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-export function WorkspaceDefinition({ onInsert }) {
+interface Props {
+  onInsert: () => void;
+}
+
+export function WorkspaceDefinition({ onInsert }: Props) {
   const [idValue, setIdValue] = useState("");
   const [selectValue2, setSelectValue2] = useState("");
   const [analistaValue, setAnalistaValue] = useState("");
