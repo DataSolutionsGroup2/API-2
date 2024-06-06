@@ -4,7 +4,7 @@ interface Props {
   onInsert: () => void;
 }
 
-export function WorkspaceDefinitionEditor({ onInsert }: Props) {
+export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
   const [idValue, setIdValue] = useState("");
   const [selectValue2, setSelectValue2] = useState("");
   const [analistaValue, setAnalistaValue] = useState("");
@@ -18,7 +18,7 @@ export function WorkspaceDefinitionEditor({ onInsert }: Props) {
     const data = {
       id: idValue,
       cidade: selectValue2,
-      atribuicao: analistaValue,
+      validação: analistaValue,
     };
 
     try {

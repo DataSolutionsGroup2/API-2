@@ -8,7 +8,8 @@ import "jspdf-autotable";
 import { ColDef } from "ag-grid-community";
 import FaixaGestor from "../menuGestor/FaixaGestor";
 import SelectorButton from "../menuGestor/ButtonSelector";
-import { WorkspaceDefinition } from "./workspaceDefinitionEditor";
+import { WorkspaceDefinitionEditor } from "./workspaceDefinitionEditor";
+import { WorkspaceDefinitionRevisor } from "./workspaceDefinitionRevisor";
 
 const AreaDeTrabalho = () => {
   const [rowData, setRowData] = useState([]);
@@ -168,7 +169,9 @@ const AreaDeTrabalho = () => {
           </div>
           <div className="text-[15px] mt-[40px] p-2 font-bold ml-20">
             <h1>Escolha a área para o Editor</h1>
-            <WorkspaceDefinition onInsert={() => setDataUpdated(true)} />
+            <WorkspaceDefinitionEditor onInsert={() => setDataUpdated(true)} />
+            <h1>Escolha a área para o Revisor</h1>
+            <WorkspaceDefinitionRevisor onInsert={() => setDataUpdated(true)} />
           </div>
         </div>
       </div>
