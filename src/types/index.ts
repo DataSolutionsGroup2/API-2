@@ -18,9 +18,9 @@ export interface GraphicRevisorProps {
   finalizado: number;
 }
 
-export interface GraphicQuantityofGraphsProps {
+export interface GraphicNumberPolProps {
   cidade: string;
-  quantidade: number;
+  total: number;
 }
 
 export interface Button {

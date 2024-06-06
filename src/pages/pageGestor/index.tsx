@@ -1,7 +1,8 @@
 import FaixaGestor from "../../components/gestor/menuGestor/FaixaGestor";
 import City from "../../components/gestor/statistics/GraficCyt";
-import { GraphicNumberPol } from "../../components/gestor/statistics/GraphicQuantityofGraphs";
+
 import GestorPage from "../../components/gestor/menuGestor/ButtonSelector";
+import { GraphicNumberPol } from "../../components/gestor/statistics/GraphicQuantityofGraphs";
 
 export default function PageGestor() {
   return (

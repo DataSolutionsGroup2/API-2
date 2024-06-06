@@ -39,7 +39,6 @@ const GraficRevisor = () => {
         const finalizadoData = cityItems.map((item) => item.finalizado);
 
         const option: echarts.EChartsOption = {
-          // Alteração aqui para EChartsOption
           title: {
             text: `Status dos Analistas em ${city}`,
           },

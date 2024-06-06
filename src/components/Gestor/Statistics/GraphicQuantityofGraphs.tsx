@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
-import { GraphicQuantityofGraphsProps } from "../../../types";
+import { GraphicNumberPolProps } from "../../../types";
 
-const GraphicQuantityofGraphs: React.FC = () => {
-  const [graphData, setGraphData] = useState<GraphicQuantityofGraphsProps[]>(
-    []
-  );
+export const GraphicNumberPol: React.FC = () => {
+  const [regionData, setRegionData] = useState<GraphicNumberPolProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3100/quantitygraphs");
-        const data: GraphicQuantityofGraphsProps[] = await response.json(); // Tipagem do resultado
-        setGraphData(data);
+        const response = await fetch("http://localhost:3100/statistcs");
+        const data: GraphicNumberPolProps[] = await response.json();
+        setRegionData(data);
       } catch (error) {
         console.error("Erro ao buscar dados do backend:", error);
       }
@@ -22,14 +20,16 @@ const GraphicQuantityofGraphs: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (graphData.length === 0) return;
+    if (regionData.length === 0) return;
 
-    const categories = graphData.map((item) => item.cidade);
-    const quantities = graphData.map((item) => item.quantidade);
+    const regionNames = regionData.map((region) => region.cidade);
+    const regionAreas = regionData.map((region) => region.total);
+
+    const colors = ["#0a3958", "#FFCC00", "#09977f82"];
 
     const option: echarts.EChartsOption = {
       title: {
-        text: "Quantidade de Gráficos por cidade",
+        text: "Total de Polígonos por cidade",
         left: "center",
       },
       tooltip: {
@@ -39,18 +39,24 @@ const GraphicQuantityofGraphs: React.FC = () => {
         },
       },
       xAxis: {
-        type: "category",
-        data: categories,
+        type: "value",
+        name: "Polígonos",
+        axisLabel: {
+          formatter: "{value}",
+        },
       },
       yAxis: {
-        type: "value",
+        type: "category",
+        name: "Região",
+        data: regionNames,
       },
       series: [
         {
-          data: quantities,
+          data: regionAreas,
           type: "bar",
           itemStyle: {
-            color: "#0a3958",
+            color: (params: echarts.EChartsCoreOption.ColorObject) =>
+              colors[params.dataIndex], // Tipagem do parâmetro
           },
         },
       ],
@@ -63,9 +69,7 @@ const GraphicQuantityofGraphs: React.FC = () => {
     return () => {
       myChart.dispose();
     };
-  }, [graphData]);
+  }, [regionData]);
 
   return <div id="chart" style={{ width: "720px", height: "400px" }} />;
 };
-
-export default GraphicQuantityofGraphs;
