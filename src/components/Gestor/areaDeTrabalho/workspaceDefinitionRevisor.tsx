@@ -52,7 +52,7 @@ export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
   }, [message]);
 
   return (
-    <div className="flex min-w-[1000px] justify-around border-gray-400 border py-3 p-2 space-x-4 rounded-sm">
+    <div className="select-none flex min-w-[1000px] justify-around border-gray-400 border py-3 p-2 space-x-4 rounded-sm">
       <input
         className="border-gray-400 border py-3 px-4 rounded-sm"
         type="text"
