@@ -1,7 +1,4 @@
-interface Button {
-  name: string;
-  onClick: () => void;
-}
+import { Button } from "../../../types";
 
 interface HeaderProps {
   buttons: Button[];

@@ -1,8 +1,9 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
+import { GraphicRevisorProps } from "../../../types";
 
 const GraficRevisor = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<GraphicRevisorProps[]>([]); // Tipagem do estado
 
   useEffect(() => {
     const fetchData = async () => {
@@ -10,7 +11,7 @@ const GraficRevisor = () => {
         const response = await fetch(
           "http://localhost:3100/tbgradestatusrevisor"
         );
-        const result = await response.json();
+        const result: GraphicRevisorProps[] = await response.json(); // Tipagem do resultado
         setData(result);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);
@@ -23,7 +24,7 @@ const GraficRevisor = () => {
   useEffect(() => {
     if (data.length > 0) {
       const cities = ["Cruzeiro", "Atibaia", "Taubate"];
-      const cityData = {};
+      const cityData: { [key: string]: GraphicRevisorProps[] } = {};
       cities.forEach((city) => {
         cityData[city] = data.filter((item) => item.cidade === city);
       });
@@ -37,9 +38,10 @@ const GraficRevisor = () => {
         const andamentoData = cityItems.map((item) => item.andamento);
         const finalizadoData = cityItems.map((item) => item.finalizado);
 
-        const option = {
+        const option: echarts.EChartsOption = {
+          // Alteração aqui para EChartsOption
           title: {
-            text: `Status dos Analistas em ${city} `,
+            text: `Status dos Analistas em ${city}`,
           },
           tooltip: {
             trigger: "axis",

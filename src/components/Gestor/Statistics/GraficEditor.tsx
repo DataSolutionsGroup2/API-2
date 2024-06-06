@@ -1,17 +1,17 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
+import { GraphicEditorProps } from "../../../types";
 
 const GraficEditor = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<GraphicEditorProps[]>([]);
 
   useEffect(() => {
-    // Fetch data from the server
     const fetchData = async () => {
       try {
         const response = await fetch(
           "http://localhost:3100/tbgradestatuseditor"
         );
-        const result = await response.json();
+        const result: GraphicEditorProps[] = await response.json();
         setData(result);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);
@@ -24,7 +24,7 @@ const GraficEditor = () => {
   useEffect(() => {
     if (data.length > 0) {
       const cities = ["Atibaia", "Cruzeiro", "Taubate"];
-      const cityData = {};
+      const cityData: { [key: string]: GraphicEditorProps[] } = {};
       cities.forEach((city) => {
         cityData[city] = data.filter((item) => item.cidade === city);
       });

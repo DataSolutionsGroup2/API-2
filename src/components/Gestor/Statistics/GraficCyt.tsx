@@ -1,14 +1,15 @@
 import * as echarts from "echarts";
 import { useEffect, useRef, useState } from "react";
+import { CityStatisticstbaoiProps } from "../../../types";
 
 const City = () => {
-  const [statistics, setStatistics] = useState([]);
-  const chartRef = useRef(null);
+  const [statistics, setStatistics] = useState<CityStatisticstbaoiProps[]>([]);
+  const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     fetch("http://localhost:3100/tbaoistatistcs")
       .then((response) => response.json())
-      .then((data) => setStatistics(data))
+      .then((data: CityStatisticstbaoiProps[]) => setStatistics(data))
       .catch((error) =>
         console.error("Erro ao buscar estatísticas de área:", error)
       );
@@ -19,7 +20,9 @@ const City = () => {
 
     const myChart = echarts.init(chartRef.current);
 
-    const option = {
+    interface ChartOption extends echarts.EChartsCoreOption {}
+
+    const option: ChartOption = {
       tooltip: {
         trigger: "item",
       },

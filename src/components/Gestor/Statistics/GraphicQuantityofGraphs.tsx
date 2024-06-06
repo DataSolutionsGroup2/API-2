@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import { GraphicQuantityofGraphsProps } from "../../../types";
 
-export const GraphicNumberPol: React.FC = () => {
-  const [regionData, setRegionData] = useState([]);
+const GraphicQuantityofGraphs: React.FC = () => {
+  const [graphData, setGraphData] = useState<GraphicQuantityofGraphsProps[]>(
+    []
+  );
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3100/statistcs");
-        const data = await response.json();
-        setRegionData(data);
+        const response = await fetch("http://localhost:3100/quantitygraphs");
+        const data: GraphicQuantityofGraphsProps[] = await response.json(); // Tipagem do resultado
+        setGraphData(data);
       } catch (error) {
         console.error("Erro ao buscar dados do backend:", error);
       }
@@ -19,16 +22,14 @@ export const GraphicNumberPol: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (regionData.length === 0) return;
+    if (graphData.length === 0) return;
 
-    const regionNames = regionData.map((region) => region.cidade);
-    const regionAreas = regionData.map((region) => region.total);
+    const categories = graphData.map((item) => item.cidade);
+    const quantities = graphData.map((item) => item.quantidade);
 
-    const colors = ["#0a3958", "#FFCC00", "#09977f82"];
-
-    const option = {
+    const option: echarts.EChartsOption = {
       title: {
-        text: "Total de Polígonos por cidade",
+        text: "Quantidade de Gráficos por cidade",
         left: "center",
       },
       tooltip: {
@@ -38,23 +39,18 @@ export const GraphicNumberPol: React.FC = () => {
         },
       },
       xAxis: {
-        type: "value",
-        name: "Polígonos",
-        axisLabel: {
-          formatter: "{value}",
-        },
+        type: "category",
+        data: categories,
       },
       yAxis: {
-        type: "category",
-        name: "Região",
-        data: regionNames,
+        type: "value",
       },
       series: [
         {
-          data: regionAreas,
+          data: quantities,
           type: "bar",
           itemStyle: {
-            color: (params: any) => colors[params.dataIndex],
+            color: "#0a3958",
           },
         },
       ],
@@ -67,7 +63,9 @@ export const GraphicNumberPol: React.FC = () => {
     return () => {
       myChart.dispose();
     };
-  }, [regionData]);
+  }, [graphData]);
 
   return <div id="chart" style={{ width: "720px", height: "400px" }} />;
 };
+
+export default GraphicQuantityofGraphs;
