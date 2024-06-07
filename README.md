@@ -2,7 +2,7 @@
 API 2 semestre
 ![image](https://github.com/DataSolutionsGroup2/API-2/assets/144190669/c9c14bf3-425e-4b7f-b82a-5bedc076cdde)
 <p align="center">
-  <img src="Images/logotipo_empresa_p.jpg" width="300" height="300">
+  <img src="Imagens/logotipo_empresa_p.jpg" width="300" height="300">
 </p>
 <h1>DSG - DATA SOLUTIONS GROUP</h1>
  
