@@ -1,34 +1,29 @@
-export interface AoiProps {
-    id: number;
-    cd_mun: string;
-    nm_mun: string;
-    sigla_uf: string;
-    area_km2: number;
-  }
-  
-  export interface ApontamentoProps {
-    id: number;
-    correcao: string;
-    status: string;
-    obs: string;
-  }
-  
-  export interface AlteracaoProps {
-    id: number;
-    municipio: string;
-    cod_estado: string;
-    cod_class: number;
-    class: string;
-    obs: string;
-    area_km2: number;
-  }
-  
-  export interface GradeProps {
-    id: number;
-    atribuicao: string;
-    status: string;
-    validacao: string;
-    status_val: string;
-    obs: string;
-    area_km2: string;
-  }
+export interface GraphicEditorProps {
+  cidade: string;
+  atribuicao?: string;
+  andamento: number;
+  finalizado: number;
+  sem_atribuicao: number;
+}
+
+export interface CityStatisticstbaoiProps {
+  cidade: string;
+  area_km2: number;
+}
+
+export interface GraphicRevisorProps {
+  cidade: string;
+  analista?: string;
+  andamento: number;
+  finalizado: number;
+}
+
+export interface GraphicNumberPolProps {
+  cidade: string;
+  total: number;
+}
+
+export interface Button {
+  name: string;
+  onClick: () => void;
+}

@@ -14,7 +14,7 @@ export default function Login() {
 
   const mockedUser: UserInterface = {
     name: "gestor",
-    password: "1234",
+    password: "",
   };
 
   const buttonRef = useRef<HTMLButtonElement>(null);
