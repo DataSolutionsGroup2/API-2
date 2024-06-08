@@ -5,6 +5,7 @@ import InsertUsuario from "../controllers/InsertUser";
 import GetGradeAtuacao from "../controllers/GetTbGradeAtuacaoCidades";
 import InsertOrUpdateAtribuicao from "../controllers/InserAtribuicaoTbGrade";
 import GetStatistcs from "../controllers/GetStastistcs";
+import Editor from "../controllers/Tbapontamento_alteracao";
 
 const router = express.Router();
 const deleteUserController = new DeleteUsuarios();
@@ -24,6 +25,7 @@ router.post(
   "/Gradeatuacao",
   insertUpdateAnalistaController.insertOrUpdateAtribuicao
 );
+router.get("/editor",Editor);
 router.get("/statistcs", getStatistcs.getStatistics);
 router.get("/tbaoistatistcs", getAreaStatistcs.getAreaStatistics);
 router.get(

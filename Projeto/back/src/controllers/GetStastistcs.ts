@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import pool from "./db";
+import pool from "../databases/connection";
 
 class GetStatistics {
   async getStatistics(req: Request, res: Response) {
@@ -26,7 +26,7 @@ class GetStatistics {
 
       const countResult = await pool.query(countQuery);
 
-      console.log("Count result:", countResult.rows);
+      // console.log("Count result:", countResult.rows);
 
       res.status(200).json(countResult.rows);
     } catch (error) {

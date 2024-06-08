@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import pool from './db';
+import pool from '../databases/connection';
 
 class Usuario {
     async putUsuario(req: Request, res: Response) {

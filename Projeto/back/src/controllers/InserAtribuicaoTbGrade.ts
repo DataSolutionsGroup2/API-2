@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import pool from "./db";
+import pool from "../databases/connection";
 
 class InsertOrUpdateAtribuicao {
   async insertOrUpdateAtribuicao(req: Request, res: Response) {
