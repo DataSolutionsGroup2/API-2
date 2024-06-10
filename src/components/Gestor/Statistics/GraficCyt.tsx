@@ -1,17 +1,35 @@
 import * as echarts from "echarts";
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 
 const City = () => {
   const [statistics, setStatistics] = useState([]);
   const chartRef = useRef(null);
 
   useEffect(() => {
-    fetch("http://localhost:3100/tbaoistatistcs")
-      .then((response) => response.json())
-      .then((data) => setStatistics(data))
-      .catch((error) =>
-        console.error("Erro ao buscar estatísticas de área:", error)
-      );
+    const fetchData = async () => {
+      try {
+        // Obtendo o token do localStorage
+        const token = localStorage.getItem("token");
+
+        // Adicionando o token no cabeçalho da requisição usando o Axios
+        const response = await axios.get(
+          "http://localhost:3001/estatisticas/getAreaStatistics",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        const data = await response.data;
+        setStatistics(data);
+      } catch (error) {
+        console.error("Erro ao buscar estatísticas de área:", error);
+      }
+    };
+
+    fetchData();
   }, []);
 
   useEffect(() => {

@@ -18,14 +18,24 @@ const AreaDeTrabalho = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3100/Gradeatuacao");
+      // Obtendo o token do localStorage
+      const token = localStorage.getItem("token");
+
+      // Adicionando o token no cabeçalho da requisição usando o fetch
+      const response = await fetch(
+        "http://localhost:3001/estatisticas//getGradeAtuacao",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       const data = await response.json();
       setRowData(data);
     } catch (error) {
       console.error("Erro ao obter os dados:", error);
     }
   };
-
   useEffect(() => {
     fetchData();
   }, []);

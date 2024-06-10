@@ -1,17 +1,27 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const GraficEditor = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the server
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "http://localhost:3100/tbgradestatuseditor"
+        // Obtendo o token do localStorage
+        const token = localStorage.getItem("token");
+
+        // Adicionando o token no cabeçalho da requisição usando o Axios
+        const response = await axios.get(
+          "http://localhost:3001/estatisticas/getStatusEditorStatistics",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
         );
-        const result = await response.json();
+
+        const result = await response.data;
         setData(result);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);

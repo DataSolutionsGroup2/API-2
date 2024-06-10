@@ -8,3 +8,8 @@ export interface ApiResponse {
   success: boolean;
   message: string;
 }
+
+export interface UserInterface {
+  name: string;
+  password: string;
+}

@@ -1,21 +1,11 @@
-import { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import React, { useRef, useEffect } from "react";
-
-interface UserInterface {
-  name: string;
-  password: string;
-}
+import axios from "axios";
 
 export default function Login() {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
-
-  const mockedUser: UserInterface = {
-    name: "gestor",
-    password: "",
-  };
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -24,6 +14,7 @@ export default function Login() {
       buttonRef.current.click();
     }
   };
+
   useEffect(() => {
     document.addEventListener("keydown", handleKeyPress);
 
@@ -40,18 +31,23 @@ export default function Login() {
     setSenha(event.target.value);
   };
 
-  const handleLogin = () => {
-    const data = {
-      usuario,
-      senha,
-    };
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post("http://localhost:3001/login", {
+        mail: usuario,
+        password: senha,
+      });
 
-    if (mockedUser.name === usuario && mockedUser.password === senha) {
-      navigate("/pagegestor");
-    } else {
+      if (response.status === 200) {
+        const { token } = response.data;
+        localStorage.setItem("token", token);
+        navigate("/pagegestor");
+      } else {
+        alert("Erro ao Logar");
+      }
+    } catch (error) {
       alert("Erro ao Logar");
     }
-    console.log("data: ", data);
   };
 
   return (

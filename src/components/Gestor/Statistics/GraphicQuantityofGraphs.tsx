@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
+import axios from "axios";
 
 export const GraphicNumberPol: React.FC = () => {
   const [regionData, setRegionData] = useState([]);
@@ -7,8 +8,20 @@ export const GraphicNumberPol: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3100/statistcs");
-        const data = await response.json();
+        // Obtendo o token do localStorage
+        const token = localStorage.getItem("token");
+
+        // Adicionando o token no cabeçalho da requisição usando o Axios
+        const response = await axios.get(
+          "http://localhost:3001/estatisticas/numberPolCity",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        const data = await response.data;
         setRegionData(data);
       } catch (error) {
         console.error("Erro ao buscar dados do backend:", error);

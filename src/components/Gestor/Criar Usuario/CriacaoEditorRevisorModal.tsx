@@ -4,35 +4,48 @@ import FaixaGestor from "../menuGestor/FaixaGestor";
 import SelectorButton from "../menuGestor/ButtonSelector";
 
 export default function CriacaoEdidorRevisorModal() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
-  const [funcao, setFuncao] = useState("");
-  const [erro, setErro] = useState("");
+  const [mail, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [profile, setProfile] = useState("");
+  const [erro, setErro] = useState<string | undefined>("");
   const [sucesso, setSucesso] = useState(false);
 
   const criarUsuario = async () => {
     try {
-      const response = await axios.post("http://localhost:3100/usuarios", {
-        nome,
-        email,
-        senha,
-        funcao,
-      });
+      const token = localStorage.getItem("token");
+
+      const response = await axios.post(
+        "http://localhost:3001/create",
+        {
+          mail,
+          password,
+          profile,
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
       console.log(response.data);
 
-      setNome("");
       setEmail("");
-      setSenha("");
-      setFuncao("");
+      setPassword("");
+      setProfile("");
 
       setSucesso(true);
-      setErro("");
+      setErro(undefined);
 
       setTimeout(() => setSucesso(false), 3000);
-    } catch (error) {
+    } catch (error: any) {
       console.error("Erro ao criar usuário:", error);
-      setErro("Erro ao criar usuário.");
+
+      if (error.response && error.response.data && error.response.data.error) {
+        setErro(error.response.data.error);
+      } else {
+        setErro("Erro ao criar usuário.");
+      }
       setSucesso(false);
     }
   };
@@ -42,23 +55,12 @@ export default function CriacaoEdidorRevisorModal() {
       <FaixaGestor />
       <div className="flex mb-4">
         <SelectorButton />
-        <div className="flex  w-full  ml-[350px] mt-4">
+        <div className="flex w-full ml-[350px] mt-4">
           <div className="w-full max-w-md border-2 border-blue-800 rounded-lg h-auto p-4 bg-white">
-            <header className="mb-2 bg-gradient-to-r from-blue-500 to-blue-800 rounded-lg  py-4 text-white text-center">
-              <h1 className="text-xl font-bold ">Criar usuário</h1>
+            <header className="mb-2 bg-gradient-to-r from-blue-500 to-blue-800 rounded-lg py-4 text-white text-center">
+              <h1 className="text-xl font-bold">Criar usuário</h1>
             </header>
-            <div className="flex flex-col mb-2">
-              <label htmlFor="usuario" className="font-bold mb-1">
-                Usuário:
-              </label>
-              <input
-                type="text"
-                id="usuario"
-                value={nome}
-                onChange={(e) => setNome(e.target.value)}
-                className="border-2 border-blue-600 rounded-lg px-2 py-2"
-              />
-            </div>
+
             <div className="flex flex-col mb-2">
               <label htmlFor="funcao" className="font-bold mb-1">
                 Função:
@@ -66,28 +68,15 @@ export default function CriacaoEdidorRevisorModal() {
               <select
                 id="funcao"
                 className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
-                value={funcao}
-                onChange={(e) => setFuncao(e.target.value)}
+                value={profile}
+                onChange={(e) => setProfile(e.target.value)}
               >
                 <option value="" disabled>
                   Selecione uma função
                 </option>
-                <option value="gestor">Gestor</option>
-                <option value="editor">Editor</option>
-                <option value="revisor">Revisor</option>
+                <option value="user">User</option>
+                <option value="adm">Adm</option>
               </select>
-            </div>
-            <div className="flex flex-col mb-2">
-              <label htmlFor="senha" className="font-bold mb-1">
-                Senha:
-              </label>
-              <input
-                type="password"
-                id="senha"
-                value={senha}
-                onChange={(e) => setSenha(e.target.value)}
-                className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
-              />
             </div>
             <div className="flex flex-col mb-2">
               <label htmlFor="email" className="font-bold mb-1">
@@ -96,11 +85,24 @@ export default function CriacaoEdidorRevisorModal() {
               <input
                 type="email"
                 id="email"
-                value={email}
+                value={mail}
                 onChange={(e) => setEmail(e.target.value)}
                 className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
               />
             </div>
+            <div className="flex flex-col mb-2">
+              <label htmlFor="senha" className="font-bold mb-1">
+                Senha:
+              </label>
+              <input
+                type="password"
+                id="senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="border-2 border- border-blue-600 rounded-lg px-2 py-2"
+              />
+            </div>
+
             <button
               type="button"
               onClick={criarUsuario}
