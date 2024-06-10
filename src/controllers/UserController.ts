@@ -74,8 +74,11 @@ class UserController {
 
       if (response && response.rowcount && response.rowcount > 0) {
         res.json(response.rows);
+      } else if (response.message.startsWith("update or delete on table")) {
+        res.json({ erro: `O usuário possui atribuições` });
       } else {
-        res.json({ erro: "Usuário não localizado" });
+        res.json(response);
+        //res.json({ erro: "Usuário não localizado" });
       }
     }
   }
