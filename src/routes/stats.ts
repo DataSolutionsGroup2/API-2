@@ -1,16 +1,27 @@
 import { Router, Request, Response } from "express";
 import controller from "../controllers/StatsController";
+import InserAtribuicaoTbGradeEditor from "../controllers/InserAtribuicaoTbGradeEditor";
 
 const routes = Router();
 
 // Quantidade de grades por projeto e quantidade de grades finalizadas no projeto
 routes.get("/gridsByProject", controller.gridsByProject);
-// Quantidade de mapeamentos (changes) por projeto 
+// Quantidade de mapeamentos (changes) por projeto
 routes.get("/mappingByProject", controller.mappingByProject);
-// Quantidade de apontamentos (pointers) por projeto 
+// Quantidade de apontamentos (pointers) por projeto
 routes.get("/pointersByProject", controller.pointersByProject);
+routes.get("/numberPolCity", controller.numberPolCity);
+routes.get("/getAreaStatistics", controller.getAreaStatistics);
+routes.get("/getStatusEditorStatistics", controller.getStatusEditorStatistics);
+routes.get(
+  "/getStatusRevisorStatistics",
+  controller.getStatusRevisorStatistics
+);
+routes.get("/getGradeAtuacao", controller.getGradeAtuacao);
 
 //aceita qualquer método HTTP ou URL
-routes.use( (_:Request,res:Response) => res.json({error:"Operação desconhecida de estatísticas"}) );
+routes.use((_: Request, res: Response) =>
+  res.json({ error: "Operação desconhecida de estatísticas" })
+);
 
 export default routes;
