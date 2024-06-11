@@ -270,3 +270,26 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
 
   <h2 id="trello3">Trello</h2>
   Acabamos por decidir trocar nosso Scrum Master portanto é possivel notar uma pequena diferença na forma que as tarefas foram criadas nessa sprint.
+  <img src="/Images/trellosprint3.png" alt="trello3" />
+
+  ## Projeto:
+  <div id="projeto3"></div>
+  Aqui temos algumas fotos de telas que foram implemtadas nessa sprint que estavam faltando para a completude de nossa entrega, sendo ela pagina de revisor e editor, cada uma dessas telas tem tanto o Front End quanto o Back End vejamos abaixo.
+
+  <h2>Revisor</h2>
+  Como dito anteriormente aqui estão as telas do revisor em nosso aplicação, um dos requisitos na documentação era de que o revisor deveria ter acesso aos dados de mapeamento por editor.
+  <img src="/Images/paginarevisor1.png" alt="telaRevisor1" />
+  
+Também fizemos uma pagina para ver os apontamento de correções de cada analista por cidade.
+<img src="/Images/paginarevisor2.png" alt="telaRevisor2" />
+
+E por último decidimos adicionar alguns gráficos que poderiam ser uteis ao revisor.
+<img src="/Images/" alt="telaRevisor3"/>
+
+<h2>Editor</h2>
+Assim como o revisor na parte de editor também decidimos implementar 3 telas em nossa aplicação, veja abaixo:
+<img src="" alt="" />
+[Conteúdo a ser adicionado]
+
+
+  
