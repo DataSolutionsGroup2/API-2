@@ -170,7 +170,7 @@ portanto fizemos 4 telas sendo elas 1 de login e outras 3 de um usuário já log
 <span id="backlog"></span>
 <h2>⚙️Backlog [TROCAR IMAGEM]</h2>
 <p>Tabela do backlog do projeto.</p>
-<img src="/Images/Backlog.png" alt="backlog" width="1200">
+<img src="/Images/backlogdoprojeto.png" alt="backlog" width="1200">
 
 <h2 id="prototipo">Protótipo 🔧</h2>
 Aqui temos o nosso prototipo implementado no projeto da tela de login.
