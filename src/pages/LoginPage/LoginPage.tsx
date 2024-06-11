@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Login() {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
-  const [error, setError] = useState(""); // Adicionado estado para mensagem de erro
+  const [error, setError] = useState(""); // Estado para mensagem de erro
   const navigate = useNavigate();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
