@@ -28,10 +28,9 @@ export const validadeAcess = (
         res.status(401).send({ error: "Não autorizado" });
       }
     } catch (e: any) {
-      if( e.message == "jwt malformed" ){
+      if (e.message == "jwt malformed") {
         res.status(401).send({ error: "Token inválido" });
-      }
-      else{
+      } else {
         res.status(401).send({ error: e.message });
       }
     }
