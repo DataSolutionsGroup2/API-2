@@ -30,6 +30,14 @@ const SelectorButton = () => {
       name: "Estatísticas dos revisores",
       onClick: () => navigate("/statisticsrevisor"),
     },
+    {
+      name: "Estatísticas de Alterações",
+      onClick: () => navigate("/statisticschanges"),
+    },
+    {
+      name: "Logout",
+      onClick: () => navigate("/"),
+    },
   ];
 
   return (

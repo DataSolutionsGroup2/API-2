@@ -128,7 +128,7 @@ export default function CriacaoEdidorRevisorModal() {
                 </div>
               )}
               {erro && (
-                <div className="text-red-600 text-center mt-2">{erro}</div>
+                <div className="text-blue-600 text-center mt-2">{erro}</div>
               )}
             </div>
           </div>

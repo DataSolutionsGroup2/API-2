@@ -5,6 +5,7 @@ import PageStatisticscEditor from "./pages/pagesStatistcs/PageStatisticsEditor";
 import PagestatisticsRevisor from "./pages/pagesStatistcs/PageStatisticRevisor";
 import CriacaoEdidorRevisorModal from "./components/gestor/criar Usuario/CriacaoEditorRevisorModal";
 import AreaDeTrabalho from "./components/gestor/areaDeTrabalho/Desktop";
+import StatisticsChanges from "./pages/pagesStatistcs/PageChanges";
 
 function Rotas() {
   return (
@@ -15,6 +16,7 @@ function Rotas() {
       <Route path="/areadetrabalho" element={<AreaDeTrabalho />} />
       <Route path="/statisticseditor" element={<PageStatisticscEditor />} />
       <Route path="/statisticsrevisor" element={<PagestatisticsRevisor />} />
+      <Route path="/statisticschanges" element={<StatisticsChanges />} />
     </Routes>
   );
 }

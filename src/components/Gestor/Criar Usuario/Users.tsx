@@ -41,13 +41,7 @@ const UsersGrid = () => {
       filter: true,
       floatingFilter: true,
     },
-    {
-      field: "password",
-      headerName: "Password",
-      sortable: true,
-      filter: true,
-      floatingFilter: true,
-    },
+
     {
       field: "profile",
       headerName: "Profile",
@@ -58,7 +52,7 @@ const UsersGrid = () => {
   ];
 
   return (
-    <div className="ag-theme-alpine" style={{ height: 439, width: 800 }}>
+    <div className="ag-theme-alpine" style={{ height: 439, width: 600 }}>
       <AgGridReact rowData={rowData} columnDefs={columnDefs}></AgGridReact>
     </div>
   );
