@@ -4,24 +4,30 @@ import query from "../database/connection";
 class InsertOrUpdateValidacao {
   async insertOrUpdateValidacao(req: Request, res: Response) {
     try {
-      const { id, cidade, validacao } = req.body;
+      const { cidade, validacao } = req.body;
+      const id = parseInt(req.body.id); // Converter o ID para um número
 
-      // Verificar se os dados existem na tabela correspondente à cidade
-      const queryText = `SELECT * FROM tbgrade_atuacao_${cidade.toLowerCase()} WHERE id = $1`;
-      const { rows } = await query(queryText, [id]); // Use pool.query para executar a consulta
-
-      if (rows.length === 1) {
-        // Se os dados existirem e o ID pertencer à cidade especificada, atualize a coluna validacao
-        const updateText = `UPDATE tbgrade_atuacao_${cidade.toLowerCase()} SET validacao = $1 WHERE id = $2`;
-        await query(updateText, [validacao, id]); // Use pool.query para executar a atualização
-        return res
-          .status(200)
-          .json({ message: "Validação atualizada com sucesso." });
-      } else {
-        return res
-          .status(403)
-          .json({ error: "ID não pertence à cidade especificada." });
+      // Verificar se todos os campos estão presentes
+      if (!cidade) {
+        return res.status(400).json({
+          error: "Todos os campos são obrigatórios: cidade e validacao.",
+        });
       }
+
+      console.log("Dados recebidos na solicitação:", { id, cidade, validacao }); // Log dos dados recebidos
+
+      // Inserir ou atualizar o registro na tabela correspondente à cidade do post
+      const updateText = `
+        INSERT INTO public.tbgrade_atuacao_${cidade.toLowerCase()} (id, validacao)
+        VALUES ($1, $2)
+        ON CONFLICT (id) DO UPDATE SET validacao = $2
+      `;
+      console.log("Consulta SQL para INSERT:", updateText); // Log da consulta SQL para INSERT
+      await query(updateText, [id, validacao]);
+
+      return res
+        .status(201)
+        .json({ message: "Validação inserida ou atualizada com sucesso." });
     } catch (error) {
       console.error("Erro ao inserir ou atualizar validação:", error);
       return res

@@ -3,20 +3,37 @@ import userController from "../controllers/UserController";
 import user from "./user";
 import { checkAdm, validadeAcess } from "../middlewares";
 import stats from "./stats";
-import InserAtribuicaoTbGradeEditor from "../controllers/InserAtribuicaoTbGradeEditor";
+import InsertOrUpdateValidacao from "../controllers/InsertValidacaoTbgradeRevisor";
+import InsertOrUpdateAtribuicao from "../controllers/InserAtribuicaoTbGradeEditor";
+import ListUsers from "../controllers/Users";
+import Users from "../controllers/CreateController";
 
 const routes = Router();
+const insertOrUpdateValidacao = new InsertOrUpdateValidacao();
+const insertOrUpdateAtribuicao = new InsertOrUpdateAtribuicao();
+const createUser = new Users();
+const listUsers = new ListUsers();
+const deleteUser = new Users();
 
 routes.post("/login", userController.login);
 routes.use("/usuario", validadeAcess, user);
-// somente o adm pode acessar
 routes.use("/estatisticas", validadeAcess, checkAdm, stats);
-routes.post(
-  "/insertAtribuicaoEditor",
-  InserAtribuicaoTbGradeEditor.insertOrUpdateValidacao
+routes.post("/insertValidacaoRevisor", (req: Request, res: Response) =>
+  insertOrUpdateValidacao.insertOrUpdateValidacao(req, res)
+);
+routes.post("/insertAtribuicaoEditor", (req: Request, res: Response) =>
+  insertOrUpdateAtribuicao.insertOrUpdateAtribuicao(req, res)
+);
+routes.post("/createUser", (req: Request, res: Response) =>
+  createUser.createUser(req, res)
+);
+routes.post("/deleteUser", (req: Request, res: Response) =>
+  deleteUser.deleteUser(req, res)
+);
+routes.get("/Listusers", async (req: Request, res: Response) =>
+  listUsers.listUsers(req, res)
 );
 
-//aceita qualquer método HTTP ou URL
 routes.use((_: Request, res: Response) =>
   res.json({ error: "Requisição desconhecida" })
 );

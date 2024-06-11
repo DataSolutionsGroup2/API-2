@@ -10,7 +10,7 @@ routes.put("/senha", controller.updatePassword);
 // somente o adm pode acessar
 routes.get("/list", checkAdm, controller.list);
 routes.post("/create", checkAdm, controller.create);
-routes.delete("/:iduser", checkAdm, controller.delete);
+routes.delete("/", checkAdm, controller.delete);
 routes.put("/perfil", checkAdm, controller.updateProfile);
 
 //aceita qualquer método HTTP ou URL

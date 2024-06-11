@@ -41,14 +41,13 @@ class UserController {
     } else {
       const response: any = await query(
         "INSERT INTO users(mail,password,profile) VALUES ($1,$2,$3) RETURNING id, mail, profile",
-        [mail, password,profile]
+        [mail, password, profile]
       );
 
       if (response && response.id) {
         res.json(response);
       } else if (response.message.startsWith("duplicate key")) {
-        res
-          .json({ erro: `O e-mail ${mail} já existe no cadastro` });
+        res.json({ erro: `O e-mail ${mail} já existe no cadastro` });
       } else {
         res.json({ erro: response.message });
       }
@@ -122,8 +121,8 @@ class UserController {
     const { id, profile } = req.body;
     if (profile === "adm" || profile === "user") {
       const r: any = await query(
-        "UPDATE users SET profile=$2 WHERE id=$1 RETURNING id, mail, profile", 
-        [id,profile]
+        "UPDATE users SET profile=$2 WHERE id=$1 RETURNING id, mail, profile",
+        [id, profile]
       );
       res.json(r);
     } else {

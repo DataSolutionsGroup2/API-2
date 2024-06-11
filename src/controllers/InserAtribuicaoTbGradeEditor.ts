@@ -2,46 +2,36 @@ import { Request, Response } from "express";
 import query from "../database/connection";
 
 class InsertOrUpdateAtribuicao {
-  async insertOrUpdateValidacao(req: Request, res: Response) {
+  async insertOrUpdateAtribuicao(req: Request, res: Response) {
     try {
-      const { id, cidade, atribuicao } = req.body;
+      const { cidade, atribuicao } = req.body;
+      const id = parseInt(req.body.id); // Converter o ID para um número
 
-      // Consulta para unir os resultados das três tabelas
-      const queryText = `
-        SELECT 'Cruzeiro' AS cidade, * FROM tbgrade_atuacao_cruzeiro
-        UNION ALL
-        SELECT 'Atibaia' AS cidade, * FROM tbgrade_atuacao_atibaia
-        UNION ALL
-        SELECT 'Taubate' AS cidade, * FROM tbgrade_atuacao_taubate
-      `;
-
-      console.log("Query:", queryText);
-
-      // Execute a consulta usando pool.query
-      const { rows } = await query(queryText);
-
-      console.log("Resultado da consulta:", rows);
-
-      // Verifique se o id e a cidade estão na mesma linha
-      const found = rows.find(
-        (row: any) => row.id === id && row.cidade === cidade
-      );
-
-      console.log("Encontrado:", found);
-
-      if (found) {
-        // Se encontrou, atualize a coluna atribuicao
-        const updateText = `UPDATE tbgrade_atuacao_${cidade.toLowerCase()} SET atribuicao = $1 WHERE id = $2`;
-        await query(updateText, [atribuicao, id]);
-        return res
-          .status(200)
-          .json({ message: "Atribuição atualizada com sucesso." });
-      } else {
-        // Se não encontrou, retorne um erro
-        return res
-          .status(403)
-          .json({ error: "ID não pertence à cidade especificada." });
+      // Verificar se todos os campos estão presentes
+      if (!cidade) {
+        return res.status(400).json({
+          error: "Todos os campos são obrigatórios: cidade e atribuicao.",
+        });
       }
+
+      console.log("Dados recebidos na solicitação:", {
+        id,
+        cidade,
+        atribuicao,
+      }); // Log dos dados recebidos
+
+      // Inserir ou atualizar o registro na tabela correspondente à cidade do post
+      const updateText = `
+        INSERT INTO public.tbgrade_atuacao_${cidade.toLowerCase()} (id,atribuicao)
+        VALUES ($1, $2)
+        ON CONFLICT (id) DO UPDATE SET atribuicao = $2
+      `;
+      console.log("Consulta SQL para INSERT:", updateText); // Log da consulta SQL para INSERT
+      await query(updateText, [id, atribuicao]);
+
+      return res
+        .status(201)
+        .json({ message: "Atribuição inserida ou atualizada com sucesso." });
     } catch (error) {
       console.error("Erro ao inserir ou atualizar validação:", error);
       return res
@@ -51,4 +41,4 @@ class InsertOrUpdateAtribuicao {
   }
 }
 
-export default new InsertOrUpdateAtribuicao();
+export default InsertOrUpdateAtribuicao;
