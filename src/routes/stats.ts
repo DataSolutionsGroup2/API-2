@@ -1,6 +1,5 @@
 import { Router, Request, Response } from "express";
 import controller from "../controllers/StatsController";
-import InserAtribuicaoTbGradeEditor from "../controllers/InserAtribuicaoTbGradeEditor";
 
 const routes = Router();
 
@@ -18,6 +17,8 @@ routes.get(
   controller.getStatusRevisorStatistics
 );
 routes.get("/getGradeAtuacao", controller.getGradeAtuacao);
+
+routes.get("/getAlteracao", controller.getAlteracao);
 
 //aceita qualquer método HTTP ou URL
 routes.use((_: Request, res: Response) =>

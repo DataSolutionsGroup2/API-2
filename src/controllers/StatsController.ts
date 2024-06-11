@@ -238,6 +238,39 @@ class StatsController {
       FROM tbgrade_atuacao_taubate;
        
       `);
+    res.json(response);
+  }
+  public async getAlteracao(_: Request, res: Response): Promise<void> {
+    const response: any = await query(`SELECT 
+    municipio,
+    class,
+    SUM(area_km2) AS soma_areas
+    FROM (
+    SELECT 
+        'Atibaia' AS municipio,
+        class,
+        id,
+        area_km2
+    FROM public.tbalteracao_atibaia
+    UNION ALL
+    SELECT 
+        'Cruzeiro' AS municipio,
+        class,
+        id,
+        area_km2
+    FROM public.tbalteracao_cruzeiro
+    UNION ALL
+    SELECT 
+        'Taubate' AS municipio,
+        class,
+        id,
+        area_km2
+    FROM public.tbalteracao_taubate
+) AS merged_data
+GROUP BY municipio, class;
+
+           
+          `);
 
     if (response.length > 0) {
       res.json(response);
