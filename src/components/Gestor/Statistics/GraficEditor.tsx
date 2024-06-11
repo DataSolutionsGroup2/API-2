@@ -1,9 +1,10 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { GraficEditorProps } from "../../../types";
 
 const GraficEditor = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<GraficEditorProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +13,7 @@ const GraficEditor = () => {
         const token = localStorage.getItem("token");
 
         // Adicionando o token no cabeçalho da requisição usando o Axios
-        const response = await axios.get(
+        const response = await axios.get<GraficEditorProps[]>(
           "http://localhost:3001/estatisticas/getStatusEditorStatistics",
           {
             headers: {
@@ -21,8 +22,7 @@ const GraficEditor = () => {
           }
         );
 
-        const result = await response.data;
-        setData(result);
+        setData(response.data);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);
       }
@@ -34,7 +34,7 @@ const GraficEditor = () => {
   useEffect(() => {
     if (data.length > 0) {
       const cities = ["Atibaia", "Cruzeiro", "Taubate"];
-      const cityData = {};
+      const cityData: Record<string, GraficEditorProps[]> = {};
       cities.forEach((city) => {
         cityData[city] = data.filter((item) => item.cidade === city);
       });
@@ -49,9 +49,9 @@ const GraficEditor = () => {
         const finalizadoData = cityItems.map((item) => item.finalizado);
         const semAtribuicaoData = cityItems.map((item) => item.sem_atribuicao);
 
-        const option = {
+        const option: echarts.EChartsOption = {
           title: {
-            text: `Status dos Analistas em ${city} `,
+            text: `Status dos Analistas em ${city}`,
           },
           tooltip: {
             trigger: "axis",

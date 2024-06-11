@@ -1,9 +1,10 @@
 import * as echarts from "echarts";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { GraficRevisorProps } from "../../../types";
 
 const GraficRevisor = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<GraficRevisorProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +13,7 @@ const GraficRevisor = () => {
         const token = localStorage.getItem("token");
 
         // Adicionando o token no cabeçalho da requisição usando o Axios
-        const response = await axios.get(
+        const response = await axios.get<GraficRevisorProps[]>(
           "http://localhost:3001/estatisticas/getStatusRevisorStatistics",
           {
             headers: {
@@ -21,8 +22,7 @@ const GraficRevisor = () => {
           }
         );
 
-        const result = await response.data;
-        setData(result);
+        setData(response.data);
       } catch (error) {
         console.error("Erro ao obter os dados:", error);
       }
@@ -34,7 +34,7 @@ const GraficRevisor = () => {
   useEffect(() => {
     if (data.length > 0) {
       const cities = ["Cruzeiro", "Atibaia", "Taubate"];
-      const cityData = {};
+      const cityData: Record<string, GraficRevisorProps[]> = {};
       cities.forEach((city) => {
         cityData[city] = data.filter((item) => item.cidade === city);
       });
@@ -48,7 +48,7 @@ const GraficRevisor = () => {
         const andamentoData = cityItems.map((item) => item.andamento);
         const finalizadoData = cityItems.map((item) => item.finalizado);
 
-        const option = {
+        const option: echarts.EChartsOption = {
           title: {
             text: `Status dos Analistas em ${city} `,
           },

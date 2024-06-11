@@ -5,7 +5,7 @@ interface Props {
 }
 
 export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
-  const [idValue, setIdValue] = useState("");
+  const [idValue, setIdValue] = useState<number | undefined>(undefined);
   const [selectValue2, setSelectValue2] = useState("");
   const [analistaValue, setAnalistaValue] = useState("");
   const [message, setMessage] = useState<string>("");
@@ -14,11 +14,11 @@ export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
     const confirmInsert = window.confirm("Deseja realmente fazer a inserção?");
     if (!confirmInsert) return;
 
-    const url = "http://localhost:3100/Gradeatuacao";
+    const url = "http://localhost:3001/insertValidacaoRevisor";
     const data = {
       id: idValue,
       cidade: selectValue2,
-      validação: analistaValue,
+      validacao: analistaValue,
     };
 
     try {
@@ -30,13 +30,19 @@ export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
         body: JSON.stringify(data),
       });
 
+      const responseData = await response.json();
+
       if (response.ok) {
         setMessage("Inserção realizada com sucesso!");
         onInsert();
       } else {
-        setMessage("O id não pertence a essa cidade, verifique por favor!");
+        setMessage(
+          responseData.error ||
+            "O id não pertence a essa cidade, verifique por favor!"
+        );
       }
     } catch (error: unknown) {
+      console.error("Erro ao fazer a requisição:", error);
       setMessage("Erro ao inserir ou atualizar atribuição.");
     }
   };
@@ -55,10 +61,10 @@ export function WorkspaceDefinitionRevisor({ onInsert }: Props) {
     <div className="flex min-w-[1000px] justify-around border-gray-400 border py-3 p-2 space-x-4 rounded-sm">
       <input
         className="border-gray-400 border py-3 px-4 rounded-sm"
-        type="text"
+        type="number"
         placeholder="Digite o ID"
-        value={idValue}
-        onChange={(e) => setIdValue(e.target.value)}
+        value={idValue !== undefined ? idValue : ""}
+        onChange={(e) => setIdValue(Number(e.target.value))}
       />
 
       <select

@@ -134,7 +134,7 @@ const AreaDeTrabalho = () => {
   };
 
   return (
-    <div>
+    <div className="select-none">
       <FaixaGestor />
       <div className="flex mb-4">
         <SelectorButton />

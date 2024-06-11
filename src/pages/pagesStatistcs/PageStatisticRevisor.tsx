@@ -4,7 +4,7 @@ import GraficRevisor from "../../components/gestor/statistics/GraficRevisor";
 
 export default function PagestatisticsRevisor() {
   return (
-    <div>
+    <div className="select-none">
       <FaixaGestor />
       <div className="flex mb-4">
         <SelectorButton />

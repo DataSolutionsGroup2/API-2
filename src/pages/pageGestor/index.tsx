@@ -5,7 +5,7 @@ import GestorPage from "../../components/gestor/menuGestor/ButtonSelector";
 
 export default function PageGestor() {
   return (
-    <div>
+    <div className="select-none">
       <FaixaGestor />
       <div className="flex">
         <GestorPage />

@@ -1,10 +1,11 @@
 import * as echarts from "echarts";
 import { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import { StatisticCityProps } from "../../../types";
 
 const City = () => {
-  const [statistics, setStatistics] = useState([]);
-  const chartRef = useRef(null);
+  const [statistics, setStatistics] = useState<StatisticCityProps[]>([]);
+  const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,8 +13,13 @@ const City = () => {
         // Obtendo o token do localStorage
         const token = localStorage.getItem("token");
 
+        if (!token) {
+          console.error("Token não encontrado no localStorage.");
+          return;
+        }
+
         // Adicionando o token no cabeçalho da requisição usando o Axios
-        const response = await axios.get(
+        const response = await axios.get<StatisticCityProps[]>(
           "http://localhost:3001/estatisticas/getAreaStatistics",
           {
             headers: {
@@ -22,8 +28,7 @@ const City = () => {
           }
         );
 
-        const data = await response.data;
-        setStatistics(data);
+        setStatistics(response.data);
       } catch (error) {
         console.error("Erro ao buscar estatísticas de área:", error);
       }
@@ -37,7 +42,7 @@ const City = () => {
 
     const myChart = echarts.init(chartRef.current);
 
-    const option = {
+    const option: echarts.EChartsOption = {
       tooltip: {
         trigger: "item",
       },
@@ -51,7 +56,6 @@ const City = () => {
           type: "pie",
           radius: ["40%", "70%"],
           avoidLabelOverlap: false,
-          padAngle: 5,
           itemStyle: {
             borderRadius: 10,
           },

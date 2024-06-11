@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import * as echarts from "echarts";
 import axios from "axios";
+import { GraphicNumberPolProps } from "../../../types";
 
 export const GraphicNumberPol: React.FC = () => {
-  const [regionData, setRegionData] = useState([]);
+  const [regionData, setRegionData] = useState<GraphicNumberPolProps[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -12,7 +13,7 @@ export const GraphicNumberPol: React.FC = () => {
         const token = localStorage.getItem("token");
 
         // Adicionando o token no cabeçalho da requisição usando o Axios
-        const response = await axios.get(
+        const response = await axios.get<GraphicNumberPolProps[]>(
           "http://localhost:3001/estatisticas/numberPolCity",
           {
             headers: {
@@ -21,8 +22,7 @@ export const GraphicNumberPol: React.FC = () => {
           }
         );
 
-        const data = await response.data;
-        setRegionData(data);
+        setRegionData(response.data);
       } catch (error) {
         console.error("Erro ao buscar dados do backend:", error);
       }
@@ -39,7 +39,7 @@ export const GraphicNumberPol: React.FC = () => {
 
     const colors = ["#0a3958", "#FFCC00", "#09977f82"];
 
-    const option = {
+    const option: echarts.EChartsOption = {
       title: {
         text: "Total de Polígonos por cidade",
         left: "center",
@@ -67,19 +67,22 @@ export const GraphicNumberPol: React.FC = () => {
           data: regionAreas,
           type: "bar",
           itemStyle: {
-            color: (params: any) => colors[params.dataIndex],
+            color: (params: any) => colors[params.dataIndex % colors.length],
           },
         },
       ],
     };
 
-    const myChart = echarts.init(document.getElementById("chart")!);
+    const chartDom = document.getElementById("chart");
+    if (chartDom) {
+      const myChart = echarts.init(chartDom);
 
-    myChart.setOption(option);
+      myChart.setOption(option);
 
-    return () => {
-      myChart.dispose();
-    };
+      return () => {
+        myChart.dispose();
+      };
+    }
   }, [regionData]);
 
   return <div id="chart" style={{ width: "720px", height: "400px" }} />;
