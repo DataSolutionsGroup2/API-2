@@ -5,6 +5,7 @@ import axios from "axios";
 export default function Login() {
   const [usuario, setUsuario] = useState("");
   const [senha, setSenha] = useState("");
+  const [error, setError] = useState(""); // Adicionado estado para mensagem de erro
   const navigate = useNavigate();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -32,6 +33,13 @@ export default function Login() {
   };
 
   const handleLogin = async () => {
+    setError(""); // Limpar mensagem de erro antes de tentar login
+
+    if (!usuario || !senha) {
+      setError("Usuário e senha são obrigatórios");
+      return;
+    }
+
     try {
       const response = await axios.post("http://localhost:3001/login", {
         mail: usuario,
@@ -43,10 +51,14 @@ export default function Login() {
         localStorage.setItem("token", token);
         navigate("/pagegestor");
       } else {
-        alert("Erro ao Logar");
+        setError("Erro ao Logar");
       }
     } catch (error) {
-      alert("Erro ao Logar");
+      if (error.response && error.response.status === 401) {
+        setError("Usuário ou senha incorretos");
+      } else {
+        setError("Erro ao Logar");
+      }
     }
   };
 
@@ -90,6 +102,8 @@ export default function Login() {
                 Lembrar de mim.
               </label>
             </div>
+            {error && <div className="text-red-500 mt-2">{error}</div>}{" "}
+            {/* Mostrar mensagem de erro */}
             <div>
               <button
                 className="border-solid border-visiona border-2 rounded-lg

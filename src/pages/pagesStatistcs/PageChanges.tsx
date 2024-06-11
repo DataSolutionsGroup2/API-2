@@ -6,9 +6,9 @@ export default function StatisticsChanges() {
   return (
     <div className="select-none">
       <FaixaGestor />
-      <div className="flex justify-between">
+      <div className="flex ">
         <SelectorButton />
-        <div className="mt-8 mr-6">
+        <div className="flex justify-center items-center m-10 ">
           <ChartChange />
         </div>
       </div>
