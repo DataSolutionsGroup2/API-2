@@ -3,7 +3,7 @@ import Login from "./pages/loginPage/LoginPage";
 import PageGestor from "./pages/pageGestor";
 import PageStatisticscEditor from "./pages/pagesStatistcs/PageStatisticsEditor";
 import PagestatisticsRevisor from "./pages/pagesStatistcs/PageStatisticRevisor";
-import CriacaoEdidorRevisorModal from "./components/gestor/criar Usuario/CriacaoEditorRevisorModal";
+import CriacaoEdidorRevisorModal from "./components/gestor/Usuario/CriacaoEditorRevisorModal";
 import AreaDeTrabalho from "./components/gestor/areaDeTrabalho/Desktop";
 import StatisticsChanges from "./pages/pagesStatistcs/PageChanges";
 
