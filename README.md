@@ -271,7 +271,7 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
   <span id="pbacklog3"></span>
 <h2>✏️ Product Backlog</h2>
 <p></p>
-<img src="/Images/pngprodctbacklogsprint3.png" alt="product backlog" width="1200">
+<img src="/Images/ProductBacklog3.png" alt="product backlog" width="1200">
 
 
   <h2 id="trello3">Trello</h2>
