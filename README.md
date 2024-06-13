@@ -269,6 +269,12 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
   Na sprint passada erramos em alguns aspectos no projeto no quesito compreensão do que era para ser entregue, mas nessa sprint terminamos todo o resto que nos faltam, conectamos o BackEnd com o FrontEnd fizemos o resto das requisições que faltavam e fizemos alguns ajustes no FrontEnd do projeto para que tudo ficasse o melhor possível e consertamos tudo que não estava de acordo com a visão do cliente.
 
   <span id="pbacklog3"></span>
+<h2>✏️ Burndown</h2>
+<p></p>
+<img src="/Images/burndownSprint3.png" alt="product backlog" width="1200">
+
+
+  <span id="pbacklog3"></span>
 <h2>✏️ Product Backlog</h2>
 <p></p>
 <img src="/Images/ProductBacklog3.png" alt="product backlog" width="1200">
