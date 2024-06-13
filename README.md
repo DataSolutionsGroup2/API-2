@@ -263,14 +263,13 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
     <a href="#review3">Sprint Review</a> |
     <a href="#trello3">Trello</a> |
     <a href="#projeto3">Projeto</a> |
-    <a href="#entrega3">Vídeo</a>
 
   ## Resumo:
   Na sprint passada erramos em alguns aspectos no projeto no quesito compreensão do que era para ser entregue, mas nessa sprint terminamos todo o resto que nos faltam, conectamos o BackEnd com o FrontEnd fizemos o resto das requisições que faltavam e fizemos alguns ajustes no FrontEnd do projeto para que tudo ficasse o melhor possível e consertamos tudo que não estava de acordo com a visão do cliente.
 
   <span id="pbacklog3"></span>
 <h2>✏️ Burndown</h2>
-<p></p>
+<p id="burndown3"></p>
 <img src="/Images/burndownSprint3.png" alt="product backlog" width="1200">
 
 
@@ -297,7 +296,14 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
   <img src="Images/criarUsuarioSprint3.png" alt="criarUsuario" />
   <p>Temos também um grafico de area de supressão de vegetação, solo exposto, nova edificação por cidade.</p>
   <img src="Images/estatisticaSprint33.png" alt="estatistica3" />
-
+  <p>E por ultimo temos uma tela de area de trabalho onde o gestor pode filtrar utilizandos os filtros na tabela, pode exportar as estatiscas que ele quiser no botão exportar estatisticas e tbm pode atribuir novas atividades a algum dos analistas.</p>
+  <img src="Images/areaDeTrabalho3.png" alt="areaDeTrabalho" />
+  
+  ## Sprint Review
+  Sprint Review dessa ultima sprint.
+  <img id="review3" src="/Images/SprintReview.png" alt="Sprint Review" width="1200" >
+  
+  
 
 
 
