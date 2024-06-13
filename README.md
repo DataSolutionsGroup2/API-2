@@ -4,7 +4,7 @@
 </p>
 <h1 align="center">DSG - DATA SOLUTIONS GROUP</h1>
  
- > Status: Developing ⚠️
+ > Status: Finished ✅
 
 <h1 align="center"> Projeto: 25/03/2024 a 13/06/2024 </h1>  
 
@@ -21,24 +21,24 @@ git clone https://github.com/DataSolutionsGroup2/API-2/ .
 
 code .
 ```
-Após abrir a pasta no `VSCode` abra o terminal e instale todas as dependências para rodar o projeto da pasta `front-end` e da pasta `back-end`, siga os passos de comandos à baixo:
+Após abrir a pasta no `VSCode` e entrar na pasta `Projeto` abra o terminal e instale todas as dependências para rodar o projeto da pasta `Front` e da pasta `Back`, siga os passos de comandos à baixo:
 ```
-cd .\front-end\
+cd .\Front\
 npm i
 cd ..
 
-cd .\back-end\
+cd .\Back\
 npm i
 cd ..
 ```
-Após realizar a instalação de dependências do projeto, é necessario subir o servidor do `front-end` e do `back-end` para que a aplicação funcione corretamente.
+Após realizar a instalação de dependências do projeto, é necessario subir o servidor do `Back` e o `Front` para que a aplicação funcione corretamente.
 ```
-cd .\front-end\
+cd .\Front\
 npm run dev
 
-abra outro terminal e repita o mesmo na pasta back-end.
+abra outro terminal e repita o mesmo na pasta Back.
 
-cd .\back-end\
+cd .\Back\
 npm run dev
 ```
 Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, utilizamos a plataforma `Heroku` para hospedar o servidor gratuitamente.
@@ -72,7 +72,7 @@ Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, 
 :---------: | :------:    | :-------:          | :-------:
 01          | 25/03 - 17/04   | ✅                | <a href="#sprint1">Sprint 1</a>
 02          | 22/04 - 15/05   | ✅                | <a href="#sprint2">Sprint 2</a>
-03          | 20/05 - 12/06   | ⚠️                | <a href="#sprint3">Sprint 3</a>
+03          | 20/05 - 12/06   | ✅               | <a href="#sprint3">Sprint 3</a>
 
 
 ## 🚀Ferramentas Utilizadas
@@ -256,7 +256,7 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
 <h3 id="entrega2">Video do Projeto</h3>
 <a href="https://youtu.be/cIjC-j5Lv38" target="_blank">Video completo Sprint 2 </a>
 
-<h1 align="center"> Sprint 3 - 20/05 a 12/06 </h1>  > Status: Developing ⚠️
+<h1 align="center"> Sprint 3 - 20/05 a 12/06 </h1>  > Status: Check ✅
 <p align="center"> 
     <a href="#burndown3">Burndown</a> |
     <a href="#pbacklog3">Product Backlog</a> | 
