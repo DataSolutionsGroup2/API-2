@@ -228,7 +228,7 @@ Primeiramente aqui temos como as tasks foram divididas pelo nosso Scrum Master c
 <span id="pbacklog2"></span>
 <h2>✏️ Product Backlog</h2>
 <p>Como cometemos alguns erros na entrega passada no quesito definir a prioridade como basico ao invés de baixo nessa sprint resolvemos esse erro.</p>
-<img src="/Images/backlogsprint3.jfif" alt="product backlog" width="1200">
+<img src="/Images/BackLogSprint2.jfif" alt="product backlog" width="1200">
 
 <h2 id="projeto2">Projeto:</h2>
 Começando com uma das primeiras implementações feitas nessa sprint temos a criação de usuarios no banco de dados, que consiste em um post que passa os parametros de criação do usuario em um JSON.
@@ -286,22 +286,9 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
 
   ## Projeto:
   <div id="projeto3"></div>
-  Aqui temos algumas fotos de telas que foram implemtadas nessa sprint que estavam faltando para a completude de nossa entrega, sendo ela pagina de revisor e editor, cada uma dessas telas tem tanto o Front End quanto o Back End vejamos abaixo.
+  Aqui temos algumas fotos de telas que foram atualizadas para cumprir melhor os requisitos propostos pelo cliente, fizemos muitas modificações na tela de gestor deixando-a mais completa e melhor.
 
-  <h2>Revisor</h2>
-  Como dito anteriormente aqui estão as telas do revisor em nosso aplicação, um dos requisitos na documentação era de que o revisor deveria ter acesso aos dados de mapeamento por editor.
-  <img src="/Images/paginarevisor1.png" alt="telaRevisor1" />
-  
-Também fizemos uma pagina para ver os apontamento de correções de cada analista por cidade.
-<img src="/Images/paginarevisor2.png" alt="telaRevisor2" />
 
-E por último decidimos adicionar alguns gráficos que poderiam ser uteis ao revisor.
-<img src="/Images/" alt="telaRevisor3"/>
-
-<h2>Editor</h2>
-Assim como o revisor na parte de editor também decidimos implementar 3 telas em nossa aplicação, veja abaixo:
-<img src="" alt="" />
-[Conteúdo a ser adicionado]
 
 
   
