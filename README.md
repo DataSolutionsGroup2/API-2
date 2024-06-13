@@ -287,6 +287,16 @@ E nossa ultima implementação feita no sistema foi um Delete que exclui um usua
   ## Projeto:
   <div id="projeto3"></div>
   Aqui temos algumas fotos de telas que foram atualizadas para cumprir melhor os requisitos propostos pelo cliente, fizemos muitas modificações na tela de gestor deixando-a mais completa e melhor.
+  <p>Aqui temos a versão final de como ficou a página home do gestor.</p>
+  <img src="Images/paginaHomeSprint3.png" alt="paginaHome" />
+  <p>Logo a baixo temos as estatisticas adicionadas a pagina vejamos, aqui temos um gráfico de editor.</p>
+  <img src="Images/estatisticaSprint31.png" alt="estatistica1" />
+  <p>aqui agora temos um outro grafico de revisor</p>
+  <img src="Images/estatisticaSprint32.png" alt="estatistica2" />
+  <p>Aqui temos uma interface de criação de novos usuarios.</p>
+  <img src="Images/criarUsuarioSprint3.png" alt="criarUsuario" />
+  <p>Temos também um grafico de area de supressão de vegetação, solo exposto, nova edificação por cidade.</p>
+  <img src="Images/estatisticaSprint33.png" alt="estatistica3" />
 
 
 
