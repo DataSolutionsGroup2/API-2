@@ -116,13 +116,6 @@ export default function CriacaoEdidorRevisorModal() {
               >
                 Criar
               </button>
-              <button
-                type="button"
-                onClick={criarUsuario}
-                className="mt-3 w-full bg-orange-600 text-white font-bold py-2 rounded-sm hover:bg-orange-700 transition-colors"
-              >
-                Deletar
-              </button>
 
               {sucesso && (
                 <div className="bg-green-500 text-center text-white rounded mt-2 p-2">

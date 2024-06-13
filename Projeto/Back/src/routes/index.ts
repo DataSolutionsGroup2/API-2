@@ -30,7 +30,7 @@ routes.post("/insertValidacaoRevisor", (req: Request, res: Response) =>
 routes.post("/insertAtribuicaoEditor", (req: Request, res: Response) =>
   insertOrUpdateAtribuicao.insertOrUpdateAtribuicao(req, res)
 );
-routes.post("/createUser", checkAdm, (req: Request, res: Response) =>
+routes.post("/createUser", (req: Request, res: Response) =>
   createUser.createUser(req, res)
 );
 routes.post("/deleteUser", (req: Request, res: Response) =>

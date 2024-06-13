@@ -36,7 +36,7 @@ const SelectorButton = () => {
       onClick: () => navigate("/statisticschanges"),
     },
     {
-      name: "Logout",
+      name: "Sair",
       onClick: () => navigate("/"),
     },
   ];
