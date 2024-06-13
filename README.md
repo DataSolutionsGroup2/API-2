@@ -170,7 +170,7 @@ portanto fizemos 4 telas sendo elas 1 de login e outras 3 de um usuário já log
 <span id="backlog"></span>
 <h2>⚙️Backlog </h2>
 <p>Tabela do backlog do projeto.</p>
-<img src="/Images/backlogdoprojeto.png" alt="backlog" width="1200">
+<img src="/Images/backlogsprint3version2.png" alt="backlog" width="1200">
 
 <h2 id="prototipo">Protótipo 🔧</h2>
 Aqui temos o nosso prototipo implementado no projeto da tela de login.
@@ -228,7 +228,7 @@ Primeiramente aqui temos como as tasks foram divididas pelo nosso Scrum Master c
 <span id="pbacklog2"></span>
 <h2>✏️ Product Backlog</h2>
 <p>Como cometemos alguns erros na entrega passada no quesito definir a prioridade como basico ao invés de baixo nessa sprint resolvemos esse erro.</p>
-<img src="/Images/ProductBackLog2.jfif" alt="product backlog" width="1200">
+<img src="/Images/backlogsprint3.jfif" alt="product backlog" width="1200">
 
 <h2 id="projeto2">Projeto:</h2>
 Começando com uma das primeiras implementações feitas nessa sprint temos a criação de usuarios no banco de dados, que consiste em um post que passa os parametros de criação do usuario em um JSON.
