@@ -41,7 +41,7 @@ abra outro terminal e repita o mesmo na pasta Back.
 cd .\Back\
 npm run dev
 ```
-Não é necessario configurar o `Banco de Dados` pois ele se encontra em nuvem, utilizamos a plataforma `Heroku` para hospedar o servidor gratuitamente.
+Para configurar o `Banco de Dados` é bem simples, basta você instalar as tabelas excel em sua maquina e executar o codigo SQL modifcando o caminho das copias com o caminho que estão as tabelas que você baixou, as tabelas já se encontram disponiveis para baixar na pasta Tabelas logo acima.
 
 ## 📝 Requisitos Funcionais
 * O gestor deverá ser capaz de carregar o polígono que delimita a área do projeto
